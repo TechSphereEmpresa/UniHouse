@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <link rel="icon" href="img/logo.png" type="iamge/png">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div id="header-profile-user-rep">
+            <a href="pagina-perfil.html">
+                <img class="profile-icon" src="img/profile.svg" alt="Foto de perfil do usuário">
+            </a>
+
+            <div id="header-user">
+                <p id="user-nome">Olá, [Nome]</p>
+
+                <div id="header-rep">
+                    <img src="img/home/loc.svg" alt="">
+                    <p id="rep-nome">[Nome república]</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="header-config-not">
+            <img src="img/home/settings.svg" alt="">
+            <img src="img/home/notification.svg" alt="">
+        </div>
+    </header>
+
+    <main>
+        <section id="secao-menu">
+            <div class="menu-box-link" id="menu-calendario">
+                <img src="img/calendario.svg" alt="">
+                <p>Calendário</p>
+            </div>
+
+            <div class="menu-box-link" id="menu-votacao">
+                <img src="img/home/votacao.svg" alt="">
+                <p>Votação</p>
+            </div>
+
+            <div class="menu-box-link" id="menu-multas">
+                <img src="img/home/multas.svg" alt="">
+                <p>Multas</p>
+            </div>
+        </section>
+
+        <section id="secao-tarefas">
+            <div id="tarefas-filtro">
+                <h1>Tarefas</h1>
+    
+                <select id="filtro">
+                    <option value="Atrasadas">Atrasadas</option>
+                    <option value="Hoje">Hoje</option>
+                    <option value="Essa semana">Essa semana</option>
+                    <option value="Esse mês">Esse mês</option>
+                    <option value="Concluídas">Concluídas</option>
+                </select>
+            </div>
+
+            <div class="box-tarefa">
+                <img src="img/home/tarefa.svg" alt="">
+
+                <div class="box-tarefa-info">
+                    <p class="tarefa-nome">Lavar banheiro</p>
+    
+                    <div class="box-tarefa-info-data">
+                        <div class="box-tarefa-data">
+                            <img src="img/home/data.svg" alt="">
+                            <time class="tarefa-data" datetime="2024-01-18">18/01/2024</time>
+                        </div>
+                        
+                        <p class="tarefa-data">-</p>
+    
+                        <div class="box-tarefa-info-data">
+                            <img src="img/relogio.svg" alt="">
+                            <p class="tarefa-data">09:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <a href="outra-pagina.html">Ir para outra página</a>
+                <button>Nova tarefa</button>
+                <img src="img/mais.svg" alt="">
+                <p>Nova tarefa</p>
+            </div>
+        </section>
+    </main>
+
+    <nav>
+
+    </nav>
+</body>
+</html>
