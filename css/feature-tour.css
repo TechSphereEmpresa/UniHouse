@@ -1,12 +1,10 @@
 body {
     display: flex;
     flex-direction: column;
-    width: 100%;
     align-items: center;
     justify-content: center;
     padding: 72px 0;
     gap: 65px;
-    color: #fff;
 }
 
 header {
@@ -15,6 +13,11 @@ header {
 
 main {
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .dot {
