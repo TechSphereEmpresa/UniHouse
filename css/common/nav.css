@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    justify-content: center;
+}
+
+a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    
+    color: inherit;       
+    text-decoration: none;        
+}
+
+a:visited {
+    color: inherit;        
+    text-decoration: none;
+}
+
+p {
+    font-size: 14px;
+    color: #BCBCBC;
+}

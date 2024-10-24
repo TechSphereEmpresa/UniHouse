@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início</title>
-    <link rel="icon" href="assets/images/logo.png" type="iamge/png">
+    <link rel="icon" href="../../assets/images/logo.png" type="iamge/png">
     <link rel="stylesheet" href="../../css/inicio/home.css">
     <link rel="stylesheet" href="../../css/main.css">
 </head>
@@ -41,26 +42,26 @@
 
     <main>
         <section id="secao-menu">
-            <div class="menu-box-link" id="menu-calendario">
-                <img src="../../assets/icons/home/calendario.svg" alt="">
-                <p>Calendário</p>
-            </div>
+            <a class="menu-box-link" id="menu-calendario" href="calendario.html">
+                    <img src="../../assets/icons/home/calendario.svg" alt="">
+                    <p>Calendário</p>
+            </a>
 
-            <div class="menu-box-link" id="menu-votacao">
-                <img src="../../assets/icons/home/votacao.svg" alt="">
-                <p>Votação</p>
-            </div>
+            <a class="menu-box-link" id="menu-votacao" href="votacao.html">
+                    <img src="../../assets/icons/home/votacao.svg" alt="">
+                    <p>Votação</p>
+            </a>
 
-            <div class="menu-box-link" id="menu-multas">
-                <img src="../../assets/icons/home/multas.svg" alt="">
-                <p>Multas</p>
-            </div>
+            <a class="menu-box-link" id="menu-multas" href="multas.html">
+                    <img src="../../assets/icons/home/multas.svg" alt="">
+                    <p>Multas</p>
+            </a>
         </section>
 
         <section id="secao-tarefas">
             <div id="tarefas-filtro">
                 <h1>Tarefas</h1>
-    
+
                 <select id="filtro">
                     <option value="Atrasadas">Atrasadas</option>
                     <option value="Hoje">Hoje</option>
@@ -70,39 +71,70 @@
                 </select>
             </div>
 
-            <div class="box-tarefa">
-                <img src="../../assets/icons/home/tarefa.svg" alt="">
+            <div id="tarefas-botao">
 
-                <div class="box-tarefa-info">
-                    <p class="tarefa-nome">Lavar banheiro</p>
-    
-                    <div class="box-tarefa-info-data">
-                        <div class="box-tarefa-data">
-                            <img src="../../assets/icons/home/data.svg" alt="">
-                            <time class="tarefa-data" datetime="2024-01-18">18/01/2024</time>
-                        </div>
-                        
-                        <p class="tarefa-data">-</p>
-    
-                        <div class="box-tarefa-info-data">
-                            <img src="../../assets/icons/home/relogio.svg" alt="">
-                            <p class="tarefa-data">09:00</p>
-                        </div>
-                    </div>
+                <div id="tarefas">
+
+                    <a class="box-tarefa" href="tarefa.html">
+                            <img src="../../assets/icons/home/tarefa.svg" alt="">
+
+                            <div class="box-tarefa-info">
+                                <p class="tarefa-nome">Lavar banheiro</p>
+
+                                <div class="box-tarefa-info-data">
+                                    <img src="../../assets/icons/home/data.svg" alt="">
+                                    <time class="tarefa-data" datetime="2024-01-18">18/01/2024</time>
+                                    <p class="tarefa-data">-</p>
+                                    <img src="../../assets/icons/home/relogio.svg" alt="">
+                                    <p class="tarefa-data">09:00</p>
+                                </div>
+                            </div>
+                    </a>
+                    <a class="box-tarefa" href="tarefa.html">
+                            <img src="../../assets/icons/home/tarefa.svg" alt="">
+
+                            <div class="box-tarefa-info">
+                                <p class="tarefa-nome">Lavar banheiro</p>
+
+                                <div class="box-tarefa-info-data">
+                                    <img src="../../assets/icons/home/data.svg" alt="">
+                                    <time class="tarefa-data" datetime="2024-01-18">18/01/2024</time>
+                                    <p class="tarefa-data">-</p>
+                                    <img src="../../assets/icons/home/relogio.svg" alt="">
+                                    <p class="tarefa-data">09:00</p>
+                                </div>
+                            </div>
+                    </a>
+                    <a class="box-tarefa" href="tarefa.html">
+                            <img src="../../assets/icons/home/tarefa.svg" alt="">
+
+                            <div class="box-tarefa-info">
+                                <p class="tarefa-nome">Lavar banheiro</p>
+
+                                <div class="box-tarefa-info-data">
+                                    <img src="../../assets/icons/home/data.svg" alt="">
+                                    <time class="tarefa-data" datetime="2024-01-18">18/01/2024</time>
+                                    <p class="tarefa-data">-</p>
+                                    <img src="../../assets/icons/home/relogio.svg" alt="">
+                                    <p class="tarefa-data">09:00</p>
+                                </div>
+                            </div>
+                    </a>
+
                 </div>
-            </div>
 
-            <div>
-                <a href="outra-pagina.html">Ir para outra página</a>
-                <button>Nova tarefa</button>
-                <img src="../../assets/icons/home/mais.svg" alt="">
-                <p>Nova tarefa</p>
+                <a href="outra-pagina.html">
+                    <div id="botao-nova-tarefa">
+                        <img src="../../assets/icons/home/mais.svg" alt="">
+                        <p>Nova tarefa</p>
+                    </div>
+                </a>
+
             </div>
         </section>
     </main>
 
-    <nav>
-
-    </nav>
+    <my-header></my-header>
 </body>
+
 </html>

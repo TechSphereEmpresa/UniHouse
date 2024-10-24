@@ -1,3 +1,10 @@
+:root {
+    --main-bg-color: #000;
+    --main-text-color: #fff;
+    --highlight-color: #61dafb;
+    --breakpoint: 364px;
+}
+
 header {
     display: flex;
     padding: 30px 100px 20px 100px;
@@ -5,10 +12,11 @@ header {
     align-items: center;
     border-bottom: 2px solid #BCBCBC;
     margin-bottom: 30px;
+    gap: 15px;
 
 }
 a {
-    display: inline-block; 
+    display: flex; 
     padding: 0;
     margin: 0;    
     color: inherit;       
@@ -54,6 +62,7 @@ a:visited {
 }
 
 #rep-nome {
+
     font-size: 12px;
     font-weight: 600;
 }
@@ -101,14 +110,29 @@ main {
     font-size: 15.385px;
 }
 
+#secao-tarefas {
+    flex: 1;
+}
+
 #tarefas-filtro {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+#tarefas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .box-tarefa {
     display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 100%;
+    flex-basis: 40%;
+   /* min-width: 315px;*/
     padding: 10px;
     align-items: center;
     gap: 13px;
@@ -122,7 +146,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: -5px;
     color: #000;
 }
 
@@ -131,6 +154,7 @@ main {
     flex-direction: row;
     align-items: center;
     gap: 5px;
+    flex-wrap: nowrap;
 }
 
 .tarefa-nome {
@@ -139,6 +163,32 @@ main {
 
 .tarefa-data {
     font-size: 12px;
+}
+
+#tarefas-botao {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#botao-nova-tarefa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5px 10px;
+    gap: 10px;
+
+    border: 3px solid #F4A503;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: background-color 0.5s;
+    }
+    
+#botao-nova-tarefa:hover {
+    background-color: #F4A503;
+    color: #000;
+    border: #F4A503;
 }
 
 #filtro {
@@ -165,3 +215,26 @@ main {
 #filtro option {
     background-color: #000;
   }
+
+@media (max-width: 664px) {
+    header {
+        padding: 30px 20px 20px 20px;
+    }
+
+    main {
+        margin: 0px 20px;
+        flex-direction: column;
+    }
+
+    #secao-menu {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menu-box-link {
+        width: 100%;
+    }
+
+}
