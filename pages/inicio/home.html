@@ -14,7 +14,7 @@
     <header>
         <div id="header-profile-user-rep">
             <a href="pagina-perfil.html">
-                <img class="profile-icon" src="../../assets/icons/home/profile.svg" alt="Foto de perfil do usuário">
+                <img class="profile-icon" src="/assets/icons/common/profile.svg" alt="Foto de perfil do usuário">
             </a>
 
             <div id="header-user">
@@ -43,39 +43,51 @@
     <main>
         <section id="secao-menu">
             <a class="menu-box-link" id="menu-calendario" href="calendario.html">
-                    <img src="../../assets/icons/home/calendario.svg" alt="">
-                    <p>Calendário</p>
+                <img src="../../assets/icons/home/calendario.svg" alt="">
+                <p>Calendário</p>
             </a>
 
             <a class="menu-box-link" id="menu-votacao" href="votacao.html">
-                    <img src="../../assets/icons/home/votacao.svg" alt="">
-                    <p>Votação</p>
+                <img src="../../assets/icons/home/votacao.svg" alt="">
+                <p>Votação</p>
             </a>
 
             <a class="menu-box-link" id="menu-multas" href="multas.html">
-                    <img src="../../assets/icons/home/multas.svg" alt="">
-                    <p>Multas</p>
+                <img src="../../assets/icons/home/multas.svg" alt="">
+                <p>Multas</p>
             </a>
         </section>
 
-        <section id="secao-tarefas">
-            <div id="tarefas-filtro">
-                <h1>Tarefas</h1>
+        <section id="secao-multa-tarefas">
+            <a id="aviso-multa" href="">
+                <div id="aviso-multa-titulo-info">
+                    <p>Você tem uma multa <br />pendente</p>
+                    <div id="aviso-multa-info">
+                        <img src="/assets/icons/home/balanca.svg" alt="">
+                        <p>5/6 pessoas votaram a favor</p>
+                    </div>
+                </div>
+                <img src="/assets/icons/home/seta-multa.svg" alt="">
+            </a>
 
-                <select id="filtro">
-                    <option value="Atrasadas">Atrasadas</option>
-                    <option value="Hoje">Hoje</option>
-                    <option value="Essa semana">Essa semana</option>
-                    <option value="Esse mês">Esse mês</option>
-                    <option value="Concluídas">Concluídas</option>
-                </select>
-            </div>
+            <section id="secao-tarefas">
+                <div id="tarefas-filtro">
+                    <h1>Tarefas</h1>
 
-            <div id="tarefas-botao">
+                    <select id="filtro">
+                        <option value="Atrasadas">Atrasadas</option>
+                        <option value="Hoje">Hoje</option>
+                        <option value="Essa semana">Essa semana</option>
+                        <option value="Esse mês">Esse mês</option>
+                        <option value="Concluídas">Concluídas</option>
+                    </select>
+                </div>
 
-                <div id="tarefas">
+                <div id="tarefas-botao">
 
-                    <a class="box-tarefa" href="tarefa.html">
+                    <div id="tarefas">
+
+                        <a class="box-tarefa" href="tarefa.html">
                             <img src="../../assets/icons/home/tarefa.svg" alt="">
 
                             <div class="box-tarefa-info">
@@ -89,8 +101,8 @@
                                     <p class="tarefa-data">09:00</p>
                                 </div>
                             </div>
-                    </a>
-                    <a class="box-tarefa" href="tarefa.html">
+                        </a>
+                        <a class="box-tarefa" href="tarefa.html">
                             <img src="../../assets/icons/home/tarefa.svg" alt="">
 
                             <div class="box-tarefa-info">
@@ -104,8 +116,8 @@
                                     <p class="tarefa-data">09:00</p>
                                 </div>
                             </div>
-                    </a>
-                    <a class="box-tarefa" href="tarefa.html">
+                        </a>
+                        <a class="box-tarefa" href="tarefa.html">
                             <img src="../../assets/icons/home/tarefa.svg" alt="">
 
                             <div class="box-tarefa-info">
@@ -119,18 +131,19 @@
                                     <p class="tarefa-data">09:00</p>
                                 </div>
                             </div>
+                        </a>
+
+                    </div>
+
+                    <a href="nova-tarefa.html">
+                        <div id="botao-nova-tarefa">
+                            <img src="../../assets/icons/home/mais.svg" alt="">
+                            <p>Nova tarefa</p>
+                        </div>
                     </a>
 
                 </div>
-
-                <a href="outra-pagina.html">
-                    <div id="botao-nova-tarefa">
-                        <img src="../../assets/icons/home/mais.svg" alt="">
-                        <p>Nova tarefa</p>
-                    </div>
-                </a>
-
-            </div>
+            </section>
         </section>
     </main>
 

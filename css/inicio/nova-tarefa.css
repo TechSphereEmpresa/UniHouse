@@ -1,0 +1,179 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 49px 100px 15px 100px;
+}
+
+header a {
+    margin-right: auto; 
+}
+
+header p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    margin: 0; 
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/*input {
+    display: flex;
+    width: 335px;
+    height: 54px;
+    padding: 14px 23px;
+    align-items: center;
+    gap: 10px;
+
+    outline: none;
+    border-radius: 18px;
+    border: 2px solid #F4A503;
+    background: #000;
+    color: #fff;
+}*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 737px;
+    gap: 50px;
+    
+}
+
+.caixa-nome, .caixa-opcoes, .caixa-descricao, .caixa-data, .caixa-hora {
+    /*flex: 2;*/
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.caixa-nome {
+    order: 1;
+}
+
+.caixa-data {
+    order: 2;
+}
+
+.caixa-descricao {
+    order: 3;
+}
+
+.caixas-hora {
+    order: 4;
+    display: flex;
+}
+
+.caixa-opcoes {
+    order: 5;
+}
+
+
+
+label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+
+input {
+    max-width: 335px;
+    padding: 14px 23px;
+
+    outline: none;
+    border: 2px solid #F4A503;
+    border-radius: 18px;
+    background-color: #000;
+    font-size: 16px;
+    color: #d3d3d3;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #BCBCBC;
+}
+
+.opcoes {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+    width: 90%; /* Ajuste conforme necessário */
+    scrollbar-width: none;
+  }
+
+  .opcoes::-webkit-scrollbar {
+    display: none;
+  }
+
+.opcoes {
+    display: flex;
+    gap: 10px;
+  }
+
+  .opcao {
+      display: flex;
+      width: 100px;
+      height: 33px;
+      align-items: center;
+      justify-content: start;
+    border: 2px solid #F4A503;
+    border-radius: 8px;
+    color: #ffb100;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+  /*padding: 13px 26px;*/
+  
+  .opcao.selected, .person.selected {
+    background-color: #ffb100;
+    color: #000;
+  }
+
+  .usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  /*.person img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+  }*/
+
+button {
+    order: 7;
+    width: 335px;
+    height: 54px;
+    background-color: #F4A503;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 18px;
+    font-family: Urbanist;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #F4A503;
+}

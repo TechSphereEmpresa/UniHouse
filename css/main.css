@@ -15,3 +15,24 @@ html, body {
     font-family: Urbanist;
     font-weight: 600;
 }
+
+header {
+    padding: 30px 100px 20px 100px;
+
+}
+
+main {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+@media (max-width: 664px) {
+    header {
+        padding: 30px 20px 20px 20px;
+    }
+
+    main {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}

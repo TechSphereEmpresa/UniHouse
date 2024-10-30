@@ -1,0 +1,209 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 49px 100px 15px 100px;
+}
+
+header a {
+    margin-right: auto; 
+}
+
+header p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    margin: 0; 
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+main {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 30px;
+}
+
+main a {
+    color: inherit;       
+    text-decoration: none;        
+}
+
+main a:visited {
+    color: inherit;        
+    text-decoration: none;
+}
+
+.multa-votacao {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#aviso-multa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 86px;
+    height: 113px;
+    padding: 0px 20px;
+
+    border-radius: 10.245px;
+    background: #F56602;
+    color: #000;
+}
+
+#aviso-multa-titulo-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    white-space: pre-wrap;
+    font-size: 20px;
+}
+
+.aviso-multa-info {
+    display: flex;
+    gap: 7px;
+
+    font-size: 12px;
+}
+
+.votacao {
+    display: flex;
+    padding: 11px 19px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 10.245px;
+    background: #F56602;
+}
+
+.votacao-titulo-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    color: #000;
+    font-size: 20px;
+}
+
+.votacao-infos {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 14px;
+}
+
+.votacao-botoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 145px;
+    height: 36px;
+
+    border-radius: 10px;
+    background: #000;
+    border: none;
+    font-family: Urbanist;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.botao-discordo {
+    color: #C31818;
+}
+
+.botao-concordo {
+    color: #3C755A;
+}
+
+#historico {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#historico-titulo-filtro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 24px;
+}
+
+#filtro {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    
+    border: none;
+    font-family: Urbanist;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    color: #BCBCBC;
+    padding: 4px;
+    background-image: url('../../assets/icons/home/seta-filtro.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    cursor: pointer;
+}
+
+#filtro option {
+    background-color: #000;
+    border: none;
+}
+
+.box-multa {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+
+    border-radius: 10px;
+    border: 2px solid #F56602;
+}
+
+.box-multa h1 {
+    font-size: 18px;
+}
+
+#box-multa-votos {
+    display: flex;
+    gap: 7px;
+
+    font-size: 12px;
+
+    img {
+        filter: brightness(1) invert(1);
+    }
+}
+
+.box-multa-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    font-size: 12px;
+}
+
+@media (max-width: 926px) {
+    main {
+        flex-direction: column;
+    }
+
+}

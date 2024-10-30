@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova tarefa</title>
+    <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
+    <link rel="stylesheet" href="/css/inicio/nova-tarefa.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <header>
+        <a href="home.html">
+            <img src="/assets/icons/common/seta-voltar.svg" alt="">
+        </a>
+        <p>Nova tarefa</p>
+    </header>
+
+    <main>
+        <form action="">
+
+            <div class="caixa-nome">
+                <label for="tarefa">Nome da tarefa</label>
+                <input type="text" id="tarefa" name="tarefa" placeholder="Digite o [Nome] da tarefa">
+            </div>
+
+            <div class="caixa-descricao">
+                <label for="tarefa">Descrição</label>
+                <input type="text" id="tarefa" name="tarefa" placeholder="Digite a descrição da tarefa">
+            </div>
+
+            <div class="caixa-data">
+                <label for="data">Data</label>
+                <input type="date" id="data" name="data">
+            </div>
+
+            <div class="caixas-hora">
+                <div class="caixa-hora">
+                    <label for="hora">Início</label>
+                    <input type="time" class="hora" name="hora" step="3600">
+                </div>
+    
+                <div class="caixa-hora">
+                    <label for="hora">Fim</label>
+                    <input type="time" class="hora" name="hora" step="3600">
+                </div>
+            </div>
+
+            <div class="caixa-opcoes">
+                <label for="">Prioridade</label>
+                <div class="opcoes">
+                    <div class="opcao" onclick="selectOption(this)">Baixa</div>
+                    <div class="opcao" onclick="selectOption(this)">Média</div>
+                    <div class="opcao" onclick="selectOption(this)">Alta</div>
+                </div>
+            </div>
+
+            <div class="caixa-opcoes">
+                <label for="">Frequência</label>
+                <div class="opcoes">
+                    <div class="opcao" onclick="selectOption(this)">Não se repete</div>
+                    <div class="opcao" onclick="selectOption(this)">Todo dia</div>
+                    <div class="opcao" onclick="selectOption(this)">Toda semana</div>
+                    <div class="opcao" onclick="selectOption(this)">Todo mês</div>
+                </div>
+            </div>
+
+            <div class="caixa-opcoes">
+                <label for="">Responsável</label>
+                <div class="opcoes">
+                    <div class="usuario" onclick="selectusuario(this)">
+                        <img src="/assets/icons/common/profile.svg" alt="Perfil">
+                        <p>[Nome]</p>
+                    </div>
+                    <div class="usuario" onclick="selectusuario(this)">
+                        <img src="/assets/icons/common/profile.svg" alt="Perfil">
+                        <p>[Nome]</p>
+                    </div>
+                    <div class="usuario" onclick="selectusuario(this)">
+                        <img src="/assets/icons/common/profile.svg" alt="Perfil">
+                        <p>[Nome]</p>
+                    </div>
+                    <div class="usuario" onclick="selectusuario(this)">
+                        <img src="/assets/icons/common/profile.svg" alt="Perfil">
+                        <p>[Nome]</p>
+                    </div>
+                </div>
+            </div>
+
+            <button id="botao" class="botao" type="button">Criar</button>
+        </form>
+    </main>
+
+    <script src="/js/nova-tarefa.js" type="text/javascript" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 49px 100px 15px 100px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.titulo-data {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.data-autor {
+    font-size: 16px;
+    color: #BCBCBC;
+}
+
+hr {
+    border: 1px solid #333;
+} 
+
+.descricao {
+    font-size: 20px;
+}

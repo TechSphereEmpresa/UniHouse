@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multas</title>
+    <link rel="icon" href="../../assets/images/logo.png" type="iamge/png">
+    <link rel="stylesheet" href="/css/inicio/multas.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <header>
+        <a href="home.html">
+            <img src="/assets/icons/common/seta-voltar.svg" alt="">
+        </a>
+        <p>Multas</p>
+    </header>
+
+    <main>
+        <div class="multa-votacao">
+            <a id="aviso-multa" href="">
+                <div id="aviso-multa-titulo-info">
+                    <p>Você tem uma multa <br />pendente</p>
+                    <div class="aviso-multa-info">
+                        <img src="/assets/icons/home/balanca.svg" alt="">
+                        <p>5/6 pessoas votaram a favor</p>
+                    </div>
+                </div>
+                <img src="/assets/icons/home/seta-multa.svg" alt="">
+            </a>
+
+            <a class="votacao" href="">
+                <div class="votacao-titulo-infos">
+                    <p>Multa para [Nome]</p>
+                    <div class="votacao-infos">
+                        <p>Motivo: Não fez a tarefa [tarefa] no dia [data]</p>
+                        <p>Valor da multa: R$ 15,00</p>
+                    </div>
+                </div>
+                <div class="votacao-botoes">
+                    <button class="botao-discordo">Discordo</button>
+                    <button class="botao-concordo">Concordo</button>
+                </div>
+            </a>
+        </div>
+
+        <div id="historico">
+            <div id="historico-titulo-filtro">
+                <p>Histórico de multas</p>
+                <select id="filtro">
+                    <option value="Atrasadas">Minhas</option>
+                    <option value="Hoje">Todas</option>
+                </select>
+            </div>
+            <a class="box-multa" href="">
+                <h1>Não fez a tarefa [tarefa] no dia [data]</h1>
+                <div class="box-multa-infos">
+                    <div id="box-multa-votos">
+                        <img src="/assets/icons/home/balanca.svg" alt="">
+                        <p>5/6 pessoas votaram a favor</p>
+                    </div>
+                    <p>Valor da multa: RS 15,00</p>
+                    <p>Status: Paga</p>
+                </div>
+            </a>
+
+        </div>
+    </main>
+</body>
+
+</html>
