@@ -109,10 +109,8 @@ button {
     height: 54px;
     background-color: #F4A503;
     color: #000;
-    padding: 10px 20px;
     border: none;
     border-radius: 18px;
-    font-family: Urbanist;
     font-size: 19px;
     font-weight: 700;
     cursor: pointer;
