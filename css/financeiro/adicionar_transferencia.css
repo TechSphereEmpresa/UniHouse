@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap);
+ 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;    
+    justify-content: flex-end;
+    display: flex;
+    height: 102px;
+    padding: 0px 100px 15px 100px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.seta {
+    width: 26px;
+    height: 26px;
+}
+
+h1 {
+    color: #FFF;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Urbanist;
+    font-size: 22px;  
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22.5px; /* 102.273% */
+    letter-spacing: -0.5px;
+}
+
+.transfer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-size: 14px;
+    color: #fff;
+}
+
+input[type="text"] {
+    background-color: #000;
+    border: 2px solid #FFA500;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+.attach-input {
+    display: flex;
+}
+
+.attach-input input {
+    flex: 1;
+}
+
+.attach-button {
+    background-color: #FFA500;
+    border: none;
+    color: #000;
+    font-size: 18px;
+    padding: 0 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.submit-button {
+    background-color: #FFA500;
+    color: #000;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
