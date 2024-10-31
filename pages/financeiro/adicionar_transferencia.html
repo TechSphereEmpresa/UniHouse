@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Transferência</title>
+    <link rel="stylesheet" href="css/adicionar_tranferencia.css">
+    <link rel="icon" href="img/Unihouse.svg" type="iamge/png">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="#" class="back-button" >
+                <img src="img/arrow-right-next.svg" alt="seta">
+            </a>  
+            <h1>Adicionar transferência</h1>
+        </header>
+        <form class="transfer-form">
+
+            <div class="input-group">
+                <label for="Valor">Valor</label>
+                <input type="text" id="valor" placeholder="R$15,00">
+            </div>
+
+            <div class="input-group">
+                <label for="motivo">Motivo</label>
+                <input type="text" id="motivo" placeholder="Multa">
+            </div>
+
+            <div class="input-group">
+                <label for="anexar">Comprovante</label>
+                <div class="attach-input">
+                    <input type="text" id="anexar" placeholder="Anexar foto ou PDF">
+                    <button class="attach-button">+</button>
+                </div>
+            </div>
+            <button class="submit-button">Concluir</button>
+
+        </form>
+    </div>
+</body>
+</html>

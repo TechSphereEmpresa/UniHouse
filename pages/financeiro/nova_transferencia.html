@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Transferência</title>
+    <link rel="stylesheet" href="css/nova_transferência.css">
+    <link rel="icon" href="img/Unihouse.svg" type="iamge/png">
+
+</head>
+<body>
+    <div class="transferencia-container">
+        <h1>Nova transferência</h1>
+
+        <!-- Cartão Visa -->
+        <div class="cartao visa">
+            <div class="info-cartao">
+                <p>Saldo atual</p>
+                <h2>R$3,360.00</h2>
+                <p>**** **** **** 2230</p>
+                <p>Louis Scottson</p>
+                <p>Exp. Date: 09/26</p>
+            </div>
+            <img src="logoVisa.png" alt="Logo Visa" class="logo-cartao">
+        </div>
+
+        <!-- Cartão Mastercard -->
+        <div class="cartao mastercard">
+            <div class="info-cartao">
+                <p>Saldo</p>
+                <h2>R$200,00</h2>
+                <p>**** **** **** 7281</p>
+                <p>[Nome]</p>
+                <p>Exp. Date: 07/26</p>
+            </div>
+            <img src="logoMastercard.png" alt="Logo Mastercard" class="logo-cartao">
+        </div>
+
+        <!-- Cartão American Express -->
+        <div class="cartao amex">
+            <div class="info-cartao">
+                <p>Saldo atual</p>
+                <h2>R$935.33</h2>
+                <p>**** **** **** 4136</p>
+                <p>Louis Scottson</p>
+                <p>Exp. Date: 08/25</p>
+            </div>
+            <img src="logoAmericanExpress.png" alt="Logo American Express" class="logo-cartao">
+        </div>
+
+        <!-- Formulário de transferência -->
+        <div class="form-transferencia">
+            <label for="valor">Valor</label>
+            <input type="text" id="valor" placeholder="R$ 15,00">
+            
+            <label for="motivo">Motivo</label>
+            <input type="text" id="motivo" placeholder="Multa">
+            
+            <button class="botao-concluir">Concluir</button>
+        </div>
+    </div>
+</body>
+</html>
