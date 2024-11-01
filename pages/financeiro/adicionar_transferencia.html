@@ -6,38 +6,37 @@
     <title>Adicionar Transferência</title>
     <link rel="stylesheet" href="/css/financeiro/adicionar_transferencia.css">
     <link rel="stylesheet" href="../../css/main.css">
-    <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
-
+    <link rel="icon" href="/assets/images/logo.png" type="image/png">
 </head>
 <body>
     <div class="container">
         <header>
-            <a href="#" class="back-button" >
+            <a href="#" class="back-button">
                 <img src="/assets/icons/common/seta-voltar.svg" alt="seta">
             </a>  
             <h1>Adicionar transferência</h1>
         </header>
         <form class="transfer-form">
-
-            <div class="input-group">
-                <label for="Valor">Valor</label>
-                <input type="text" id="valor" placeholder="R$15,00">
-            </div>
-
-            <div class="input-group">
-                <label for="motivo">Motivo</label>
-                <input type="text" id="motivo" placeholder="Multa">
-            </div>
-
-            <div class="input-group">
-                <label for="anexar">Comprovante</label>
-                <div class="attach-input">
-                    <input type="text" id="anexar" placeholder="Anexar foto ou PDF">
-                    <button class="attach-button">+</button>
+            <div class="left-section">
+                <div class="input-group">
+                    <label for="valor">Valor</label>
+                    <input type="text" id="valor" placeholder="R$15,00">
+                </div>
+                <div class="input-group">
+                    <label for="motivo">Motivo</label>
+                    <input type="text" id="motivo" placeholder="Multa">
                 </div>
             </div>
-            <button class="submit-button">Concluir</button>
-
+            <div class="right-section">
+                <div class="input-group">
+                    <label for="anexar">Comprovante</label>
+                    <div class="attach-input">
+                        <input type="text" id="anexar" placeholder="Anexar foto ou PDF">
+                        <button class="attach-button">+</button>
+                    </div>
+                </div>
+                <button class="submit-button">Concluir</button>
+            </div>
         </form>
     </div>
 </body>
