@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório</title>
+    <title>Confirmação de Transferência</title>
+    <link rel="stylesheet" href="/css/relatorio.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
+
+</head>
+<body>
+    <div class="container">
+      <h1>Relatório</h1>
+      <div class="reports">
+        <!-- Gráfico de Tarefas Concluídas -->
+        <div class="report-section">
+          <h2>Tarefas Concluídas</h2>
+          <canvas id="completedTasksChart"></canvas>
+        </div>
+
+        <!-- Gráfico de Tarefas Atrasadas -->
+        <div class="report-section">
+          <h2>Tarefas Atrasadas</h2>
+          <canvas id="delayedTasksChart"></canvas>
+        </div>
+
+        <!-- Gráfico de Despesas -->
+        <div class="report-section">
+          <h2>Despesas</h2>
+          <canvas id="expensesChart"></canvas>
+          <ul class="expenses-list">
+            <li>Conta de água - R$ 120,00</li>
+            <li>Conta de energia - R$ 110,00</li>
+            <li>Mercado - R$ 270,00</li>
+            <li>Conserto de pia - R$ 100,00</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/graficos.js"></script>
+
+    <nav class="menu">
+        <a href="/pages/inicio/home.html" class="menu-item active">
+            <img src="/assets/icons/common/nav/inicio.svg" alt="Início" class="menu-icon">
+            <img class="img-active" src="/assets/icons/common/nav/inicio-active.svg" alt="Início" class="menu-icon">
+            Início
+        </a>
+        <a href="/pages/financeiro/financeiro.html" class="menu-item">
+            <img src="/assets/icons/common/nav/financeiro.svg" alt="Financeiro" class="menu-icon">
+            <img class="img-active" src="/assets/icons/common/nav/financeiro-active.svg" alt="Financeiro" class="menu-icon">
+            Financeiro
+        </a>
+        <a href="#" class="menu-item">
+            <img src="/assets/icons/common/nav/relatorio.svg" alt="Relatório" class="menu-icon">
+            <img class="img-active" src="/assets/icons/common/nav/reatorio-active.svg" alt="Relatório" class="menu-icon">
+            Relatório
+        </a>
+        <a href="#" class="menu-item">
+            <img src="/assets/icons/common/nav/chat.svg" alt="Chat" class="menu-icon">
+            <img class="img-active" src="/assets/icons/common/nav/chat-active.svg" alt="Chat" class="menu-icon">
+            Chat
+        </a>
+    </nav>
+
+  </body>
+</html>
