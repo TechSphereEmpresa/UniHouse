@@ -2,28 +2,41 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 72px 0;
-    gap: 65px;
 }
 
 header {
-    margin-top: 72px;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo-nome-aplicativo {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+img {
+    flex: 0 1 370px;
 }
 
 main {
-    width: 100%;
-    height: 100%;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 50px;
+    padding-bottom: 30px;
+}
+
+.pagination-dots {
+    display: flex;
+    gap: 16px;
 }
 
 .dot {
     height: 8px;
     width: 8px;
-    margin: 0 8px;
     background-color: #CDD9E3;
     border-radius: 9px;
     transition: width 0.5s, background-color 0.5s, transform 0.5s;
@@ -41,13 +54,13 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
-    gap: 32px;
+    gap: 64px;
 }
 
 .funcao-informacoes {
     display: flex;
     flex-direction: column;
+    width: 320px;
     gap: 32px;
 }
 
@@ -55,21 +68,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 8px;
     gap: 16px;
 }
 
-.titulo-nome-aplicativo {
-    font-family: Montserrat;
-    font-size: 24px;
-    font-weight: 700;
-}
-
 .funcao-titulo {
-    font-family: Urbanist;
     font-size: 28px;
     font-weight: 700;
-    white-space: nowrap;
 }
 
 .funcao-descricao {
@@ -78,9 +82,11 @@ main {
 }
 
 .funcao-descricao-texto {
-    font-family: Urbanist;
     font-size: 20px;
+    font-style: normal;
     font-weight: 400;
+    line-height: 24px; /* 120% */
+    letter-spacing: -0.5px;
 }
 
 .elementVisible, .elementHidden {
@@ -106,12 +112,15 @@ main {
 
 button {
     width: 335px;
-    height: 54px;
+    padding: 14px 0px;
+    
+    
     background-color: #F4A503;
-    color: #000;
-    border: none;
+    border: 2px solid #F4A503;
     border-radius: 18px;
-    font-size: 19px;
+    color: #000;
+    font-family: Urbanist;
+    font-size: 20px;
     font-weight: 700;
     cursor: pointer;
     transition: background-color 0.5s;
@@ -123,14 +132,24 @@ button:hover {
     border: 2px solid #F4A503;
 }
 
-@media (max-width: 802px) {
+@media (max-width: 700px) {
+    main {
+        margin: 0px 10px !important;
+    }
+}
+
+@media (max-width: 8px) {
+    .funcao {
+        width: 370px;
+        gap: 32px;
+    }
+
     .funcao-informacoes, .funcao-informacoes-parte-escrita {
         align-items: center;
     }
 
     .funcao-descricao-texto {
         width: 223px;
-        white-space: normal;
         text-align: center;
     }
 }

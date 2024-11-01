@@ -11,7 +11,7 @@ botao.onclick = function () {
         alternarVisibilidade(currentIndex, currentIndex + 1);
         currentIndex++;
   } else {
-    window.location.href = ''; 
+    window.location.href = '/pages/login-cadastro/login-cadastro.html'; 
   }
 };
 
