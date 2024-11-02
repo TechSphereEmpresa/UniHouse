@@ -173,3 +173,8 @@ input {
     font-weight: 700;
     line-height: 26px;
 }
+
+.submit-button:hover{
+    background-color: #ffd54f;
+
+}
