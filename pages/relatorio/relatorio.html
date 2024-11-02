@@ -11,34 +11,35 @@
 
 </head>
 <body>
-    <div class="container">
-      <h1>Relatório</h1>
-      <div class="reports">
-        <!-- Gráfico de Tarefas Concluídas -->
-        <div class="report-section">
-          <h2>Tarefas Concluídas</h2>
-          <canvas id="completedTasksChart"></canvas>
-        </div>
+  <div class="container">
+    <h1>Relatório</h1>
+    <div class="relatorios">
+      <!-- Gráfico de Tarefas Concluídas -->
+      <div class="secao-relatorio">
+        <h2>Tarefas Concluídas</h2>
+        <canvas id="graficoTarefasConcluidas"></canvas>
+      </div>
 
-        <!-- Gráfico de Tarefas Atrasadas -->
-        <div class="report-section">
-          <h2>Tarefas Atrasadas</h2>
-          <canvas id="delayedTasksChart"></canvas>
-        </div>
+      <!-- Gráfico de Tarefas Atrasadas -->
+      <div class="secao-relatorio">
+        <h2>Tarefas Atrasadas</h2>
+        <canvas id="graficoTarefasAtrasadas"></canvas>
+      </div>
 
-        <!-- Gráfico de Despesas -->
-        <div class="report-section">
-          <h2>Despesas</h2>
-          <canvas id="expensesChart"></canvas>
-          <ul class="expenses-list">
-            <li>Conta de água - R$ 120,00</li>
-            <li>Conta de energia - R$ 110,00</li>
-            <li>Mercado - R$ 270,00</li>
-            <li>Conserto de pia - R$ 100,00</li>
-          </ul>
-        </div>
+      <!-- Gráfico de Despesas -->
+      <div class="secao-relatorio">
+        <h2>Despesas</h2>
+        <canvas id="graficoDespesas"></canvas>
+        <ul class="lista-despesas">
+          <li>Conta de água - R$ 120,00</li>
+          <li>Conta de energia - R$ 110,00</li>
+          <li>Mercado - R$ 270,00</li>
+          <li>Conserto de pia - R$ 100,00</li>
+        </ul>
       </div>
     </div>
+  </div>
+
 
     <script src="/js/graficos.js"></script>
 

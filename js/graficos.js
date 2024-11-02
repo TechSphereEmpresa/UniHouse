@@ -1,8 +1,8 @@
 // Gráfico de Tarefas Concluídas (Pizza)
-const completedTasksCtx = document
-  .getElementById("completedTasksChart")
+const tarefasConcluidasCtx = document
+  .getElementById("graficoTarefasConcluidas")
   .getContext("2d");
-const completedTasksChart = new Chart(completedTasksCtx, {
+const graficoTarefasConcluidas = new Chart(tarefasConcluidasCtx, {
   type: "doughnut",
   data: {
     labels: [
@@ -29,10 +29,10 @@ const completedTasksChart = new Chart(completedTasksCtx, {
 });
 
 // Gráfico de Tarefas Atrasadas (Barra)
-const delayedTasksCtx = document
-  .getElementById("delayedTasksChart")
+const tarefasAtrasadasCtx = document
+  .getElementById("graficoTarefasAtrasadas")
   .getContext("2d");
-const delayedTasksChart = new Chart(delayedTasksCtx, {
+const graficoTarefasAtrasadas = new Chart(tarefasAtrasadasCtx, {
   type: "bar",
   data: {
     labels: ["1", "2", "3", "4"],
@@ -56,8 +56,8 @@ const delayedTasksChart = new Chart(delayedTasksCtx, {
 });
 
 // Gráfico de Despesas (Linha)
-const expensesCtx = document.getElementById("expensesChart").getContext("2d");
-const expensesChart = new Chart(expensesCtx, {
+const despesasCtx = document.getElementById("graficoDespesas").getContext("2d");
+const graficoDespesas = new Chart(despesasCtx, {
   type: "line",
   data: {
     labels: ["Conta de água", "Conta de energia", "Mercado", "Conserto de pia"],
