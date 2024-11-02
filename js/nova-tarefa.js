@@ -1,13 +1,20 @@
-function selectOption(element) {
-    document.querySelectorAll('.opcao').forEach(opcao => {
-        opcao.classList.remove('selected');
+function selectPrioridade(element) {
+    document.querySelectorAll('.prioridade').forEach(prioridade => {
+      prioridade.classList.remove('selected');
     });
     element.classList.add('selected');
   }
 
-  function selectPerson(element) {
-    document.querySelectorAll('.person').forEach(person => {
-      person.classList.remove('selected');
+  function selectFrequencia(element) {
+    document.querySelectorAll('.frequencia').forEach(frequencia => {
+      frequencia.classList.remove('selected');
+    });
+    element.classList.add('selected');
+  }
+
+  function selectMorador(element) {
+    document.querySelectorAll('.morador').forEach(morador => {
+      morador.classList.remove('selected');
     });
     element.classList.add('selected');
   }
