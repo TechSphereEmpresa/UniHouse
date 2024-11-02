@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Urbanist:wght@400;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -20,118 +22,154 @@ body {
     width: 90%;
     max-width: 500px;
     text-align: center;
-    padding-top: 120px; /* Para ajustar a posição do formulário abaixo do header fixo */
+    padding-top: 120px;
 }
 
 header {
     display: flex;
-    height: 102px;
-    padding: 0px 100px 15px 100px;
-    justify-content: flex-end;
     align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-    align-self: stretch;
+    justify-content: center;
+    height: 102px;
+    padding: 0 20px;
     background: #000;
+    position: relative;
+}
+
+.back-button {
+    position: absolute;
+    left: 20px;
 }
 
 .back-button img {
     width: 26px;
     height: 26px;
-    margin-right: 10px;
 }
 
 h1 {
     color: #FFF;
-    text-align: center;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: Urbanist;
     font-size: 22px;
-    font-style: normal;
     font-weight: 700;
-    line-height: 22.5px; /* 102.273% */
     letter-spacing: -0.5px;
-    flex: 1 0 0;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.spacer {
+    width: 26px; /* Define o espaço do tamanho da seta para centralizar o título */
 }
 
 .transfer-form {
-    display:flex;
-    justify-content: space-between;
-    gap: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
     padding-bottom: 300px;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
-.left-section,
-.right-section {
+.left-section {
     display: flex;
     flex-direction: column;
     gap: 20px;
 
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 240px;
 }
 
 .input-group {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    width: 434px;
+    height: 110px;
+    justify-content: center;
+    align-items: center;
 }
 
 label {
-    color: var(--cones, #BCBCBC);
+    color: #BCBCBC;
     font-family: Urbanist;
     font-size: 20px;
-    font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 30px */
-    align-self: stretch;
+ 
 }
 
-input[type="text"] {
+input {
+    display: flex;
+    width: 434px;
+    height: 70px;
+    padding: 18px 30px;
+    align-items: center;
+    border-radius: 23px;
+    border: 2.5px solid #F4A503;
     background-color: #000;
-    border: 2px solid #FFA500;
-    border-radius: 10px;
     color: #fff;
-    padding: 10px;
     font-size: 14px;
     outline: none;
 }
 
 .attach-input {
     display: flex;
+    position: relative;
+    width: 434px;
+    height: 70px;
 }
 
 .attach-input input {
     flex: 1;
+    background-color: #000;
+    border: 2px solid #FFA500;
+    color: #FFA500;
+    font-family: Urbanist, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 20px;
+    border-radius: 23px;
+    outline: none;
+}
+
+.attach-input input::placeholder {
+    color: #FFA500;
 }
 
 .attach-button {
-    background-color: #FFA500;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
     border: none;
-    color: #000;
-    font-size: 18px;
-    padding: 0 15px;
-    border-radius: 10px;
+    color: #FFA500;
+    font-size: 24px;
+    font-weight: bold;
     cursor: pointer;
+    padding: 0;
 }
 
 .submit-button {
-
     font-size: 16px;
     cursor: pointer;
     display: flex;
-    padding: 14px 0px;
+    padding: 14px 0;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    flex-shrink: 0;
     border-radius: 18px;
-    background: var(--Cor-principal, #F4A503);
+    background: #F4A503;
+    width: 434px;
+    height: 70px;
     color: #000;
     text-align: center;
-    font-feature-settings: 'liga' off, 'clig' off;
     font-family: Urbanist;
-    font-size: 16px;
-    font-style: normal;
+    font-size: 20px;
     font-weight: 700;
-    line-height: 26px; /* 108.333% */
-
+    line-height: 26px;
 }
