@@ -1,21 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="5; url=feature-tour.html">
     <title>UniHouse</title>
-    <link rel="icon" href="../assets/images/logo.png" type="iamge/png">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/splash-screen.css">
+    <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 3s;
+            opacity: 0;
+        }
+
+        .loaded {
+            opacity: 1;
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+        }
+
+        #titulo-versao {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        h1 {
+            color: #FFF;
+            text-align: center;
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-family: Montserrat;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 32px;
+        }
+
+        h3 {
+            color: #FFF;
+            text-align: center;
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: -0.5px;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #000;
+            overflow: hidden;
+            height: 3px;
+            max-width: 400px;
+        }
+
+        /* Barra de progresso */
+        .progress-bar {
+            height: 100%;
+            width: 0;
+            background-color: #F4A503;
+            transition: width 0.3s ease;
+        }
+    </style>
 </head>
+
 <body>
     <main>
         <img src="../assets/images/logo.png" alt="Logo">
-        <div id="logo-parte-escrita">
-            <h1 class="titulo">UniHouse</h1>
-            <h3 class="versao">Versão 1.0</h3>
+        <div id="titulo-versao">
+            <h1>UniHouse</h1>
+            <h3>Versão 1.0</h3>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
         </div>
     </main>
+
+    <script>
+        let width = 0;
+        const progressBar = document.getElementById('progress-bar');
+
+
+        window.onload = function () {
+            document.body.classList.add('loaded');
+
+            setTimeout(function () {
+                function increaseProgress() {
+                    if (width >= 100) {
+                        clearInterval(interval);
+                    } else {
+                        width++;
+                        progressBar.style.width = width + '%';
+                    }
+                }
+                const interval = setInterval(increaseProgress, 25);
+
+                setTimeout(function () {
+                    document.body.classList.add('fade-out');
+
+                    setTimeout(function () {
+                        window.location.href = "feature-tour.html";
+                    }, 2500); //
+                }, 3000); //escurecimento
+            }, 2500); //aparecer barra
+        };
+    </script>
 </body>
+
 </html>
