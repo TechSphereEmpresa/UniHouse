@@ -1,61 +1,187 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   background-color: #000;
   color: #fff;
   font-family: Arial, sans-serif;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  min-height: 100vh;
 }
 
-.container {
+header {
+  display: flex;
+  width: 1280px;
+  height: 102px;
+  padding: 0px 20px 15px 20px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background: #000;
+}
+
+h1 { 
+  padding-top: 50px;
+  color: #FFF;
   text-align: center;
-  width: 80%;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Urbanist;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22.5px;
+  letter-spacing: -0.5px;
+  flex: 1 0 0;
 }
 
-h1 {
-  margin-bottom: 20px;
+main {
+  display: flex;
+  justify-content: center;
+  width: 80%;
 }
 
 .relatorios {
   display: flex;
-  justify-content: space-around;
-  gap: 20px;
+  width: 1080px;
+  align-items: flex-start;
+  gap: 30px;
 }
 
 .secao-relatorio {
-  background-color: #222;
+  background-color: #000;
   padding: 20px;
   border-radius: 8px;
   width: 30%;
+  text-align: center;
+  gap: 20px;
+}
+
+.cima-secaoRelatorio{
+  display: flex;
+  padding: 5px;
+  gap: 8px;
+  border-radius: 4px;
+  justify-content: space-between;
+
+}
+
+select{
+  align-items: end;
+  background: #000;
+  display: flex;
+  padding: 4px;
+  gap: 5px;
+  color: var(--cones, #BCBCBC);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+  border-radius: 4px;
+  border-color: #000;
+}
+
+.mes-navegacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  padding-top: 10px;
+}
+
+.mes-navegacao img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.mes-atual {
+  color: #FFF;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 108%; /* 19.44px */
+  letter-spacing: -0.5px;
 }
 
 .secao-relatorio h2 {
-  margin-bottom: 10px;
-  color: #ffa500;
+  color: #FFF;
+  text-align:start;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 108%;
+  letter-spacing: -0.5px;
+  padding-bottom: 10px;
 }
 
 canvas {
-  width: 100% !important;
-  height: 200px !important;
+  padding-top: 25px;
+  width: 170px;
+  height: 170px;
+}
+
+
+
+.lista-tarefas{
+
+  padding: 10px 0px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  list-style: none;
+  color: #FFF;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-align: start;
+} 
+
+.nome-azul span:first-child {
+  color: #264370;
+}
+
+.nome-amarelo span:first-child {
+  color: #F4A503;
+}
+
+.nome-verde span:first-child {
+  color: #3C755A;
+}
+
+.nome-laranja span:first-child {
+  color: #F56602;
+}
+
+.nome-roxo span:first-child {
+  color: #9747FF;
 }
 
 .lista-despesas {
-  margin-top: 10px;
-  text-align: left;
   list-style: none;
+  padding: 0;
+  color: #FFF;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-align: start;
 }
 
-.lista-despesas li {
-  margin: 5px 0;
-  font-size: 0.9em;
+.lista-tarefas li, .lista-despesas li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #444;
+  padding: 8px 0;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
+
 
 
 .menu {
@@ -73,7 +199,6 @@ canvas {
   right: 0;
 }
 
-
 .menu-item {
   display: flex;
   flex-direction: column;
@@ -81,32 +206,26 @@ canvas {
   color: #BCBCBC;
   text-decoration: none;
   font-size: 14px;
-
-
-  .img-active {
-      display: none;
-  }
 }
 
+.menu-item .img-active {
+    display: none;
+}
 
 .menu-item.active {
   color: #F4A503;
-
-
-  .img-active {
-      display: block;
-  }
-
-
-  img {
-      display: none;
-  }
 }
 
+.menu-item.active .img-active {
+    display: block;
+}
+
+.menu-item.active img {
+    display: none;
+}
 
 .menu-icon {
   width: 24px;
   height: 24px;
   margin-bottom: 5px;
 }
-
