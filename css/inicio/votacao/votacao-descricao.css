@@ -1,0 +1,64 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 49px 100px 15px 100px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 20px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.descricao {
+    font-size: 20px;
+}
+
+.data {
+    font-size: 16px;
+    color: #BCBCBC;
+}
+
+hr {
+    border: 1px solid #333;
+} 
+
+.votacao {
+    display: flex;
+    justify-content: space-between;
+}
+
+.votacao h2 {
+    width: fit-content;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.votacao p {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.votos {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+#concordaram {
+    color: #3C755A;
+}
+
+#discordaram {
+    color: #C31818;
+}
+
+#pendente {
+    color: #BCBCBC;
+}

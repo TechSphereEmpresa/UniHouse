@@ -1,10 +1,3 @@
-:root {
-    --main-bg-color: #000;
-    --main-text-color: #fff;
-    --highlight-color: #61dafb;
-    --breakpoint: 364px;
-}
-
 header {
     display: flex;
     justify-content: space-between;

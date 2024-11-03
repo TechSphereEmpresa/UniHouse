@@ -7,48 +7,36 @@ header {
 }
 
 header a {
-    margin-right: auto; 
+    margin-right: auto;
 }
 
 header p {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); 
-    margin: 0; 
+    transform: translateX(-50%);
+    margin: 0;
 
     font-size: 22px;
     font-weight: 700;
 }
 
-/*input {
-    display: flex;
-    width: 335px;
-    height: 54px;
-    padding: 14px 23px;
-    align-items: center;
-    gap: 10px;
-
-    outline: none;
-    border-radius: 18px;
-    border: 2px solid #F4A503;
-    background: #000;
-    color: #fff;
-}*/
-
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
+    padding-bottom: 30px;
     gap: 15px;
 }
 
 form {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: end;
+    justify-content: center;
     width: 737px;
-    gap: 50px;
-    
+    gap: 40px;
+
 }
 
 .caixa-nome, .caixa-opcoes, .caixa-descricao, .caixa-data, .caixa-hora {
@@ -71,16 +59,16 @@ form {
     order: 3;
 }
 
-.caixas-hora {
+.div-caixa-hora {
     order: 4;
+    width: 45%;
     display: flex;
+    justify-content: space-between;
 }
 
 .caixa-opcoes {
     order: 5;
 }
-
-
 
 label {
     font-size: 16px;
@@ -89,9 +77,8 @@ label {
 }
 
 input {
-    max-width: 335px;
     padding: 14px 23px;
-
+    width: 100%;
     outline: none;
     border: 2px solid #F4A503;
     border-radius: 18px;
@@ -105,56 +92,64 @@ input:focus {
     border-color: #BCBCBC;
 }
 
-.opcoes {
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 10px 0;
-    width: 90%; /* Ajuste conforme necessário */
-    scrollbar-width: none;
-  }
-
-  .opcoes::-webkit-scrollbar {
-    display: none;
-  }
+input[type="date"], input[type="time"] {
+    
+}
 
 .opcoes {
     display: flex;
     gap: 10px;
-  }
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
 
-  .opcao {
-      display: flex;
-      width: 100px;
-      height: 33px;
-      align-items: center;
-      justify-content: start;
+.prioridade, .frequencia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 26px;
+
+    font-size: 14px;
+    line-height: 14px;
+    color: #F4A503;
     border: 2px solid #F4A503;
-    border-radius: 8px;
-    color: #ffb100;
+    border-radius: 18px;
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
-  }
-  /*padding: 13px 26px;*/
-  
-  .opcao.selected, .person.selected {
+}
+
+.prioridade::-webkit-scrollbar, .frequencia::-webkit-scrollbar {
+    display: none;
+}
+
+.prioridade.selected, .frequencia.selected {
     background-color: #ffb100;
     color: #000;
-  }
+}
 
-  .usuario {
+.moradores {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.morador {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2px;
-  }
+    gap: 3px;
+    border: none;
+}
 
-  /*.person img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-bottom: 5px;
-  }*/
+.morador.selected {
+    color: #F4A503;
+}
+
+.morador.selected img {
+    content: url('/assets/icons/home/check.svg');
+}
 
 button {
     order: 7;
@@ -176,4 +171,27 @@ button:hover {
     background-color: #000;
     color: #fff;
     border: 2px solid #F4A503;
+}
+
+@media (max-width: 1000px) {
+    header {
+        padding: 30px 20px 20px 20px;
+    }
+
+    main {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .caixa-nome, .caixa-opcoes, .caixa-descricao, .caixa-data, .div-caixa-hora {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
 }

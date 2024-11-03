@@ -1,0 +1,130 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 49px 100px 15px 100px;
+}
+
+header a {
+    margin-right: auto; 
+}
+
+header p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    margin: 0; 
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+main a {
+    color: inherit;       
+    text-decoration: none;        
+}
+
+main a:visited {
+    color: inherit;        
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+}
+
+.votacao {
+    display: flex;
+    width: 335px;
+    height: fit-content;
+    padding: 11px 19px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 10.245px;
+    background: #F56602;
+}
+
+.votacao-titulo-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    color: #000;
+    font-size: 20px;
+}
+
+.votacao-infos {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 14px;
+}
+
+.votacao-botoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+}
+
+#generica {
+    background: #B1B9F8;
+    
+}
+
+#tarefa-concluida {
+    background: #F4A503;
+}
+
+.box-tarefa-info-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: nowrap;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 145px;
+    height: 36px;
+
+    border-radius: 10px;
+    background: #000;
+    border: none;
+    font-family: Urbanist;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.botao-discordo {
+    color: #C31818;
+}
+
+.botao-concordo {
+    color: #3C755A;
+}
+
+@media (max-width: 1244px) {
+    .container {
+        width: 690px;
+    }
+}
+
+@media (max-width: 890px) {
+    .container {
+        width: 335px;
+    }
+}

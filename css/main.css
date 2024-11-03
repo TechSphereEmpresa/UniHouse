@@ -26,7 +26,7 @@ main {
     margin-right: 100px;
 }
 
-@media (max-width: 664px) {
+@media (max-width: 1000px) {
     header {
         padding: 30px 20px 20px 20px;
     }

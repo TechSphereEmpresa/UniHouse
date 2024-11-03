@@ -1,50 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatório</title>
-    <title>Confirmação de Transferência</title>
+    <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/relatorio.css">
-    <link rel="stylesheet" href="../../css/main.css">
-    <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
+    <link rel="icon" href="/assets/images/logo.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.1.0/dist/chartjs-plugin-annotation.min.js"></script>
 
-</head>
+  </head>
 <body>
-  <div class="container">
-    <h1>Relatório</h1>
-    <div class="relatorios">
-      <!-- Gráfico de Tarefas Concluídas -->
-      <div class="secao-relatorio">
-        <h2>Tarefas Concluídas</h2>
-        <canvas id="graficoTarefasConcluidas"></canvas>
-      </div>
+    <header>
+        <h1>Relatório</h1>
+    </header>
 
-      <!-- Gráfico de Tarefas Atrasadas -->
-      <div class="secao-relatorio">
-        <h2>Tarefas Atrasadas</h2>
-        <canvas id="graficoTarefasAtrasadas"></canvas>
-      </div>
+    <main>
+        <div class="relatorios">
+            <section class="secao-relatorio">
+              <div class="cima-secaoRelatorio">
+                <h2>Tarefas Concluídas</h2>
+                <select id="tipo-grafico">
+                  <option value="Atrasadas">Setor</option>
+                  <option value="Hoje">Barras</option>
+                  <option value="Essa semana">Linhas</option>
+              </select>
+              </div>
+              <div class="mes-navegacao">
+                  <img src="/assets/icons/relatorio/seta_esquerda.svg" alt="Seta Esquerda" class="seta-esquerda">
+                  <span class="mes-atual">Janeiro</span>
+                  <img src="/assets/icons/relatorio/seta_direita.svg" alt="Seta Direita" class="seta-direita">
 
-      <!-- Gráfico de Despesas -->
-      <div class="secao-relatorio">
-        <h2>Despesas</h2>
-        <canvas id="graficoDespesas"></canvas>
-        <ul class="lista-despesas">
-          <li>Conta de água - R$ 120,00</li>
-          <li>Conta de energia - R$ 110,00</li>
-          <li>Mercado - R$ 270,00</li>
-          <li>Conserto de pia - R$ 100,00</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+              </div>
+                <canvas id="graficoTarefasConcluidas"></canvas>
+            </section>
 
+            <section class="secao-relatorio">
+                <div class="cima-secaoRelatorio">
+                  <h2>Tarefas Atrasadas</h2>
+                  <select id="tipo-grafico">
+                    <option value="Atrasadas">Setor</option>
+                    <option value="Hoje">Barras</option>
+                    <option value="Essa semana">Linhas</option>
+                </select>
+                </div>
+                <div class="mes-navegacao">
+                  <img src="/assets/icons/relatorio/seta_esquerda.svg" alt="Seta Esquerda" class="seta-esquerda">
+                  <span class="mes-atual">Janeiro</span>
+                  <img src="/assets/icons/relatorio/seta_direita.svg" alt="Seta Direita" class="seta-direita">
+              </div>
+                <canvas id="graficoTarefasAtrasadas"></canvas>
+                <ul class="lista-tarefas">
+                  <li class="nome-azul"><span>[Nome]</span> <span>1</span></li>
+                  <li class="nome-amarelo"><span>[Nome]</span> <span>2</span></li>
+                  <li class="nome-verde"><span>[Nome]</span> <span>1</span></li>
+                  <li class="nome-laranja"><span>[Nome]</span> <span>2</span></li>
+                  <li class="nome-roxo"><span>[Nome]</span> <span>1</span></li>
+              </ul>
+            </section>
 
-    <script src="/js/graficos.js"></script>
+            <section class="secao-relatorio">
+              <div class="cima-secaoRelatorio">
+                <h2>Despesas</h2>
+                <select id="tipo-grafico">
+                  <option value="Atrasadas">Setor</option>
+                  <option value="Hoje">Barras</option>
+                  <option value="Essa semana">Linhas</option>
+              </select>
+              </div>
+              <div class="mes-navegacao">
+                <img src="/assets/icons/relatorio/seta_esquerda.svg" alt="Seta Esquerda" class="seta-esquerda">
+                <span class="mes-atual">Janeiro</span>
+                <img src="/assets/icons/relatorio/seta_direita.svg" alt="Seta Direita" class="seta-direita">
+            </div>
+                <canvas id="graficoDespesas"></canvas>
+                <ul class="lista-despesas">
+                  <li><span>Conta de água</span> <span>R$ 120,00</span></li>
+                  <li><span>Conta de energia</span> <span>R$ 110,00</span></li>
+                  <li><span>Mercado</span> <span>R$ 270,00</span></li>
+                  <li><span>Conserto da pia</span> <span>R$ 100,00</span></li>
+              </ul>
+            </section>
+        </div>
+    </main>
 
     <nav class="menu">
-        <a href="/pages/inicio/home.html" class="menu-item">
+        <a href="/pages/inicio/inicio.html" class="menu-item">
             <img src="/assets/icons/common/nav/inicio.svg" alt="Início" class="menu-icon">
             <img class="img-active" src="/assets/icons/common/nav/inicio-active.svg" alt="Início" class="menu-icon">
             Início
@@ -59,12 +101,14 @@
             <img class="img-active" src="/assets/icons/common/nav/reatorio-active.svg" alt="Relatório" class="menu-icon">
             Relatório
         </a>
-        <a href="#" class="menu-item">
+        <a href="/pages/relatorio/relatorio.html" class="menu-item">
             <img src="/assets/icons/common/nav/chat.svg" alt="Chat" class="menu-icon">
             <img class="img-active" src="/assets/icons/common/nav/chat-active.svg" alt="Chat" class="menu-icon">
             Chat
         </a>
     </nav>
 
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/graficos.js"></script>
+</body>
 </html>
