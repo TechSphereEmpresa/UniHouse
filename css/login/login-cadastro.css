@@ -26,8 +26,8 @@ body {
 
 /* Estilo da seta de volta */
 .back-button {
-    font-size: 25px;
-    color: #656F77; /* Cor da seta em cinza */
+    font-size: 30px;
+    color: #656F77;
     text-decoration: none;
     position: absolute;
     top: 50px; /* Ajuste a altura da seta aqui */
@@ -38,9 +38,9 @@ body {
 h1 {
     font-size: 24px;
     color: #fff;
-    margin-bottom: 40px; /* Ajusta o espaço entre o título e os botões */
+    margin-bottom: 60px; /* Ajusta o espaço entre o título e os botões */
     margin-top: 15px; /* Espaço acima do título */
-    text-align: left = 2;
+    text-align: left = 1px;
     width: 100%;
     margin-right: 15px; /* Espaço entre o marcador e o texto */
 }
@@ -49,7 +49,7 @@ h1 {
 .input-field, .btn-registrar {
     width: 100%;
     padding: 20px;
-    border-radius: 25px; /* Arredondamento dos botões brancos e botão amarelo */
+    border-radius: 16px; /* Arredondamento dos botões brancos e botão amarelo */
     font-size: 16px;
     margin-bottom: 8px; /* Reduzido para aproximar os botões */
     border: none;
@@ -84,7 +84,7 @@ h1 {
 /* Botões dentro dos contêineres que ficam lado a lado */
 .input-container input {
     width: calc(50% - 12px); /* Largura para que os botões lado a lado fiquem do mesmo tamanho */
-    border-radius: 25px; /* Arredondamento dos botões brancos duplos */
+    border-radius: 16px; /* Arredondamento dos botões brancos duplos */  
 }
 
 /* Estilo dos botões transparentes de escolha */
@@ -102,7 +102,7 @@ h1 {
     border: 1px solid #fff;
     color: #fff;
     cursor: pointer;
-    border-radius: 25px; /* Arredondamento dos botões transparentes */
+    border-radius: 16px; /* Arredondamento dos botões transparentes */
     width: calc(50% - 10px); /* Largura para manter alinhado os botões lado a lado */
     background-color: transparent;
 }

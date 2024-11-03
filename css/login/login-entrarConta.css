@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Layout principal */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+.back-button {
+    font-size: 30px;
+    color: #656F77;
+    text-decoration: none;
+    position: absolute;
+    top: 50px; /* Ajuste a altura da seta aqui */
+    left: 30px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 60px; /* Ajusta o espaço entre o título e os botões */
+    margin-top: 15px; /* Espaço acima do título */
+    text-align: left = 1px;
+    width: 100%;
+    margin-right: 15px; /* Espaço entre o marcador e o texto */
+}
+
+.input-field-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 20px;
+    border-radius: 16px; /* Arredondamento dos botões brancos e botão amarelo */
+    font-size: 16px;
+    margin-bottom: -5px; /* Reduzido para aproximar os botões */
+    border: none;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #656F77;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    color: #656F77;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.btn-entrar {
+    width: 100%;
+    padding: 15px;
+    border-radius: 16px;
+    font-size: 14px;
+    background-color: #F4A503;
+    color: #000;
+    font-weight: SemiBold;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: -5px;
+}
+
+.btn-entrar:hover {
+    background-color: #d29502;
+}
