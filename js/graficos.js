@@ -114,7 +114,7 @@ const graficoDespesas = new Chart(ctxDespesas, {
                     callback: function(value) {
                         return "R$ " + value; // Formato de moeda
                     },
-                    display: false // Oculta os labels do eixo Y
+                     // Oculta os labels do eixo Y
                 }
             }
         },
