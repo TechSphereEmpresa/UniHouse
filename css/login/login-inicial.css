@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column; /* Alinha os botões verticalmente */
+    gap: 16px; /* Espaço de 16px entre os botões */
+}
+
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 335px; /* Definido como uma largura fixa */
+}
+
+.btn-login {
+    background-color: #F4A503; 
+    color: #000;
+    border-radius: 18px;
+    opacity: 100%;
+}
+
+.btn-login:hover {
+    background-color: #F4A503;
+}
+
+.btn-cadastro {
+    background-color: transparent;
+    border: 2px solid #F4A503; 
+    color: #F4A503;
+    border-radius: 18px;
+    opacity: 100%;
+}
+
+.btn-cadastro:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Define o layout principal da página */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px; /* Ajuste a largura máxima */
+    width: 100%;
+}
+
+/* Estilo da seta de voltar */
+.back-button {
+    font-size: 30px;
+    color: #656F77; /* Cor da seta em cinza */
+    text-decoration: none;
+    position: absolute;
+    top: 60px; /* Ajuste a altura da seta aqui */
+    left: 20px;
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 30px; /* A distância entre o título e os botões: ajuste aqui */
+    margin-top: 15px; /* Espaço acima do título */
+    text-align: left;
+    width: 100%;
+}
+
+/* Estilos para campos de entrada e botão "Registrar" */
+.input-field, .btn-registrar {
+    width: 95%; /* Largura aumentada: AQUI você pode ajustar a largura dos botões e campos */
+    padding: 20px;
+    border-radius: 25px; /* Arredondamento dos botões brancos e botão amarelo */
+    font-size: 16px;
+    margin-bottom: 12px; /* Espaçamento entre os campos */
+    border: none;
+}
+
+/* Estilo dos botões brancos */
+.input-field {
+    background-color: #fff; /* Cor de fundo dos botões brancos */
+    color: #000; /* Cor do texto dos botões brancos */
+}
+
+/* Botão "Registrar" */
+.btn-registrar {
+    background-color: #F4A503; /* Cor mostarda */
+    color: #000; /* Cor do texto do botão amarelo */
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-registrar:hover {
+    background-color: #d29502; /* Cor ao passar o mouse no botão "Registrar" */
+}
+
+/* Contêiner para botões que ficam lado a lado (como "Email Universitário" e "Telefone") */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px; /* Ajuste de espaçamento entre grupos */
+}
+
+/* Botões dentro dos contêineres que ficam lado a lado */
+.input-container input {
+    width: calc(50% - 12px); /* Largura para os botões lado a lado */
+    border-radius: 25px; /* Arredondamento dos botões brancos duplos */
+}
+
+/* Estilo dos botões transparentes de escolha */
+.radio-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px; /* Espaço entre os botões transparentes e o botão amarelo */
+}
+
+/* Estilo individual dos botões transparentes */
+.radio-option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 25px; /* Arredondamento dos botões transparentes */
+    width: calc(50% - 12px); /* Largura para manter alinhado os botões lado a lado */
+    background-color: transparent; /* Fundo transparente */
+    transition: background-color 0.3s; /* Efeito de transição de cor */
+}
+
+/* Adiciona estilo ao botão de "Morador" quando selecionado */
+.radio-option.selected {
+    background-color:#264370; /* Cor azul clara para o botão de Morador selecionado */
+    color: #000; /* Cor do texto quando selecionado */
+}
+
+.radio-option input[type="radio"] {
+    accent-color: #fff; /* Cor do marcador dos botões transparentes */
+    margin-right: 10px; /* Espaço entre o marcador e o texto */
+}

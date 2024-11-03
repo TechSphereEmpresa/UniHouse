@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login Inicial</title>
+    <link rel="stylesheet" href="/css/login/login-morador.css">
+    <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+    </style>
+  </head>
+  <body>
+      <div class="container">
+          <a href="#" class="back-button">←</a> <!-- Seta sozinha -->
+  
+          <h1>Faça o cadastro da sua conta para começar</h1>
+  
+          <!-- Campo de nome -->
+          <input type="text" class="input-field" placeholder="Nome">
+  
+          <!-- Grupo de campos "Email Universitário" e "Telefone" -->
+          <div class="input-container">
+              <input type="email" class="input-field" placeholder="Email universitário">
+              <input type="tel" class="input-field" placeholder="Telefone">
+          </div>
+  
+          <!-- Grupo de campos "Senha" e "Confirmar Senha" -->
+          <div class="input-container">
+              <input type="password" class="input-field" placeholder="Senha">
+              <input type="password" class="input-field" placeholder="Confirmar senha">
+          </div>
+  
+          <!-- Opções de escolha "Morador" e "Administrador" -->
+          <div class="radio-container">
+              <label class="radio-option" id="moradorOption"> <!-- Botão Morador -->
+                  <input type="radio" name="role" value="morador" checked>
+                  Morador (entra em uma república)
+              </label>
+              <label class="radio-option" id="adminOption"> <!-- Botão Administrador -->
+                  <input type="radio" name="role" value="administrador">
+                  Administrador (criar uma república)
+              </label>
+          </div>
+  
+          <!-- Botão de registrar -->
+          <button class="btn-registrar">Registrar</button>
+      </div>
+  
+      <script>
+          // Adiciona eventos de clique para alterar o estilo dos botões de rádio
+          const moradorOption = document.getElementById('moradorOption');
+          const adminOption = document.getElementById('adminOption');
+  
+          moradorOption.addEventListener('click', function() {
+              moradorOption.classList.add('selected');
+              adminOption.classList.remove('selected');
+          });
+  
+          adminOption.addEventListener('click', function() {
+              adminOption.classList.add('selected');
+              moradorOption.classList.remove('selected');
+          });
+      </script>
+  </body>
+  </html>

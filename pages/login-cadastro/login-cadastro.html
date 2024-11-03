@@ -3,86 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Login Inicial</title>
+    <title>Cadastro de Conta</title>
+    <link rel="stylesheet" href="/css/login/login-cadastro.css">
+    <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
+    <link rel="stylesheet" href="/css/main.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-        }
-
-        .logo {
-            width: 150px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        .company-name {
-            font-size: 24px;
-            font-weight: bold;
-            color: #fff;
-            margin-bottom: 30px;
-        }
-
-        .btn-container {
-            display: flex;
-            flex-direction: column; 
-            gap: 16px; 
-        }
-
-        .btn {
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            text-decoration: none;
-            width: 335px; 
-        }
-
-        .btn-login {
-            background-color: #F4A503; 
-            color: #000;
-            border-radius: 18px;
-            opacity: 100%;
-        }
-
-        .btn-login:hover {
-            background-color: #F4A503;
-        }
-
-        .btn-cadastro {
-            background-color: transparent;
-            border: 2px solid #F4A503; 
-            color: #F4A503;
-            border-radius: 18px;
-            opacity: 100%;
-        }                              
-
-        .btn-cadastro:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
     </style>
 </head>
 <body>
-    <div>
-        <img src="/assets/images/logo.png" alt="Logo" class="logo">
-        <div class="company-name">UniHouse</div>
-        <div class="btn-container">
-            <a href="#" class="btn btn-login">Entrar</a>
-            <a href="#" class="btn btn-cadastro">Cadastrar</a>
+    <div class="container">
+        <a href="#" class="back-button">← Voltar</a>
+        <h1>Faça o cadastro da sua conta para começar</h1>
+
+        <input type="text" class="input-field" placeholder="Nome">
+
+        <div class="input-container">
+            <input type="email" class="input-field" placeholder="Email universitário">
+            <input type="tel" class="input-field" placeholder="Telefone">
         </div>
+
+        <div class="input-container">
+            <input type="password" class="input-field" placeholder="Senha">
+            <input type="password" class="input-field" placeholder="Confirmar senha">
+        </div>
+
+        <div class="radio-container">
+            <label class="radio-option">
+                <input type="radio" name="role" value="morador">
+                Morador (entra em uma república)
+            </label>
+            <label class="radio-option">
+                <input type="radio" name="role" value="administrador">
+                Administrador (criar uma república)
+            </label>
+        </div>
+
+        <button class="btn-registrar">Registrar</button>
     </div>
 </body>
 </html>
