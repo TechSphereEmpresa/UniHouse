@@ -27,8 +27,6 @@ body {
 
 header {
     display: flex;
-    align-items: center;
-    justify-content: center;
     height: 102px;
     padding: 0 20px;
     background: #000;
@@ -38,6 +36,9 @@ header {
 .back-button {
     position: absolute;
     left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
 }
 
 .back-button img {
@@ -56,10 +57,6 @@ h1 {
     margin: 0 auto;
 }
 
-.spacer {
-    width: 26px; /* Define o espaço do tamanho da seta para centralizar o título */
-}
-
 .transfer-form {
     display: flex;
     justify-content: center;
@@ -67,20 +64,20 @@ h1 {
     padding-bottom: 300px;
     flex-wrap: wrap;
     align-items: flex-start;
+    padding-top: 20px;
 }
 
 .left-section {
     display: flex;
     flex-direction: column;
     gap: 20px;
-
 }
 
 .right-section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+    align-items: center;
     height: 240px;
 }
 
@@ -99,7 +96,7 @@ label {
     font-family: Urbanist;
     font-size: 20px;
     font-weight: 500;
- 
+    align-self: self-start;
 }
 
 input {
@@ -112,7 +109,8 @@ input {
     border: 2.5px solid #F4A503;
     background-color: #000;
     color: #fff;
-    font-size: 14px;
+    font-size: 20px;
+    font-family: Urbanist;
     outline: none;
 }
 
@@ -174,7 +172,6 @@ input {
     line-height: 26px;
 }
 
-.submit-button:hover{
+.submit-button:hover {
     background-color: #ffd54f;
-
 }
