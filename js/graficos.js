@@ -84,9 +84,9 @@ const graficoDespesas = new Chart(ctxDespesas, {
         labels: ["1", "2", "3", "4", "5", "6", "7"], // Representa dias ou semanas
         datasets: [{
             label: "Despesas",
-            data: [300, 500, 400, 600, 550, 750, 400],
+            data: [120, 110, 270, 100, 300, 750, 400],
             borderColor: "#FFA500", // Cor da linha
-            pointBackgroundColor: ["#E67D2E", "#E67D2E", "#E67D2E", "#FF0000", "#E67D2E", "#E67D2E", "#E67D2E"], // Pontos com destaque
+            pointBackgroundColor: ["#E67D2E", "#E67D2E", "#E67D2E", "#E67D2E", "#E67D2E", "#FF0000", "#E67D2E"], // Pontos com destaque
             backgroundColor: ctxDespesas.createLinearGradient(0, 0, 0, 400), // Gradiente
             fill: true,
             tension: 0.4,
@@ -100,6 +100,9 @@ const graficoDespesas = new Chart(ctxDespesas, {
             x: {
                 grid: {
                     color: "rgba(255, 255, 255, 0.1)"
+                },
+                ticks: {
+                    display: false // Oculta os labels do eixo X
                 }
             },
             y: {
@@ -110,13 +113,14 @@ const graficoDespesas = new Chart(ctxDespesas, {
                 ticks: {
                     callback: function(value) {
                         return "R$ " + value; // Formato de moeda
-                    }
+                    },
+                    display: false // Oculta os labels do eixo Y
                 }
             }
         },
         plugins: {
             legend: {
-                display: false
+                display: false // Oculta a legenda
             },
             tooltip: {
                 callbacks: {
