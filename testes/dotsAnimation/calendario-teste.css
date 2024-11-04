@@ -1,99 +1,135 @@
-header {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    position: relative;
-    padding: 49px 100px 15px 100px;
-
-    border-radius: 0px 0px 16px 16px;
-    background: #264370;
-}
-
-header a {
-    margin-right: auto; 
-}
-
-header p {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%); 
-    margin: 0; 
-
-    font-size: 22px;
-    font-weight: 700;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-}
-
-.div-hora {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 120px;
-}
-
-.tarefa-marcada {
-    display: flex;
-    align-items: start;
-
-    .div-hora {
-        margin: 0px;
-    }
-}
-
-hr {
-    flex: 1;
-}
-
-.box-tarefa {
-    display: flex;
-    width: 235px;
-    height: 120px;
-    padding: 10px;
-    align-items: center;
-    gap: 13px;
-    margin-top: 9.5px;
-    
-    border-radius: 10px;
-    background: #F4A503;
-}
-
-.box-tarefa-info {
-    display: flex;
-    flex-direction: column;
+    padding: 0 10px;
     justify-content: center;
-    align-items: flex-start;
-    color: #000;
+    min-height: 100vh;
+    background: #FFDEAD;
 }
 
-.box-tarefa-info-data {
+.wrapper {
+    width: 450px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.wrapper header {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 5px;
-    flex-wrap: nowrap;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
 }
 
-.tarefa-nome {
-    font-size: 18px;
-}
-
-.tarefa-data {
-    font-size: 12px;
-}
-
-main a {
-    font-size: 17px;
+header .current-date {
+    font-size: 1.45rem;
     font-weight: 500;
-    color: inherit;       
-    text-decoration: none;        
 }
 
-main a:visited {
-    color: inherit;        
-    text-decoration: none;
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#dropdownBtn {
+    background-color: #f9f9f9;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#dropdownMenu {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown-content h4 {
+    margin: 10px;
+    font-weight: bold;
+}
+
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-content ul li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.dropdown-content ul li:hover {
+    background-color: #f1f1f1;
+}
+
+.calendar {
+    padding: 20px;
+}
+
+.calendar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+}
+
+.calendar .weeks li {
+    font-weight: 500;
+    cursor: default;
+    width: calc(100% / 7);
+}
+
+.calendar li {
+    color: #333;
+    width: calc(100% / 7);
+    font-size: 1.07rem;
+}
+
+.calendar .days li {
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+}
+
+.days li.inactive {
+    color: #aaa;
+}
+
+.days li.active {
+    color: #fff;
+}
+
+.days li::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+    background: #FFDEAD;
+}
+
+.days li:not(.active):hover::before {
+    background: #f2f2f2;
 }

@@ -37,7 +37,6 @@ a:visited {
 
 #header-rep {
     display: flex;
-    align-items: center;
     gap: 4px;
 }
 
@@ -52,10 +51,14 @@ a:visited {
     font-weight: 600;
 }
 
-#rep-nome {
+a #rep-nome {
+    font-size: 14px;
+    line-height: 22px;
+    transition: color 0.5s;
+}
 
-    font-size: 12px;
-    font-weight: 600;
+a #rep-nome:hover {
+    color: #F4A503;
 }
 
 main {
@@ -248,7 +251,7 @@ main {
     border: none;
   }
 
-@media (max-width: 664px) {
+@media (max-width: 1000px) {
     main {
         flex-direction: column;
     }
@@ -292,9 +295,21 @@ main {
     color: #BCBCBC;
     text-decoration: none;
     font-size: 14px;
-
+    transition: 0.5s;
     .img-active {
         display: none;
+    }
+}
+
+.menu-item:hover {
+    color: #F4A503;
+
+    img {
+        display: none;
+    }
+    
+    .img-active {
+        display: block;
     }
 }
 

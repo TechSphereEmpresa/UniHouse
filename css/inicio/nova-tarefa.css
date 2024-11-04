@@ -33,8 +33,7 @@ form {
     display: flex;
     flex-wrap: wrap;
     align-items: end;
-    justify-content: center;
-    width: 737px;
+    justify-content: space-between;
     gap: 40px;
 
 }
@@ -90,10 +89,6 @@ input {
 
 input:focus {
     border-color: #BCBCBC;
-}
-
-input[type="date"], input[type="time"] {
-    
 }
 
 .opcoes {
@@ -153,7 +148,7 @@ input[type="date"], input[type="time"] {
 
 button {
     order: 7;
-    width: 335px;
+    width: 45%;
     height: 54px;
     background-color: #F4A503;
     color: #000;

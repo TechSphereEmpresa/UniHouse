@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário App</title>
+    <link rel="stylesheet" href="teste.css">
+</head>
+<body>
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <button id="prev-month" class="back-button">&#8592;</button>
+            <h1>Calendário</h1>
+            <button id="next-month" class="add-button">+</button>
+        </div>
+        <div class="calendar-month">
+            <span id="current-month-year" class="month-year">Janeiro 2024</span>
+        </div>
+        <div class="calendar-days">
+            <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
+            <div id="days-container"></div>
+        </div>
+    </div>
+
+    <div class="agenda">
+        <div class="time-slot">06:00</div>
+        <div class="time-slot">07:00</div>
+        <div class="time-slot">08:00</div>
+        <div class="time-slot">
+            <div class="event" style="background-color: #FFA500;">
+                <span class="event-title">Lavar banheiro</span>
+                <span class="event-time">18/01/24 - 09:00</span>
+            </div>
+        </div>
+        <div class="time-slot">10:00</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

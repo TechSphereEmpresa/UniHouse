@@ -1,99 +1,282 @@
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    padding: 49px 100px 15px 100px;
-
-    border-radius: 0px 0px 16px 16px;
-    background: #264370;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 100%;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
-header a {
-    margin-right: auto; 
+.cabecalho {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 49px 100px 15px 100px;
+
+  border-radius: 0px 0px 16px 16px;
+  background: #264370;
+
 }
 
-header p {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%); 
-    margin: 0; 
+.cabecalho a {
+  margin-right: auto;
+}
 
-    font-size: 22px;
-    font-weight: 700;
+.cabecalho p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#wrapper {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  height: fit-content;
+  padding: 20px;
+  background: #264370;
+  border-radius: 0 0 10px 10px;
+  gap: 20px;
+  margin-right: 100px;
+}
+
+#wrapper .cabecalho-calendario {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.cabecalho-calendario .current-date {
+  font-size: 22px;
+  pointer-events: none;
+  font-family: Urbanist;
+  color: #fff;
+  font-weight: 600;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+#dropdownBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #264370;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  width: 193px;
+  height: 175px;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px;
+}
+
+.dropdown-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.months,
+.years {
+  height: 155px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.months {
+  flex: 1;
+}
+
+.dropdown-content ul {
+  list-style: none;
+}
+
+.dropdown-content ul::-webkit-scrollbar {
+  display: none;
+}
+
+.dropdown-content ul li {
+  flex: 1;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dropdown-content ul li:hover {
+  background-color: #fff;
+  color: #264370;
+}
+
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+
+.calendar .weeks li {
+  font-size: 12px;
+  color: #BCBCBC;
+  cursor: default;
+  width: calc(100% / 7);
+}
+
+.calendar li {
+  color: #fff;
+  width: calc(100% / 7);
+  font-size: 16px;
+
+}
+
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 20px;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.active {
+  color: #264370;
+}
+
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 8px;
+  transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+  background: #fff;
+}
+
+.days li:not(.active):hover::before {
+  color: #F4A503;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 180px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+#horarios {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
 }
 
 .div-hora {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 120px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 120px;
 }
 
 .tarefa-marcada {
-    display: flex;
-    align-items: start;
+  display: flex;
+  align-items: start;
 
-    .div-hora {
-        margin: 0px;
-    }
+  .div-hora {
+    margin: 0px;
+  }
 }
 
 hr {
-    flex: 1;
+  flex: 1;
 }
 
 .box-tarefa {
-    display: flex;
-    width: 235px;
-    height: 120px;
-    padding: 10px;
-    align-items: center;
-    gap: 13px;
-    margin-top: 9.5px;
-    
-    border-radius: 10px;
-    background: #F4A503;
+  display: flex;
+  width: 235px;
+  height: 120px;
+  padding: 10px;
+  align-items: center;
+  gap: 13px;
+  margin-top: 9.5px;
+
+  border-radius: 10px;
+  background: #F4A503;
 }
 
 .box-tarefa-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #000;
 }
 
 .box-tarefa-info-data {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-    flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: nowrap;
 }
 
 .tarefa-nome {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .tarefa-data {
-    font-size: 12px;
+  font-size: 12px;
+}
+
+.secao-vazia {
+  width: 375px;
+  background: #BCBCBC;
 }
 
 main a {
-    font-size: 17px;
-    font-weight: 500;
-    color: inherit;       
-    text-decoration: none;        
+  font-size: 17px;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
 }
 
 main a:visited {
-    color: inherit;        
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 1357px) {
+  header {
+      padding: 30px 50px 50px;
+  }
+
+  main {
+      margin: 0 50px;
+  }
 }

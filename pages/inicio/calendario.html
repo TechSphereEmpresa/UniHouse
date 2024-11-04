@@ -5,53 +5,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendário</title>
-    <link rel="icon" href="../../assets/images/logo.png" type="iamge/png">
+    <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
     <link rel="stylesheet" href="/css/inicio/calendario.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
-    <header>
-        <a href="inicio.html">
-            <img src="/assets/icons/common/seta-voltar.svg" alt="">
-        </a>
-        <p>Calendário</p>
-    </header>
-    <div>
-        <p>Janeiro 2024</p>
-    </div>
-
-    <main>
-        <div class="div-hora">
-            <p>06:00</p>
-            <hr class="divisoria">
-        </div>
-        <div class="tarefa-marcada">
-            <div class="div-hora">
-                <p>09:00</p>
-                <hr class="divisoria">
+        <header>
+            <div class="cabecalho">
+                <a href="inicio.html">
+                    <img src="/assets/icons/common/seta-voltar.svg" alt="">
+                </a>
+                <p>Calendário</p>
             </div>
-            <a class="box-tarefa" href="tarefa.html">
-                <img src="../../assets/icons/home/tarefa.svg" alt="">
-    
-                <div class="box-tarefa-info">
-                    <p class="tarefa-nome">Lavar banheiro</p>
-    
-                    <div class="box-tarefa-info-data">
-                        <img src="../../assets/icons/home/data.svg" alt="">
-                        <time class="tarefa-data" datetime="2024-01-18">18/01/2024</time>
-                        <p class="tarefa-data">-</p>
-                        <img src="../../assets/icons/home/relogio.svg" alt="">
-                        <p class="tarefa-data">09:00</p>
+            <div id="wrapper">
+                <div class="cabecalho-calendario">
+                    <div class="dropdown">
+                        <button id="dropdownBtn"">
+                            <div class=" current-date" id="monthYear">
+                    </div>
+                    <img src="/assets/icons/home/calendario/triangulo-mes.svg" alt="">
+                    </button>
+                    <div id="dropdownMenu" class="dropdown-content">
+                        <div class="dropdown-items">
+                            <div class="months">
+                                <ul>
+                                    <li onclick="setMonth(0)">Janeiro</li>
+                                    <li onclick="setMonth(1)">Fevereiro</li>
+                                    <li onclick="setMonth(2)">Março</li>
+                                    <li onclick="setMonth(3)">Abril</li>
+                                    <li onclick="setMonth(4)">Maio</li>
+                                    <li onclick="setMonth(5)">Junho</li>
+                                    <li onclick="setMonth(6)">Julho</li>
+                                    <li onclick="setMonth(7)">Agosto</li>
+                                    <li onclick="setMonth(8)">Setembro</li>
+                                    <li onclick="setMonth(9)">Outubro</li>
+                                    <li onclick="setMonth(10)">Novembro</li>
+                                    <li onclick="setMonth(11)">Dezembro</li>
+                                </ul>
+                            </div>
+                            <div class="years">
+                                <ul>
+                                    <li onclick="setYear(2023)">2023</li>
+                                    <li onclick="setYear(2024)">2024</li>
+                                    <li onclick="setYear(2025)">2025</li>
+                                    <li onclick="setYear(2026)">2026</li>
+                                    <li onclick="setYear(2027)">2027</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </a>
-        </div>
-        <div class="div-hora">
-            <p>06:00</p>
-            <hr class="divisoria">
-        </div>
+                <img src="/assets/icons/home/mais.svg" alt="">
+            </div>
+            <div class="calendar">
+                <ul class="weeks">
+                    <li>D</li>
+                    <li>S</li>
+                    <li>T</li>
+                    <li>Q</li>
+                    <li>Q</li>
+                    <li>S</li>
+                    <li>S</li>
+                </ul>
+                <ul class="days"></ul>
+            </div>
+            </div>
+        </header>
+
+    <main>
+        <section id="horarios">
+            <div class="div-hora">
+                <p>01:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>02:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>03:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>04:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>05:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>06:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>07:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>08:00</p>
+                <hr class="divisoria">
+            </div>
+
+            <div class="tarefa-marcada">
+                <div class="div-hora">
+                    <p>09:00</p>
+                    <hr class="divisoria">
+                </div>
+                <a class="box-tarefa" href="tarefa.html">
+                    <img src="../../assets/icons/home/tarefa.svg" alt="">
+
+                    <div class="box-tarefa-info">
+                        <p class="tarefa-nome">Lavar banheiro</p>
+
+                        <div class="box-tarefa-info-data">
+                            <img src="../../assets/icons/home/data.svg" alt="">
+                            <time class="tarefa-data" datetime="2024-01-18">18/01/2024</time>
+                            <p class="tarefa-data">-</p>
+                            <img src="../../assets/icons/home/relogio.svg" alt="">
+                            <p class="tarefa-data">09:00</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="div-hora">
+                <p>10:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>11:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>12:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>13:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>14:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>15:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>16:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>17:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>18:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>19:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>20:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>21:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>22:00</p>
+                <hr class="divisoria">
+            </div>
+            <div class="div-hora">
+                <p>23:00</p>
+                <hr class="divisoria">
+            </div>
+        </section>
+        <section class="secao-vazia"></section>
     </main>
+
+    <script src="/js/calendario.js" defer></script>
 </body>
 
 </html>

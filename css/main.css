@@ -2,6 +2,7 @@
 
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -15,6 +16,11 @@ html, body {
     color: #FFF;
     font-family: Urbanist;
     font-weight: 600;
+    overflow: auto; /* remover barra de rolagem*/
+}
+
+body::-webkit-scrollbar {
+    display: none; 
 }
 
 header {
@@ -22,17 +28,25 @@ header {
 }
 
 main {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 20px 100px;
 }
 
 @media (max-width: 1000px) {
     header {
-        padding: 30px 20px 20px 20px;
+        padding: 30px 50px 50px;
     }
 
     main {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin: 0 50px;
+    }
+}
+
+@media (max-width: 664px) {
+    header {
+        padding: 30px 20px 20px;
+    }
+
+    main {
+        margin: 0 20px;
     }
 }

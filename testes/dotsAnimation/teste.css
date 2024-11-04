@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #FFFFFF;
+}
+
+.calendar-container {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    background-color: #1E3A5F;
+    border-radius: 10px;
+    padding: 10px;
+    color: #FFFFFF;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.back-button,
+.add-button {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.calendar-month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.dropdown {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.day {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.day.selected {
+    background-color: #FFFFFF;
+    color: #1E3A5F;
+}
+
+.day.today {
+    background-color: #FFA500;
+    color: #FFFFFF;
+}
+
+.agenda {
+    background-color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.time-slot {
+    position: relative;
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    font-size: 0.9em;
+    color: #888;
+}
+
+.event {
+    background-color: #FFA500;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #FFFFFF;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-title {
+    font-weight: bold;
+}
+
+.event-time {
+    font-size: 0.8em;
+    color: #333;
+}
+
+.empty-day {
+    visibility: hidden;
+}
+
