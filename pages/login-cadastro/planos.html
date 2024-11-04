@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos</title>
+    <link rel="stylesheet" href="/css/login/planos.css">
+    <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <header>
+        <a href="/pages/login-cadastro/login-inicial.html">
+            <img src="/assets/icons/login-cadastro/x.svg" alt="Fechar">
+        </a>
+    </header>
+    <main>
+        <div class="planos">
+            <div class="opcoes">
+                    <label class="radio-option selected" id="anualOption">
+                        <div class="anual-desconto">
+                            <div class="anual">
+                                <img src="/assets/icons/login-cadastro/bolinha-cadastro.svg" alt="">
+                                <input type="radio" name="role" value="anual">
+                                Anual 
+                            </div>
+                            <div class="desconto">
+                                <p>-40%</p>
+                            </div>
+                        </div>
+                            <p>R$9,90 (R$118,80)</p>
+                    </label>
+        
+                    <label class="radio-option" id="mensalOption">
+                            <div class="anual">
+                                <img src="/assets/icons/login-cadastro/bolinha-cadastro.svg" alt="">
+                                <input type="radio" name="role" value="mensal">
+                                Mensal 
+                            </div>
+                            <p>R$14,90/mês</p>
+                    </label>
+                </div>
+                
+                <button href="/pages/inicio/inicio.html">Comece 7 dias grátis</button>
+                <a href="">Continuar no plano gratuito</a>
+        </div>
+    </main>
+
+    <script>
+        const anualOption = document.getElementById('anualOption');
+        const mensalOption = document.getElementById('mensalOption');
+
+        anualOption.addEventListener('click', function () {
+            anualOption.classList.add('selected');
+            mensalOption.classList.remove('selected');
+        });
+
+        mensalOption.addEventListener('click', function () {
+            mensalOption.classList.add('selected');
+            anualOption.classList.remove('selected');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    padding: 49px 100px 15px 100px;
+}
+
+main {
+    display: flex;
+    height: 100%;
+    align-items: end;
+}
+
+.planos {
+    display: flex;
+    width: 375px;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 24px;
+
+    border-radius: 20px 20px 0px 0px;
+    background: rgba(55, 96, 160, 0.60);
+}
+
+.radio-option {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 327px;
+    height: 82px;
+    padding: 12px;
+    gap: 6px;
+
+    border-radius: 18px; 
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #fff;
+    background-color: #1C3152;
+    transition: background-color 0.3s;
+}
+
+.radio-option.selected {
+    background-color: #264370; 
+    img {
+        content: url('/assets/icons/login-cadastro/check-cadastro.svg');
+    }
+}
+
+.radio-option input[type="radio"] {
+    display: none; /* Esconde o botão de rádio padrão */
+}
+
+.anual-desconto {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.anual {
+    display: flex;
+    gap: 6px;
+    
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.desconto {
+    padding: 3px 8px 3px 12px;
+    border-radius: 8px;
+    background: #F4A503;
+
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+button {
+    width: 100%;
+    background-color: #F4A503;
+    color: #000;
+    height: 54px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 18px;
+    font-family: Urbanist;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+button:hover {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    margin-top: 20px;
+    color: #BCBCBC;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    text-decoration: none;
+}

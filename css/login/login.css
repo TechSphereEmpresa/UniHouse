@@ -66,7 +66,7 @@ main {
 }
 
 .eye-icon {
-    position: absolute; /* Posiciona o ícone dentro do campo de entrada */
+    position: absolute; 
     right: 10px; /* Distância da direita */
     top: 50%; /* Centraliza verticalmente */
     transform: translateY(-50%); /* Ajusta o posicionamento vertical do ícone */

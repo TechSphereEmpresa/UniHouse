@@ -111,9 +111,8 @@ form {
     border: 2px solid #F4A503;
 }
 
-/* Estilo para o botão selecionado */
 .radio-option.selected {
-    background-color: #264370; /* Cor de fundo azul para o botão selecionado */
+    background-color: #264370; 
     border: #264370;
     img {
         content: url('/assets/icons/login-cadastro/check-cadastro.svg');
@@ -121,7 +120,7 @@ form {
 }
 
 .radio-option input[type="radio"] {
-    display: none; /* Esconde o botão de rádio padrão */
+    display: none; 
 }
 
 @media (max-width: 1000px) {
