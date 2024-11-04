@@ -4,29 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Login Inicial</title>
+    <title>Login</title>
     <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
     <link rel="stylesheet" href="/css/login/login.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
-    <a href="#" class="back-button">←</a> <!-- Seta no canto esquerdo -->
-
+    <header>
+        <a href="/pages/login-cadastro/login-inicial.html">
+            <img src="/assets/icons/common/seta-voltar.svg" alt="">
+        </a>
+    </header>
+    
     <main>
         <h1>Seja bem-vindo de volta!</h1>
+        <div class="div-botao">
+            <div class="div-email-senha">
+                <input type="text" class="input-field" placeholder="Email ou número" />
 
-            <input type="text" class="input-field" placeholder="Email ou número" />
+                <div class="caixa-senha">
+                    <div class="input-field-container">
+                        <input type="password" class="input-field" id="senhaInput" placeholder="Senha">
+                        <img class="eye-icon" src="/assets/icons/login-cadastro/olho-aberto.svg" alt="Mostrar Senha"
+                            onclick="togglePassword()">
+                    </div>
+                    <a href="/pages/login-cadastro/esqueceuSenha.html" class="forgot-password">Esqueceu sua senha?</a>
+                </div>
+            </div>
 
-        <div class="input-field-container">
-            <input type="password" class="input-field" id="senhaInput" placeholder="Senha">
-            <img class="eye-icon" src="/assets/icons/login-cadastro/olho-aberto.svg" alt="Mostrar Senha"
-                onclick="togglePassword()">
-        </div>
-
-        <a href="#" class="forgot-password">Esqueceu sua senha?</a>
-
-        <button class="btn-entrar">Entrar</button>
+            <button class="btn-entrar">Entrar</button>
         </div>
     </main>
 
@@ -37,10 +44,10 @@
 
             if (senhaInput.type === 'password') {
                 senhaInput.type = 'text';
-                eyeIcon.src = "/assets/icons/login-cadastro/olho-fechado.svg"; // Mude para a imagem do olho fechado
+                eyeIcon.src = "/assets/icons/login-cadastro/olho-fechado.svg";
             } else {
                 senhaInput.type = 'password';
-                eyeIcon.src = "/assets/icons/login-cadastro/olho-aberto.svg"; // Mude para a imagem do olho aberto
+                eyeIcon.src = "/assets/icons/login-cadastro/olho-aberto.svg";
             }
         }
     </script>

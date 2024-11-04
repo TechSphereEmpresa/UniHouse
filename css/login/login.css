@@ -1,27 +1,50 @@
 body {
-    display: flex; 
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 140px;
 }
 
-.back-button {
-    position: absolute; /* Posiciona a seta no canto superior esquerdo */
-    top: 20px; /* Distância do topo */
-    left: 20px; /* Distância da esquerda */
-    font-size: 24px; /* Tamanho da fonte da seta */
-    color: white; /* Cor da seta */
-    text-decoration: none; /* Remove sublinhado do link */
+header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 49px 100px 15px 100px;
 }
 
 main {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    width: 300px; 
     text-align: center; 
+    gap: 40px;
 }
 
-.welcome-message {
-    margin-bottom: 20px; /* Espaçamento abaixo da mensagem de boas-vindas */
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+.div-botao {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.div-email-senha {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.caixa-senha {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: end;
 }
 
 .input-field {
@@ -60,9 +83,10 @@ main {
 .button:hover {
     background-color: #f0f0f0; /* Cor do botão ao passar o mouse */
 }
+
 .input-field-container {
-    position: relative; /* Para posicionar o ícone dentro do campo */
-    margin-bottom: 21px; /* Espaçamento abaixo do campo de entrada */
+    position: relative;
+    width: 100%;
 }
 
 .eye-icon {
@@ -74,28 +98,40 @@ main {
     font-size: 20px; /* Tamanho do ícone */
 }
 .forgot-password {
-    display: block; 
-    margin: 21px 0; /* Margem acima e abaixo do link */
-    font-family: Urbanist;
+    text-decoration: none;
     font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    color: var(--Dark-Gray, #6A707C);
+    color: #BCBCBC;
+    transition: color 0.3s; 
+    z-index: 10;
 }
+
 .forgot-password:hover {
-    text-decoration: underline; /* Efeito de sublinhado ao passar o mouse */
+    text-decoration: #F4A503; 
+    text-decoration: underline;
 }
+
 .btn-entrar {
     background-color: #F4A503; /* Cor de fundo do botão "Entrar" */
     border: none; /* Remove borda do botão */
     padding: 15px 30px; /* Espaçamento interno do botão */
-    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
-    font-size: 16px; /* Tamanho da fonte do botão */
-    border-radius: 18px; /* Bordas arredondadas do botão */
-    transition: background-color 0.3s; 
-    width: 100%; /* Largura total do botão */
+    background-color: #F4A503;
+    color: #000;
+    font-family: Urbanist;
+    height: 54px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 18px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.5s;
 }
 .btn-entrar:hover {
     background-color: #F4A503; /* Cor do botão ao passar o mouse */
+}
+
+@media (max-width: 381px) {
+    h1 {
+        text-align: left;
+    }
 }
