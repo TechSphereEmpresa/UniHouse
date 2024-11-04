@@ -1,142 +1,201 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap);
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --primary-color: #F4A503;
-    --light: #FFFFFF;
-    --medium: #BCBCBC;
-    --dark: #000000;
+  --primary-color: #f4a503;
+  --light: #ffffff;
+  --medium: #bcbcbc;
+  --dark: #000000;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .container {
-    width: 90%;
-    max-width: 800px;
+  width: 90%;
+  max-width: 800px;
 }
 
 .back-button {
-    font-size: 1.5em;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-bottom: 1em;
-    display: flex;
-
+  font-size: 1.5em;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1em;
+  display: flex;
 }
 
 .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    color: #fff;
-    gap: 59px;
-    align-self: stretch;
+  display: flex;
+  justify-content: flex-start; /* Alinha todos os itens à esquerda */
+  align-items: flex-start;
+  color: #fff;
+  gap: 59px;
+  align-self: stretch;
+  flex-wrap: wrap; /* Permite que o conteúdo quebre para a próxima linha em telas pequenas */
 }
 
 .details {
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 59px;
-    align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 59px;
+  align-self: stretch;
+  flex: 1 0 100%; /* Faz com que ocupe toda a largura disponível */
 }
 
 .title-transferencia h1 {
-    font-size: 1.8em;
-    margin-bottom: 0.5em;
-    font-feature-settings: 'liga' off, 'clig' off;
-    font-family: Urbanist;
-    font-size: 35 px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 108%; /* 51.84px */
-    letter-spacing: -0.5px;
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Urbanist;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 108%; /* 51.84px */
+  letter-spacing: -0.5px;
 }
 
-.title-transferencia{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    
+.title-transferencia {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .date {
-    margin-bottom: 1em;
-    color: var(--cones, #BCBCBC);
-    font-family: Urbanist;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 26px; /* 162.5% */
+  margin-bottom: 1em;
+  color: var(--cones, #bcbcbc);
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px; /* 162.5% */
 }
 
-
-
 .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 7px;
 }
 
 .info p {
-    color: #FFF;
-    font-family: Urbanist;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 26px; /* 118.182% */
-    margin-bottom: 0.5em;
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px; /* 118.182% */
+  margin-bottom: 0.5em;
 }
 
 .comprovante {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  flex: 1 0 100%;
+  text-align: center;
 }
 
 .comprovante-img {
-    width: 314.859px;
-    height: 419.402px;
-    flex-shrink: 0;
-    border-radius: 13.262px;
-    border: 3px solid var(--Cor-principal, #F4A503);
-    box-shadow: 0px 10.609px 21.219px -2.652px rgba(0, 0, 0, 0.12);
-    display: flex;
-    padding: 12.299px;
-    align-items: center;
-    gap: 12.299px;
+  width: 100%;
+  max-width: 314.859px; /* Máxima largura da imagem */
+  height: auto; /* Permite que a altura se ajuste proporcionalmente */
+  flex-shrink: 0;
+  border-radius: 13.262px;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0px 10.609px 21.219px -2.652px rgba(0, 0, 0, 0.12);
+  display: flex;
+  padding: 12.299px;
+  align-items: center;
+  gap: 12.299px;
 }
 
 .comprovante p {
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px; /* 130% */
+}
 
-    color: #FFF;
+/* Media Queries para dispositivos móveis e tablets */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: flex-start; /* Garante que todos os itens, exceto o comprovante, fiquem alinhados à esquerda */
+    gap: 30px;
+  }
 
-    /* H3 */
-    font-family: Urbanist;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 26px; /* 130% */
-    
+  .details {
+    gap: 30px;
+    align-items: flex-start; /* Alinha as informações à esquerda */
+    width: 100%;
+  }
+
+  .title-transferencia h1 {
+    font-size: 2em; /* Aumenta o tamanho do título para visibilidade em telas menores */
+    text-align: left; /* Alinha o título à esquerda */
+  }
+
+  .date {
+    font-size: 14px; /* Reduz o tamanho da data */
+  }
+
+  .info p {
+    font-size: 14px; /* Reduz o tamanho do texto na informação */
+  }
+
+  .comprovante-img {
+    max-width: 90%; /* Ajusta a largura da imagem para caber bem na tela */
+  }
+
+  .comprovante p {
+    font-size: 18px; /* Ajusta o tamanho do texto para a legenda */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px; /* Adiciona padding nas laterais para evitar que o conteúdo fique colado nas bordas */
+  }
+
+  .back-button {
+    font-size: 1.2em; /* Reduz o tamanho da seta de voltar */
+  }
+
+  .title-transferencia h1 {
+    font-size: 1.5em; /* Reduz o tamanho do título para telas menores */
+    text-align: left; /* Alinha o título à esquerda */
+  }
+
+  .comprovante-img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura da tela */
+    max-width: 100%;
+  }
+
+  .comprovante p {
+    font-size: 16px; /* Reduz o tamanho da legenda */
+  }
+
+  .info {
+    padding-top: 20px;
+  }
 }
