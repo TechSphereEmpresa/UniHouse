@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar conta </title>
-    <link rel="stylesheet" href="/css/login/login-entrarConta.css">
+    <title>Página de Login Inicial</title>
     <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
+    <link rel="stylesheet" href="/css/login/login.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
+
 <body>
-    <a href="#" class="back-button">←</a>
-    
-    <div class="container">
+    <a href="#" class="back-button">←</a> <!-- Seta no canto esquerdo -->
+
+    <main>
         <h1>Seja bem-vindo de volta!</h1>
 
-        <div class="input-field-container">
-            <input type="text" class="input-field" placeholder="Email ou Número">
-        </div>
+            <input type="text" class="input-field" placeholder="Email ou número" />
 
         <div class="input-field-container">
             <input type="password" class="input-field" id="senhaInput" placeholder="Senha">
-            <span class="eye-icon" onclick="togglePassword()">👁️</span> <!-- Ícone de olho cinza -->
+            <img class="eye-icon" src="/assets/icons/login-cadastro/olho-aberto.svg" alt="Mostrar Senha"
+                onclick="togglePassword()">
         </div>
 
         <a href="#" class="forgot-password">Esqueceu sua senha?</a>
 
         <button class="btn-entrar">Entrar</button>
-    </div>
+        </div>
+    </main>
 
     <script>
         function togglePassword() {
@@ -35,12 +37,14 @@
 
             if (senhaInput.type === 'password') {
                 senhaInput.type = 'text';
-                eyeIcon.textContent = '🙈'; // Ícone de olho fechado
+                eyeIcon.src = "/assets/icons/login-cadastro/olho-fechado.svg"; // Mude para a imagem do olho fechado
             } else {
                 senhaInput.type = 'password';
-                eyeIcon.textContent = '👁️'; // Ícone de olho aberto
+                eyeIcon.src = "/assets/icons/login-cadastro/olho-aberto.svg"; // Mude para a imagem do olho aberto
             }
         }
     </script>
+
 </body>
+
 </html>
