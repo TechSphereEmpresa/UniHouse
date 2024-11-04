@@ -15,9 +15,10 @@
 }
 
 body {
-    background-color: #000;
-    color: #fff;
     display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: auto;
 }
 
 .container {
@@ -25,13 +26,11 @@ body {
     flex-direction: column;
     align-items: center;
     max-width: 800px;
-    margin: auto;
     padding: 20px;
 }
 
 header {
     display: flex;
-    width: 1280px;
     height: 102px;
     padding: 0px 100px 15px 100px;
     flex-direction: column;
@@ -58,11 +57,10 @@ header h1 {
 
 .conteudo {
     display: flex;
-    width: 952px;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     gap: 25px;
-    margin-bottom: 20px;
 }
 
 .transacoes {
@@ -100,6 +98,7 @@ header h1 {
     align-items: flex-start; 
     gap: 15px;
     align-self: stretch;
+    white-space: nowrap;
 }
 
 .transacao:last-child {
@@ -142,7 +141,7 @@ header h1 {
     display: flex;
     height: 90px;
     overflow: hidden;
-    padding: 21px 92px;
+    padding: 21px;
     border-radius: 10px;
     box-shadow: 0px 8px 16px -2px rgba(0, 0, 0, 0.12);
     background: var(--primary-color);
@@ -151,6 +150,7 @@ header h1 {
     align-items: center;
     flex-shrink: 0;
     align-self: stretch;
+    white-space: nowrap;
 }
 
 .saldo-container p{
@@ -250,3 +250,32 @@ header h1 {
     margin-bottom: 5px;
 }
 
+@media (max-width: 1000px) {
+    .transfer-form {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .input-group, .submit-button {
+        width: 100%;
+    }
+
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .back-button {
+        position: fixed;
+        left: 15px;
+        top: 15px;
+    }
+
+    .conteudo {
+        flex-direction: column;
+    }
+
+    .transacoes {
+        order: 2;
+    }
+}

@@ -229,3 +229,7 @@ canvas {
   height: 24px;
   margin-bottom: 5px;
 }
+
+@media (max-width: 1000px){
+  
+}
