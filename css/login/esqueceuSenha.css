@@ -77,18 +77,18 @@ h1 {
 
 .btn-enviar {
     width: 100%;
-    padding: 15px;
-    font-family: Urbanist;
-    border-radius: 16px;
-    font-size: 16px;
     background-color: #F4A503;
     color: #000;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
+    font-family: Urbanist;
     height: 54px;
-    margin-top: 18px;
-    
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.5s;
 }
 
 .btn-enviar:hover {
