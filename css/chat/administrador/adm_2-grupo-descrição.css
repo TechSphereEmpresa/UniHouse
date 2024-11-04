@@ -21,17 +21,17 @@ body {
     background-color: #000; 
     padding: 10px 50px; /* Ajustado para um padding consistente */
     margin: 20px 0px; /* Margens do container */
-}
+} 
 
 .back-arrow {
     color: #fff;
     font-size: 24px;
-    text-decoration: none;
+    text-decoration: none; 
     transition: color 0.3s ease;
     margin: 0 350px; /* Reduzido para manter o alinhamento */
 }
 
-.settings {
+.check{
     color: #fff;
     font-size: 24px;
     text-decoration: none;
@@ -39,7 +39,7 @@ body {
     margin: 0 350px; 
 }
 
-.back-arrow:hover, .settings:hover {
+.back-arrow:hover, .check:hover {
     color: #F4A503;
 }
 
@@ -47,11 +47,13 @@ body {
     font-size: 20px;
     color: #fff;
 }
+ 
+
 
 .group-info-container {
     background-color: #000;
     display: flex;
-    padding-bottom: 20px;
+    padding: 20px;
     flex-direction: column;
     overflow: hidden;
     min-height: 100vh;
