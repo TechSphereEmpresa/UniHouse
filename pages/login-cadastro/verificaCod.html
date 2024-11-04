@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação do Código</title>
+    <link rel="stylesheet" href="/css/login/verificaCod.css">
+    <link rel="icon" href="/assets/images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Seta no canto superior esquerdo -->
+    <header>
+        <a href="/pages/login-cadastro/">
+            <img src="/assets/icons/common/seta-voltar.svg" alt="Voltar">
+        </a>
+    </header>
+
+    <!-- Conteúdo centralizado -->
+    <main>
+        <div class="container">
+            <h1>OTP de Verificação</h1>
+            <p class="description">Digite o código de verificação que enviamos para o email cadastrado.</p>
+            
+            <div class="input-container">
+                <input type="text" class="input-codigo" maxlength="1" oninput="moveFocus(this)" />
+                <input type="text" class="input-codigo" maxlength="1" oninput="moveFocus(this)" />
+                <input type="text" class="input-codigo" maxlength="1" oninput="moveFocus(this)" />
+                <input type="text" class="input-codigo" maxlength="1" oninput="moveFocus(this)" />
+            </div>
+
+            <button class="btn-verificar">Verificar</button>
+        </div>
+    </main>
+
+    <!-- Script para mover o foco automaticamente entre os campos -->
+    <script>
+        function moveFocus(input) {
+            if (input.value.length >= input.maxLength) {
+                const nextInput = input.nextElementSibling;
+                if (nextInput) {
+                    nextInput.focus();
+                }
+            }
+            if (input.value.length === 0) {
+                const prevInput = input.previousElementSibling;
+                if (prevInput) {
+                    prevInput.focus();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
