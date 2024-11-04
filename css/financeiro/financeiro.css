@@ -61,14 +61,19 @@ header h1 {
     justify-content: center;
     align-items: flex-start;
     gap: 25px;
+    padding-bottom: 80px; 
+    width: 100%;
+    padding: 20px; 
+    box-sizing: border-box;
 }
 
 .transacoes {
-    width: 60%;
+
+    width: 100%;
+    max-width: 600px;
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
-    flex: 1 0 0;
 }
 
 .transacoes h2 {
@@ -88,6 +93,8 @@ header h1 {
     background-color: #fff;
     border-radius: 10px;
     padding: 10px;
+    max-height: 60vh; /* Limita a altura no desktop e mobile */
+    overflow-y: auto;
 
 }
 
@@ -118,9 +125,12 @@ header h1 {
 }
 
 .ver-tudo {
+
+    display: block;
+    margin: 10px auto 0 auto;
+    padding: 10px;
     background-color: #333;
     color: #fff;
-    padding: 10px;
     width: 100%;
     border: none;
     border-radius: 5px;
@@ -136,6 +146,10 @@ header h1 {
     align-items: center;
     gap: 25px;
     flex: 1 0 0;
+
+    padding: 15px; 
+    margin: 10px;  
+    border-radius: 10px;
 }
 
 .saldo-container {
@@ -276,9 +290,34 @@ header h1 {
     .conteudo {
         flex-direction: column;
         align-items: center;
+        padding-bottom: 100px;
     }
 
     .transacoes {
         order: 2;
+        width: 90%;
+    }
+
+    .transacao {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #333;
+        white-space: normal; /* permite quebra de linha no mobile */
+    }
+
+    .transacao-info {
+        max-width: 70%; /* Limita o espaço para que o span fique dentro do quadro */
+    }
+
+    .transacao span {
+        width: 30%; /* Define a largura do span */
+        text-align: right; /* Alinha o texto do span à direita */
+        font-size: 14px; /* Ajusta o tamanho da fonte para mobile */
+    }
+
+    .lista-transacoes {
+        max-height: 50vh; /* Ajusta a altura da lista para o mobile */
     }
 }
