@@ -1,323 +1,318 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap);
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 :root {
-    --primary-color: #F4A503;
-    --light: #FFFFFF;
-    --medium: #BCBCBC;
-    --dark: #000000;
+  --primary-color: #f4a503;
+  --light: #ffffff;
+  --medium: #bcbcbc;
+  --dark: #000000;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: auto;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 800px;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  padding: 20px;
 }
 
 header {
-    display: flex;
-    height: 102px;
-    padding: 0px 100px 15px 100px;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-    background: #000;
+  display: flex;
+  height: 102px;
+  padding: 0px 100px 15px 100px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background: #000;
 }
 
 header h1 {
-    color: #FFF;
-    text-align: center;
-    font-feature-settings: 'liga' off, 'clig' off;
-    font-family: Urbanist;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 22.5px;
-    letter-spacing: -0.5px;
-    flex: 1 0 0;
-
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Urbanist;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22.5px;
+  letter-spacing: -0.5px;
+  flex: 1 0 0;
 }
 
 .conteudo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 25px;
-    padding-bottom: 80px; 
-    width: 100%;
-    padding: 20px; 
-    box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  padding-bottom: 80px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .transacoes {
-
-    width: 100%;
-    max-width: 600px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+  width: 100%;
+  max-width: 600px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
 }
 
 .transacoes h2 {
-    color: #FFF;
-    font-family: Urbanist;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 108%;
-    letter-spacing: -0.5px;
-    text-align:start;
-    font-feature-settings: 'liga' off, 'clig' off;
-    padding-bottom: 20px;
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 108%;
+  letter-spacing: -0.5px;
+  text-align: start;
+  font-feature-settings: "liga" off, "clig" off;
+  padding-bottom: 20px;
 }
 
 .lista-transacoes {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 10px;
-    max-height: 60vh; /* Limita a altura no desktop e mobile */
-    overflow-y: auto;
-
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 60vh; /* Limita a altura no desktop e mobile */
+  overflow-y: auto;
 }
 
 .transacao {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #333;
-    align-items: flex-start; 
-    gap: 15px;
-    align-self: stretch;
-    white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+  align-items: flex-start;
+  gap: 15px;
+  align-self: stretch;
+  white-space: nowrap;
 }
 
 .transacao:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .transacao-info p {
-    margin: 5px 0;
-    color: #000;
-    font-feature-settings: 'liga' off, 'clig' off;
-    font-family: Urbanist;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
+  margin: 5px 0;
+  color: #000;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
 }
 
 .ver-tudo {
-
-    display: block;
-    margin: 10px auto 0 auto;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: Urbanist;
+  display: block;
+  margin: 10px auto 0 auto;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Urbanist;
 }
 
 .saldo {
-    display: flex;
-    height: 239px;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 25px;
-    flex: 1 0 0;
+  display: flex;
+  height: 239px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+  flex: 1 0 0;
 
-    padding: 15px; 
-    margin: 10px;  
-    border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 .saldo-container {
-    display: flex;
-    height: 90px;
-    overflow: hidden;
-    padding: 21px;
-    border-radius: 10px;
-    box-shadow: 0px 8px 16px -2px rgba(0, 0, 0, 0.12);
-    background: var(--primary-color);
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-    align-self: stretch;
-    white-space: nowrap;
+  display: flex;
+  height: 90px;
+  overflow: hidden;
+  padding: 21px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px -2px rgba(0, 0, 0, 0.12);
+  background: var(--primary-color);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: stretch;
+  white-space: nowrap;
 }
 
-.saldo-container p{
-    align-self: stretch;
-    color: #000;
-    font-family: Urbanist;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -0.5px;
-    text-align: center;
-    font-feature-settings: 'liga' off, 'clig' off;
+.saldo-container p {
+  align-self: stretch;
+  color: #000;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
 }
 
-.saldo-container h3{
-    align-self: stretch;
-    color: #000;
-    font-family: Urbanist;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: -0.5px;
-    text-align: center;
-    font-feature-settings: 'liga' off, 'clig' off;
+.saldo-container h3 {
+  align-self: stretch;
+  color: #000;
+  font-family: Urbanist;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
 }
 
 .btn {
-    color: #FFF;
-    cursor: pointer;
-    width: 100%;
-    padding: 5px 0px;
-    align-items: center;
-    gap: 80px;
-    align-self: stretch;
-    border-radius: 10px;
-    border: 3px solid var(--primary-color);
-    background: #000;
-    font-family: Urbanist;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 26px;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  padding: 5px 0px;
+  align-items: center;
+  gap: 80px;
+  align-self: stretch;
+  border-radius: 10px;
+  border: 3px solid var(--primary-color);
+  background: #000;
+  font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.btn:hover {
+  background-color: #f4a503;
+  color: #000;
 }
 
 /* nav */
 .menu {
-    display: flex;
-    width: 100%;
-    padding: 10px 0;
-    border-radius: 8px;
-    border-top: 2px solid #BCBCBC;
-    background: #000;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  display: flex;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 8px;
+  border-top: 2px solid #bcbcbc;
+  background: #000;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
-
 
 .menu-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #BCBCBC;
-    text-decoration: none;
-    font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #bcbcbc;
+  text-decoration: none;
+  font-size: 14px;
 
-
-    .img-active {
-        display: none;
-    }
+  .img-active {
+    display: none;
+  }
 }
-
 
 .menu-item.active {
-    color: #F4A503;
+  color: #f4a503;
 
+  .img-active {
+    display: block;
+  }
 
-    .img-active {
-        display: block;
-    }
-
-
-    img {
-        display: none;
-    }
+  img {
+    display: none;
+  }
 }
 
-
 .menu-icon {
-    width: 24px;
-    height: 24px;
-    margin-bottom: 5px;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 5px;
 }
 
 @media (max-width: 1000px) {
-    .transfer-form {
-        flex-direction: column;
-        gap: 20px;
-    }
+  .transfer-form {
+    flex-direction: column;
+    gap: 20px;
+  }
 
+  .input-group,
+  .submit-button {
+    width: 100%;
+  }
 
-    .input-group, .submit-button {
-        width: 100%;
-    }
+  header {
+    justify-content: center;
+    text-align: center;
+  }
 
-    header {
-        justify-content: center;
-        text-align: center;
-    }
+  .back-button {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+  }
 
-    .back-button {
-        position: fixed;
-        left: 15px;
-        top: 15px;
-    }
+  .conteudo {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+  }
 
-    .conteudo {
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 100px;
-    }
+  .transacoes {
+    order: 2;
+    width: 90%;
+  }
 
-    .transacoes {
-        order: 2;
-        width: 90%;
-    }
+  .transacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+    white-space: normal; /* permite quebra de linha no mobile */
+  }
 
-    .transacao {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 0;
-        border-bottom: 1px solid #333;
-        white-space: normal; /* permite quebra de linha no mobile */
-    }
+  .transacao-info {
+    max-width: 70%; /* Limita o espaço para que o span fique dentro do quadro */
+  }
 
-    .transacao-info {
-        max-width: 70%; /* Limita o espaço para que o span fique dentro do quadro */
-    }
+  .transacao span {
+    width: 30%; /* Define a largura do span */
+    text-align: right; /* Alinha o texto do span à direita */
+    font-size: 14px; /* Ajusta o tamanho da fonte para mobile */
+  }
 
-    .transacao span {
-        width: 30%; /* Define a largura do span */
-        text-align: right; /* Alinha o texto do span à direita */
-        font-size: 14px; /* Ajusta o tamanho da fonte para mobile */
-    }
-
-    .lista-transacoes {
-        max-height: 50vh; /* Ajusta a altura da lista para o mobile */
-    }
+  .lista-transacoes {
+    max-height: 50vh; /* Ajusta a altura da lista para o mobile */
+  }
 }

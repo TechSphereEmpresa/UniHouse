@@ -1,145 +1,139 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap);
 
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 :root {
-    --primary-color: #F4A503;
-    --light: #FFFFFF;
-    --medium: #BCBCBC;
-    --dark: #000000;
+  --primary-color: #f4a503;
+  --light: #ffffff;
+  --medium: #bcbcbc;
+  --dark: #000000;
 }
-
 
 body {
-
-    display: flex;
-    width: 1280px;
-    padding-bottom: 270px;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    background: #000;
-
+  display: flex;
+  width: 1280px;
+  padding-bottom: 270px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: #000;
+  overflow: auto;
 }
 
-
-
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    padding-top: 40px;
-    border-bottom: 1px solid #333;
-    color: #D9D9D9;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  padding-top: 40px;
+  border-bottom: 1px solid #333;
+  color: #d9d9d9;
 }
 
 header h1 {
-    flex: 1 0 0;
-    color: #D9D9D9;
-    text-align: center;
-    font-feature-settings: 'liga' off, 'clig' off;
-    font-family: Urbanist;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 22.5px; /* 102.273% */
-    letter-spacing: -0.5px;
+  flex: 1 0 0;
+  color: #d9d9d9;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Urbanist;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22.5px; /* 102.273% */
+  letter-spacing: -0.5px;
 }
 
-.seta, .buscar {
-    font-size: 20px;
-    color: #ffffff;
-    text-decoration: none;
+.seta,
+.buscar {
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .Lista-transferencias {
-    list-style: none;
+  list-style: none;
 }
 
 .itens-tranferencia {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    align-self: stretch;
-    padding: 20px 100px 15px 100px;
-    background: #000;
-    width: 1280px;
-    height: 102px;
-
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  align-self: stretch;
+  padding: 20px 100px 15px 100px;
+  background: #000;
+  width: 1280px;
+  height: 102px;
 }
 
 .itens-tranferencia:hover {
-    background-color: #1e1e1e;
+  background-color: #1e1e1e;
 }
 
 .itens-tranferencia img {
-    display: flex;
-    width: 50px;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .transfer-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
 }
 
 .transfer-recebida {
-    color: #FFF;
-    font-family: Urbanist;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-    font-feature-settings: 'liga' off, 'clig' off;
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  font-feature-settings: "liga" off, "clig" off;
 }
 
 .transfer-nome {
-    color: #FFF;
-    font-family: Urbanist;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    font-feature-settings: 'liga' off, 'clig' off;
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  font-feature-settings: "liga" off, "clig" off;
 }
 
 .transfer-valor {
-    color: #FFF;
-    font-family: Urbanist;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    font-feature-settings: 'liga' off, 'clig' off;
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  font-feature-settings: "liga" off, "clig" off;
 }
 
 .transfer-data {
-    color: #FFF ;
-    font-feature-settings: 'liga' off, 'clig' off;
-    font-family: Urbanist;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px; /* 200% */
+  color: #fff;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Urbanist;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 200% */
 }
 
-.espaco-de-baixo{
-    display: flex;
-    width: 1280px;
-    padding-bottom: 270px;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+.espaco-de-baixo {
+  display: flex;
+  width: 1280px;
+  padding-bottom: 270px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
