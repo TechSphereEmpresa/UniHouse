@@ -48,7 +48,6 @@ body {
     color: #fff;
 }
 
-/* Estilos do contêiner principal */
 .group-info-container {
     background-color: #000;
     display: flex;
@@ -336,7 +335,7 @@ body {
         margin: 0 3%;
     }
 
-    .back-arrow, .settings {
+    .back-arrow, .check /*.settings*/ {
         font-size: 20px; 
     }
 
@@ -347,7 +346,7 @@ body {
         margin: 0 2%;
     }
 
-    .back-arrow, .settings {
+    .back-arrow, .check /*settings */ {
         font-size: 18px; 
     }
 }
