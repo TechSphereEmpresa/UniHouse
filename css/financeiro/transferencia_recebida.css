@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap);
 
 * {
   margin: 0;
@@ -37,16 +37,15 @@ body {
   cursor: pointer;
   margin-bottom: 1em;
   display: flex;
+  align-items: center;
 }
 
 .content {
   display: flex;
-  justify-content: flex-start; /* Alinha todos os itens à esquerda */
+  justify-content: space-between;
   align-items: flex-start;
   color: #fff;
   gap: 59px;
-  align-self: stretch;
-  flex-wrap: wrap; /* Permite que o conteúdo quebre para a próxima linha em telas pequenas */
 }
 
 .details {
@@ -54,19 +53,14 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 59px;
-  align-self: stretch;
-  flex: 1 0 100%; /* Faz com que ocupe toda a largura disponível */
 }
 
 .title-transferencia h1 {
   font-size: 1.8em;
   margin-bottom: 0.5em;
-  font-feature-settings: "liga" off, "clig" off;
   font-family: Urbanist;
-  font-size: 35px;
-  font-style: normal;
   font-weight: 600;
-  line-height: 108%; /* 51.84px */
+  line-height: 108%;
   letter-spacing: -0.5px;
 }
 
@@ -78,18 +72,16 @@ body {
 
 .date {
   margin-bottom: 1em;
-  color: var(--cones, #bcbcbc);
+  color: var(--medium);
   font-family: Urbanist;
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
-  line-height: 26px; /* 162.5% */
+  line-height: 26px;
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   gap: 7px;
 }
@@ -98,9 +90,8 @@ body {
   color: #fff;
   font-family: Urbanist;
   font-size: 15px;
-  font-style: normal;
   font-weight: 600;
-  line-height: 26px; /* 118.182% */
+  line-height: 26px;
   margin-bottom: 0.5em;
 }
 
@@ -109,93 +100,69 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  flex: 1 0 100%;
-  text-align: center;
 }
 
 .comprovante-img {
-  width: 100%;
-  max-width: 314.859px; /* Máxima largura da imagem */
-  height: auto; /* Permite que a altura se ajuste proporcionalmente */
-  flex-shrink: 0;
-  border-radius: 13.262px;
+  width: 314.859px;
+  height: 419.402px;
+  border-radius: 13px;
   border: 3px solid var(--primary-color);
-  box-shadow: 0px 10.609px 21.219px -2.652px rgba(0, 0, 0, 0.12);
-  display: flex;
-  padding: 12.299px;
-  align-items: center;
-  gap: 12.299px;
+  box-shadow: 0px 10px 21px -2px rgba(0, 0, 0, 0.12);
+  padding: 12px;
 }
 
 .comprovante p {
   color: #fff;
   font-family: Urbanist;
   font-size: 20px;
-  font-style: normal;
   font-weight: 600;
-  line-height: 26px; /* 130% */
+  line-height: 26px;
 }
 
-/* Media Queries para dispositivos móveis e tablets */
-@media (max-width: 768px) {
+/* Ajustes para tablet */
+@media (min-width: 600px) and (max-width: 1024px) {
   .content {
     flex-direction: column;
-    align-items: flex-start; /* Garante que todos os itens, exceto o comprovante, fiquem alinhados à esquerda */
-    gap: 30px;
-  }
-
-  .details {
-    gap: 30px;
-    align-items: flex-start; /* Alinha as informações à esquerda */
-    width: 100%;
-  }
-
-  .title-transferencia h1 {
-    font-size: 2em; /* Aumenta o tamanho do título para visibilidade em telas menores */
-    text-align: left; /* Alinha o título à esquerda */
-  }
-
-  .date {
-    font-size: 14px; /* Reduz o tamanho da data */
-  }
-
-  .info p {
-    font-size: 14px; /* Reduz o tamanho do texto na informação */
-  }
-
-  .comprovante-img {
-    max-width: 90%; /* Ajusta a largura da imagem para caber bem na tela */
-  }
-
-  .comprovante p {
-    font-size: 18px; /* Ajusta o tamanho do texto para a legenda */
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0 15px; /* Adiciona padding nas laterais para evitar que o conteúdo fique colado nas bordas */
+    gap: 20px;
+    align-items: stretch;
   }
 
   .back-button {
-    font-size: 1.2em; /* Reduz o tamanho da seta de voltar */
+    align-self: flex-start; /* Garante que a seta fique à esquerda */
+    margin-bottom: 0.5em;
   }
 
   .title-transferencia h1 {
-    font-size: 1.5em; /* Reduz o tamanho do título para telas menores */
-    text-align: left; /* Alinha o título à esquerda */
+    font-size: 1.6em;
+  }
+}
+
+/* Ajustes para mobile */
+@media (max-width: 599px) {
+  .content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .back-button {
+    align-self: flex-start;
+    margin-bottom: 0.5em;
+  }
+
+  .title-transferencia h1 {
+    font-size: 1.4em;
+    line-height: 1.2em; /* Ajusta o espaçamento do título para caber sem cortes */
+  }
+
+  .date,
+  .info p,
+  .comprovante p {
+    font-size: 14px;
   }
 
   .comprovante-img {
-    width: 100%; /* Garante que a imagem ocupe toda a largura da tela */
-    max-width: 100%;
-  }
-
-  .comprovante p {
-    font-size: 16px; /* Reduz o tamanho da legenda */
-  }
-
-  .info {
-    padding-top: 20px;
+    width: 100%; /* Ajusta o comprovante para a largura da tela no mobile */
+    max-width: 300px;
+    height: auto; /* Mantém a proporção */
   }
 }
