@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap);
 
 * {
   margin: 0;
@@ -16,13 +16,18 @@
 
 body {
   display: flex;
-  width: 1280px;
+  width: 100%;
   padding-bottom: 270px;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   background: #000;
   overflow: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
 }
 
 header {
@@ -36,38 +41,43 @@ header {
 }
 
 header h1 {
-  flex: 1 0 0;
+  flex: 1;
   color: #d9d9d9;
   text-align: center;
   font-feature-settings: "liga" off, "clig" off;
   font-family: Urbanist;
   font-size: 22px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 22.5px; /* 102.273% */
+  line-height: 22.5px;
   letter-spacing: -0.5px;
 }
 
-.seta,
-.buscar {
-  font-size: 20px;
-  color: #ffffff;
-  text-decoration: none;
+.seta, .buscar {
+  display: flex;
+  align-items: center;
+}
+
+.seta img, .buscar img {
+  width: 24px;
+  height: 24px;
 }
 
 .Lista-transferencias {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
 }
 
 .itens-tranferencia {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 15px;
-  align-self: stretch;
-  padding: 20px 100px 15px 100px;
+  padding: 15px 20px;
   background: #000;
-  width: 1280px;
-  height: 102px;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
 }
 
 .itens-tranferencia:hover {
@@ -75,65 +85,102 @@ header h1 {
 }
 
 .itens-tranferencia img {
-  display: flex;
   width: 50px;
   height: 50px;
-  justify-content: center;
-  align-items: center;
 }
 
 .transfer-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  flex: 1 0 0;
+  flex: 1;
+}
+
+.transfer-recebida, .transfer-nome, .transfer-valor, .transfer-data {
+  color: #fff;
+  font-family: Urbanist;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 .transfer-recebida {
-  color: #fff;
-  font-family: Urbanist;
   font-size: 15px;
-  font-style: normal;
   font-weight: 600;
-  line-height: 24px;
-  font-feature-settings: "liga" off, "clig" off;
 }
 
-.transfer-nome {
-  color: #fff;
-  font-family: Urbanist;
+.transfer-nome, .transfer-valor {
   font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  font-feature-settings: "liga" off, "clig" off;
-}
-
-.transfer-valor {
-  color: #fff;
-  font-family: Urbanist;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  font-feature-settings: "liga" off, "clig" off;
 }
 
 .transfer-data {
-  color: #fff;
-  font-feature-settings: "liga" off, "clig" off;
-  font-family: Urbanist;
   font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px; /* 200% */
+  white-space: nowrap;
 }
 
 .espaco-de-baixo {
   display: flex;
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   padding-bottom: 270px;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    max-width: 100%;
+  }
+
+  header {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  .itens-tranferencia {
+    padding: 15px;
+  }
+
+  .itens-tranferencia img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .transfer-recebida {
+    font-size: 14px;
+  }
+
+  .transfer-nome, .transfer-valor {
+    font-size: 13px;
+  }
+
+  .transfer-data {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 16px;
+  }
+
+  .itens-tranferencia {
+    padding: 10px;
+  }
+
+  .itens-tranferencia img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .transfer-recebida {
+    font-size: 13px;
+  }
+
+  .transfer-nome, .transfer-valor {
+    font-size: 12px;
+  }
+
+  .transfer-data {
+    font-size: 10px;
+  }
 }
