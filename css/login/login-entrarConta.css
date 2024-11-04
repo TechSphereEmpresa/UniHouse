@@ -14,10 +14,10 @@ body {
     background-color: #000;
     color: #fff;
     padding: 20px;
+    text-align: center;
 }
 
 .container {
-    text-align: center;
     max-width: 400px;
     width: 100%;
     padding: 20px;
@@ -29,71 +29,46 @@ body {
     color: #656F77;
     text-decoration: none;
     position: absolute;
-    top: 50px; /* Ajuste a altura da seta aqui */
+    top: 50px;
     left: 30px;
 }
 
 h1 {
     font-size: 24px;
     color: #fff;
-    margin-bottom: 60px; /* Ajusta o espaço entre o título e os botões */
-    margin-top: 15px; /* Espaço acima do título */
-    text-align: left = 1px;
-    width: 100%;
-    margin-right: 15px; /* Espaço entre o marcador e o texto */
+    margin-bottom: 40px; /* Espaçamento maior para afastar do parágrafo */
 }
 
-.input-field-container {
-    position: relative;
-    margin-bottom: 20px;
+p {
+    font-size: 16px;
+    color: #656F77;
+    margin-bottom: 30px; /* Espaço maior abaixo do texto explicativo */
 }
 
 .input-field {
     width: 100%;
     padding: 20px;
-    border-radius: 16px; /* Arredondamento dos botões brancos e botão amarelo */
+    border-radius: 16px; /* Mesmo arredondamento dos botões da outra página */
     font-size: 16px;
-    margin-bottom: -5px; /* Reduzido para aproximar os botões */
-    border: none;
-}
-
-.eye-icon {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    font-size: 18px;
-    color: #656F77;
-}
-
-.forgot-password {
-    display: block;
-    text-align: right;
-    font-size: 14px;
-    color: #656F77;
-    text-decoration: none;
     margin-bottom: 20px;
+    border: none;
+    background-color: #fff;
+    color: #000;
 }
 
-.forgot-password:hover {
-    text-decoration: underline;
-}
-
-.btn-entrar {
+.btn-enviar {
     width: 100%;
-    padding: 15px;
+    padding: 15px; /* Tamanho e altura de botão semelhantes à outra página */
     border-radius: 16px;
     font-size: 14px;
     background-color: #F4A503;
     color: #000;
-    font-weight: SemiBold;
+    font-weight: semi-bold;
     border: none;
     cursor: pointer;
     text-transform: uppercase;
-    margin-bottom: -5px;
 }
 
-.btn-entrar:hover {
+.btn-enviar:hover {
     background-color: #d29502;
 }

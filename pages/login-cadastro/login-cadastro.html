@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container">
-        <a href="#" class="back-button">← Voltar</a>
+        <a href="#" class="back-button">←</a>
         <h1>Faça o cadastro da sua conta para começar</h1>
 
         <input type="text" class="input-field" placeholder="Nome">
@@ -28,11 +28,11 @@
         </div>
 
         <div class="radio-container">
-            <label class="radio-option">
+            <label class="radio-option" id="moradorOption">
                 <input type="radio" name="role" value="morador">
                 Morador (entra em uma república)
             </label>
-            <label class="radio-option">
+            <label class="radio-option" id="adminOption">
                 <input type="radio" name="role" value="administrador">
                 Administrador (criar uma república)
             </label>
@@ -40,5 +40,21 @@
 
         <button class="btn-registrar">Registrar</button>
     </div>
+
+    <script>
+        // Seleção dos botões de rádio
+        const moradorOption = document.getElementById('moradorOption');
+        const adminOption = document.getElementById('adminOption');
+
+        moradorOption.addEventListener('click', function() {
+            moradorOption.classList.add('selected');
+            adminOption.classList.remove('selected');
+        });
+
+        adminOption.addEventListener('click', function() {
+            adminOption.classList.add('selected');
+            moradorOption.classList.remove('selected');
+        });
+    </script>
 </body>
 </html>
