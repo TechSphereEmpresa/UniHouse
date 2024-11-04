@@ -1,210 +1,301 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap);
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #000;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .transferencia-container {
-    max-width: 800px;
-    width: 100%;
-    padding: 20px;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
 }
 
 .header {
-    display: flex;
-    height: 102px;
-    overflow: hidden;
-    padding: 50px 100px 15px 100px;
-    background: #000;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  height: 102px;
+  overflow: hidden;
+  padding: 20px;
+  background: #000;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
 }
 
 .icone-seta img {
-    width: 24px;
-    height: auto;
-    margin-right: 10px;
+  width: 24px;
+  height: auto;
+  margin-right: 10px;
 }
 
 h1 {
-    flex: 1 0 0;
-    color: #FFF;
-    text-align: center;
-    font-family: Urbanist;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+  flex: 1 0 0;
+  color: #fff;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .conteudo {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .coluna-cartoes {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
 }
 
 .form-transferencia {
-    width: 48%;
+  width: 48%;
 }
 
 .cartao {
-    position: relative;
-    border-radius: 20px;
-    display: flex;
-    width: 325px;
-    height: 174px;
-    padding: 20px;
-    flex-direction: column;
-
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  width: 325px;
+  height: 174px;
+  padding: 20px;
+  flex-direction: column;
 }
 
 .cartao.visa {
-    background-color: #ff7a00;
+  background-color: #ff7a00;
 }
 
 .cartao.mastercard {
-    background-color: #d9d9d9;
-    color: #000;
+  background-color: #d9d9d9;
+  color: #000;
 }
 
 .cartao.amex {
-    background-color: #1a73e8;
+  background-color: #1a73e8;
 }
 
 .logo-cartao {
-    width: 50px;
-    height: auto;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-
+  width: 50px;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .info-cartao {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 5px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
 }
 
 .descricao-saldo {
-    color: var(--Ink-01, #191D21);
-    font-family: Montserrat;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;
-    text-align:start;
-    font-feature-settings: 'liga' off, 'clig' off;
-    padding-left: 20px;
-    padding-top: 10px;
+  color: var(--Ink-01, #191d21);
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: start;
+  font-feature-settings: "liga" off, "clig" off;
+  padding-left: 20px;
+  padding-top: 10px;
 }
 
 .saldo {
-    position: absolute;
-    top: 35px;
-    left: 20px;
-    font-family: Montserrat;
-    font-size: 20px;
-    font-weight: bold;
-    color: #191D21;
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: bold;
+  color: #191d21;
 }
 
 .numero-cartao {
-    position: absolute;
-    top: 75px;
-    left: 20px;
-    font-family: Montserrat;
-    font-size: 18px;
-    letter-spacing: 2px;
-    color: #191D21;
+  position: absolute;
+  top: 75px;
+  left: 20px;
+  font-family: Montserrat;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #191d21;
 }
 
 .detalhes-cartao {
-    position: absolute;
-    bottom: 15px;
-    left: 20px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.nome-cartao {
-    font-family: Montserrat;
-    font-size: 12px;
-    color: #191D21;
-}
-
+.nome-cartao,
 .exp-date {
-    font-family: Montserrat;
-    font-size: 12px;
-    color: #191D21;
-    text-align: right;
-    padding-right: 20px;
+  font-family: Montserrat;
+  font-size: 12px;
+  color: #191d21;
 }
 
 .form-transferencia {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
 }
 
 .form-transferencia label {
-    color: #BCBCBC;
-    font-family: Urbanist;
-    font-size: 16px;
-    font-weight: 500;
+  color: #bcbcbc;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .form-transferencia input {
-    color: #BCBCBC;
-    font-family: Urbanist;
-    font-size: 16px;
-    font-weight: 600;
-    width: 335px;
-    height: 54px;
-    padding: 14px 23px;
-    border-radius: 18px;
-    border: 2px solid #F4A503;
-    background-color: #000;
+  color: #bcbcbc;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 600;
+  width: 335px;
+  height: 54px;
+  padding: 14px 23px;
+  border-radius: 18px;
+  border: 2px solid #f4a503;
+  background-color: #000;
 }
 
 .botao-concluir {
-    width: 335px;
-    height: 54px;
-    padding: 14px 0;
-    border-radius: 18px;
-    background: #F4A503;
-    color: #000;
-    font-family: Urbanist;
-    font-size: 19px;
-    font-weight: 700;
-    text-align: center;
+  width: 335px;
+  height: 54px;
+  padding: 14px 0;
+  border-radius: 18px;
+  background: #f4a503;
+  color: #000;
+  font-family: Urbanist;
+  font-size: 19px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .botao-concluir:hover {
-    background-color: #ffd54f;
+  background-color: #ffd54f;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .conteudo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header {
+    padding: 15px;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .coluna-cartoes {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .cartao {
+    min-width: 280px;
+    height: 150px;
+    padding: 15px;
+  }
+
+  .form-transferencia {
+    width: 90%;
+  }
+
+  .form-transferencia input,
+  .botao-concluir {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .conteudo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .coluna-cartoes {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .cartao {
+    min-width: 280px;
+    height: 150px;
+    padding: 15px;
+  }
+
+  .descricao-saldo {
+    font-size: 10px;
+    padding-left: 15px;
+    padding-top: 5px;
+  }
+
+  .saldo {
+    font-size: 16px;
+    top: 30px;
+    left: 15px;
+  }
+
+  .numero-cartao {
+    font-size: 14px;
+    top: 60px;
+    left: 15px;
+  }
+
+  .detalhes-cartao {
+    bottom: 10px;
+    left: 15px;
+  }
+
+  .nome-cartao,
+  .exp-date {
+    font-size: 10px;
+  }
+
+  .form-transferencia {
+    width: 90%;
+  }
+
+  .form-transferencia input,
+  .botao-concluir {
+    width: 100%;
+  }
 }
