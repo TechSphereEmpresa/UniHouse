@@ -1,319 +1,321 @@
-:root {
-    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-  }
-  
-  .main-container {
-    overflow: hidden;
-  }
-  
-  .main-container,
-  .main-container * {
-    box-sizing: border-box;
-  }
-  
-  input,
-  select,
-  textarea,
-  button {
-    outline: 0;
-  }
-  
-  .main-container {
-    position: relative;
-    width: 1280px;
-    height: 832px;
-    margin: 0 auto;
-    background: #000000;
-  }
-  .arrow-right-next {
-    position: relative;
-    width: 26px;
-    height: 26px;
-    margin: 66px 0 0 22px;
-    background: url(./assets/images/6e679e07-23c2-430c-9a9d-9cde9ff598b0.png)
-      no-repeat center;
-    background-size: cover;
-    overflow: hidden;
-  }
-  .frame {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 10px;
-    position: relative;
-    width: 1080px;
-    margin: 33px 0 0 100px;
-    z-index: 1;
-  }
-  .hello-register {
-    flex-shrink: 0;
-    flex-basis: auto;
-    position: relative;
-    height: 39px;
-    color: #ffffff;
-    font-family: Urbanist, var(--default-font-family);
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 39px;
-    text-align: left;
-    white-space: nowrap;
-    letter-spacing: -0.3px;
-    z-index: 2;
-  }
-  .frame-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: stretch;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-    gap: 32px;
-    position: relative;
-    min-width: 0;
-    z-index: 3;
-  }
-  .frame-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-self: stretch;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-    gap: 28px;
-    position: relative;
-    z-index: 4;
-  }
-  .frame-3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: stretch;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-    gap: 14px;
-    position: relative;
-    z-index: 5;
-  }
-  .share-code {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    position: relative;
-    width: 328px;
-    height: 48px;
-    color: #8390a1;
-    font-family: Urbanist, var(--default-font-family);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    text-align: left;
-    z-index: 6;
-  }
-  .email-box {
-    flex-shrink: 0;
-    position: relative;
-    width: 327px;
-    height: 54px;
-    z-index: 7;
-    overflow: hidden;
-  }
-  .rectangle {
-    position: absolute;
-    width: 327px;
-    height: 54px;
-    top: 0;
-    left: 0;
-    border: 2px solid #f4a503;
-    z-index: 8;
-    border-radius: 18px;
-  }
-  .caixa-email-input {
-    position: absolute;
-    width: 327px;
-    height: 54px;
-    top: 0;
-    left: 0;
-    background: transparent;
-    border: none;
-    z-index: 12;
-    outline: none;
-  }
-  .codigo {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: absolute;
-    width: 56px;
-    height: 26px;
-    top: 14px;
-    left: 23px;
-    color: #ffffff;
-    font-family: IBM Plex Sans, var(--default-font-family);
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 26px;
-    text-align: center;
-    white-space: nowrap;
-    z-index: 9;
-  }
-  .frame-4 {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 15px;
-    left: 280px;
-    z-index: 10;
-    overflow: hidden;
-  }
-  .vector {
-    position: relative;
-    width: 17px;
-    height: 20px;
-    margin: 2px 0 0 3px;
-    background: url(./assets/images/10882b65-d580-42fd-be14-bf59c5b09d29.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 11;
-  }
-  .frame-5 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: stretch;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-    gap: 14px;
-    position: relative;
-    z-index: 13;
-  }
-  .text-4 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    flex-basis: auto;
-    position: relative;
-    width: 328px;
-    height: 24px;
-    color: #8390a1;
-    font-family: Urbanist, var(--default-font-family);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 14;
-  }
-  .section-3 {
-    flex-shrink: 0;
-    position: relative;
-    width: 327px;
-    height: 54px;
-    z-index: 15;
-    overflow: hidden;
-  }
-  .box-4 {
-    position: absolute;
-    width: 327px;
-    height: 54px;
-    top: 0;
-    left: 0;
-    background: #f7f8f9;
-    border: 1px solid #e8ecf4;
-    z-index: 16;
-    border-radius: 18px;
-  }
-  .Input-2 {
-    position: absolute;
-    width: 327px;
-    height: 54px;
-    top: 0;
-    left: 0;
-    background: transparent;
-    border: none;
-    z-index: 20;
-    outline: none;
-  }
-  .text-5 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: absolute;
-    width: 38px;
-    height: 26px;
-    top: 14px;
-    left: 23px;
-    color: #000000;
-    font-family: IBM Plex Sans, var(--default-font-family);
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 26px;
-    text-align: center;
-    white-space: nowrap;
-    z-index: 17;
-  }
-  .mail-send {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    top: 15px;
-    left: 280px;
-    z-index: 18;
-    overflow: hidden;
-  }
-  .vector-6 {
-    position: relative;
-    width: 21px;
-    height: 18px;
-    margin: 3px 0 0 2px;
-    background: url(./assets/images/6afe4fc9-b581-4d04-8c27-63d0524d476d.png)
-      no-repeat center;
-    background-size: 100% 100%;
-    z-index: 19;
-  }
-  .button-group {
-    flex-shrink: 0;
-    position: relative;
-    width: 327px;
-    height: 54px;
-    cursor: pointer;
-    font-size: 0px;
-    background: transparent;
-    border: none;
-    z-index: 21;
-    border-radius: 18px;
-    border-radius: 18px;
-    background: var(--Cor-principal, #F4A503);
-    align-items: center;
-  }
-
-.button-group span{
-    color: #000;
-    text-align: center;
-    font-feature-settings: 'liga' off, 'clig' off;
-
-    /* Botão continuar */
-    font-family: Urbanist;
-    font-size: 19px;
-    font-style: normal;
-    font-weight: 700;
-    
+body {
+  align-items: center;
 }
 
-  .seguir {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-    width: 56px;
-    height: 26px;
-    margin: 14px 0 0 136px;
-    color: #000000;
-    font-family: Urbanist, var(--default-font-family);
+body, main, .criar, foto-caixas, .foto, .caixas {
+  display: flex;
+  flex-direction: column;
+}
 
-  }
+header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  padding: 49px 100px 15px 100px;
+}
+
+main {
+  width: 327px;
+  height: 100%;
+  justify-content: center;
+  gap: 40px;
+}
+
+
+.main-container {
+  position: relative;
+  width: 1280px;
+  height: 832px;
+  margin: 0 auto;
+  background: #000000;
+}
+
+.arrow-right-next {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  margin: 66px 0 0 22px;
+  background: url(./assets/images/6e679e07-23c2-430c-9a9d-9cde9ff598b0.png) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  position: relative;
+  width: 1080px;
+  margin: 33px 0 0 100px;
+  z-index: 1;
+}
+
+.hello-register {
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  height: 39px;
+  color: #ffffff;
+  font-family: Urbanist, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 39px;
+  text-align: left;
+  white-space: nowrap;
+  letter-spacing: -0.3px;
+  z-index: 2;
+}
+
+.frame-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 32px;
+  position: relative;
+  min-width: 0;
+  z-index: 3;
+}
+
+.frame-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 28px;
+  position: relative;
+  z-index: 4;
+}
+
+.frame-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 14px;
+  position: relative;
+  z-index: 5;
+}
+
+.share-code {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  width: 328px;
+  height: 48px;
+  color: #8390a1;
+  font-family: Urbanist, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  z-index: 6;
+}
+
+.email-box {
+  flex-shrink: 0;
+  position: relative;
+  width: 327px;
+  height: 54px;
+  z-index: 7;
+  overflow: hidden;
+}
+
+.rectangle {
+  position: absolute;
+  width: 327px;
+  height: 54px;
+  top: 0;
+  left: 0;
+  border: 2px solid #f4a503;
+  z-index: 8;
+  border-radius: 18px;
+}
+
+.caixa-email-input {
+  position: absolute;
+  width: 327px;
+  height: 54px;
+  top: 0;
+  left: 0;
+  background: transparent;
+  border: none;
+  z-index: 12;
+  outline: none;
+}
+
+.codigo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 56px;
+  height: 26px;
+  top: 14px;
+  left: 23px;
+  color: #ffffff;
+  font-family: IBM Plex Sans, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 9;
+}
+
+.frame-4 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 15px;
+  left: 280px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.vector {
+  position: relative;
+  width: 17px;
+  height: 20px;
+  margin: 2px 0 0 3px;
+  background: url(./assets/images/10882b65-d580-42fd-be14-bf59c5b09d29.png) no-repeat center;
+  background-size: 100% 100%;
+  z-index: 11;
+}
+
+.frame-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 14px;
+  position: relative;
+  z-index: 13;
+}
+
+.text-4 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 328px;
+  height: 24px;
+  color: #8390a1;
+  font-family: Urbanist, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 14;
+}
+
+.section-3 {
+  flex-shrink: 0;
+  position: relative;
+  width: 327px;
+  height: 54px;
+  z-index: 15;
+  overflow: hidden;
+}
+
+.box-4 {
+  position: absolute;
+  width: 327px;
+  height: 54px;
+  top: 0;
+  left: 0;
+  background: #f7f8f9;
+  border: 1px solid #e8ecf4;
+  z-index: 16;
+  border-radius: 18px;
+}
+
+.Input-2 {
+  position: absolute;
+  width: 327px;
+  height: 54px;
+  top: 0;
+  left: 0;
+  background: transparent;
+  border: none;
+  z-index: 20;
+  outline: none;
+}
+
+.text-5 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 38px;
+  height: 26px;
+  top: 14px;
+  left: 23px;
+  color: #000000;
+  font-family: IBM Plex Sans, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 17;
+}
+
+.mail-send {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 15px;
+  left: 280px;
+  z-index: 18;
+  overflow: hidden;
+}
+
+.vector-6 {
+  position: relative;
+  width: 21px;
+  height: 18px;
+  margin: 3px 0 0 2px;
+  background: url(./assets/images/6afe4fc9-b581-4d04-8c27-63d0524d476d.png) no-repeat center;
+  background-size: 100% 100%;
+  z-index: 19;
+}
+
+a.btn {
+  width: 100%;
+}
+
+.seguir-btn {
+  width: 100%;
+  height: 54px;
+  padding: 10px 20px;
+  background-color: #F4A503;
+  color: #000;
+  border: none;
+  border-radius: 18px;
+  font-family: Urbanist;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.seguir-btn:hover {
+  color: #fff;
+}
