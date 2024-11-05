@@ -1,96 +1,130 @@
+/* Configura o corpo da página */
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 150px;
+    display: flex; /* Usando flexbox para disposição */
+    flex-direction: column; /* Organiza os elementos em uma coluna */
+    align-items: center; /* Centraliza os itens na horizontal */
+    gap: 150px; /* Adiciona um espaço de 150px entre os elementos */
 }
 
-main{
-    align-items: center;
+/* Configuração do contêiner principal (main) */
+main {
+    align-items: center; /* Centraliza os itens do contêiner principal */
 }
 
-header{
-    display: flex;
-    height: 102px;
-    padding: 0px 20px 15px 20px;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: start;
-    gap: 80px;
-    align-self: stretch;
+/* Estilização do cabeçalho (header) */
+header {
+    display: flex; /* Usando flexbox para o layout do cabeçalho */
+    height: 102px; /* Definindo uma altura fixa para o cabeçalho */
+    padding: 0px 20px 15px 20px; /* Definindo o preenchimento nas laterais */
+    flex-direction: column; /* Os itens dentro do header serão organizados em uma coluna */
+    justify-content: flex-end; /* Alinha os itens ao final do contêiner */
+    align-items: start; /* Alinha os itens no início (lado esquerdo) */
+    gap: 80px; /* Espaço de 80px entre os elementos dentro do cabeçalho */
+    align-self: stretch; /* Garante que o cabeçalho ocupe toda a largura disponível */
 }
+
+/* Configuração do contêiner geral (container) */
 .container {
-    text-align: center;
-    width: 100%;
-    align-items: center;
-    height: 792px;
+    text-align: center; /* Alinha o texto no centro */
+    width: 90%; /* Ocupa toda a largura da tela */
+    align-items: center; /* Alinha os itens no centro horizontalmente */
 }
 
+/* Estilização do botão de voltar (back-button) */
 .back-button {
-    font-size: 30px;
-    color: #656F77;
-    text-decoration: none;
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    font-size: 30px; /* Tamanho da fonte do botão */
+    color: #656F77; /* Cor do ícone de voltar */
+    text-decoration: none; /* Remove qualquer sublinhado ou decoração do link */
+    position: absolute; /* Posiciona o botão de forma absoluta */
+    top: 20px; /* Distância de 20px do topo */
+    left: 20px; /* Distância de 20px da esquerda */
 }
 
+/* Título principal (h1) */
 h1 {
-    font-size: 24px;
-    color: #fff;
-    margin-top: 50px; /* Ajuste para compensar o espaço da seta */
-    margin-bottom: 40px;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 130%;
+    font-size: 24px; /* Tamanho da fonte do título */
+    color: #fff; /* Cor do texto */
+    margin-top: 50px; /* Ajuste para compensar o espaço da seta de voltar */
+    margin-bottom: 40px; /* Distância do título para o conteúdo abaixo */
+    font-size: 30px; /* Aumenta o tamanho da fonte para 30px */
+    font-weight: 700; /* Deixa o texto em negrito */
+    line-height: 110%; /* Define o espaçamento entre as linhas de texto */
 }
 
+/* Descrição abaixo do título (description) */
 .description {
-    font-size: 16px;
-    color: #656F77;
-    margin-bottom: 30px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    font-size: 16px; /* Tamanho da fonte para a descrição */
+    color: #656F77; /* Cor do texto da descrição */
+    margin-bottom: 30px; /* Espaçamento abaixo da descrição */
+    flex-direction: column; /* Organiza os elementos da descrição em coluna */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    gap: 10px; /* Espaço de 10px entre os itens da descrição */
 }
 
+/* Estilo para o campo de entrada de código (input-field) */
 .input-field {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 54px;
-    padding: 0px 14px;
-    cursor: pointer;
+    display: flex; /* Usando flexbox para o campo de entrada */
+    align-items: center; /* Alinha o conteúdo do campo de entrada no centro */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    width: 100%; /* O campo de entrada ocupa 100% da largura do contêiner */
+    height: 54px; /* Define a altura do campo de entrada */
+    padding: 0px 14px; /* Define o preenchimento (padding) nas laterais */
+    cursor: pointer; /* Altera o cursor para mãozinha ao passar sobre o campo */
     
-    font-family: Urbanist;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%;
-    color: #000;
+    font-family: Urbanist; /* Define a fonte do campo de entrada */
+    font-size: 16px; /* Tamanho da fonte */
+    font-style: normal; /* Define o estilo da fonte como normal */
+    font-weight: 500; /* Define o peso da fonte */
+    line-height: 150%; /* Define a altura da linha */
+    color: #000; /* Cor do texto */
     
-    background-color: #fff;
-    border: none;
-    border-radius: 16px;
+    background-color: #fff; /* Cor de fundo do campo de entrada */
+    border-radius: 16px; /* Adiciona bordas arredondadas */
 }
 
+/* Botão "Enviar" */
 .btn-enviar {
-    width: 100%;
-    background-color: #F4A503;
-    color: #000;
-    font-family: Urbanist;
-    height: 54px;
-    padding: 10px 20px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 20px;
-    font-size: 19px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.5s;
+    width: 60%; /* Define a largura do botão como 60% do contêiner */
+    background-color: #F4A503; /* Cor de fundo do botão */
+    color: #000; /* Cor do texto */
+    font-family: Urbanist; /* Define a fonte do botão */
+    height: 54px; /* Define a altura do botão */
+    padding: 14px 23px; /* Preenchimento interno do botão */
+    margin-top: 30px; /* Espaçamento de 30px acima do botão */
+    margin-bottom: 30px; /* Espaçamento de 20px abaixo do botão */
+    border: none; /* Remove as bordas do botão */
+    border-radius: 20px; /* Borda arredondada */
+    font-size: 19px; /* Tamanho da fonte do botão */
+    font-weight: 700; /* Deixa o texto em negrito */
+    cursor: pointer; /* Altera o cursor para mãozinha */
+    transition: background-color 0.5s; /* Efeito de transição suave na cor de fundo */
 }
 
+/* Efeito de hover para o botão "Enviar" */
 .btn-enviar:hover {
-    background-color: #d29502;
+    background-color: #d29502; /* Cor do fundo do botão quando o cursor passar sobre ele */
+}
+
+/* Estilo para o botão secundário */
+.btn-secundario {
+    width: 60%; /* Largura de 60% do contêiner */
+    background-color: #fff; /* Cor de fundo branca */
+    color: #F4A503; /* Cor do texto em laranja */
+    font-family: Urbanist; /* Fonte do botão */
+    height: 54px; /* Altura do botão */
+    padding: 10px 20px; /* Preenchimento interno */
+    margin-top: 20px; /* Distância de 20px acima do botão */
+    margin-bottom: 20px; /* Distância de 20px abaixo do botão */
+    border: 2px solid #F4A503; /* Borda laranja */
+    border-radius: 20px; /* Borda arredondada */
+    font-size: 19px; /* Tamanho da fonte */
+    font-weight: 700; /* Texto em negrito */
+    cursor: pointer; /* Altera o cursor para mãozinha */
+    transition: background-color 0.5s; /* Transição suave na cor de fundo */
+}
+
+/* Efeito de hover para o botão secundário */
+.btn-secundario:hover {
+    background-color: #F4A503; /* Cor de fundo laranja quando o cursor passar */
+    color: #fff; /* Altera a cor do texto para branco */
 }
