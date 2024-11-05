@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Urbanist', Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    height: 100vh;
+}
+
+.navbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #000; 
+    padding: 10px 50px; 
+    margin: 20px 0; 
+}
+
+.back-arrow, .settings {
+    color: #fff; 
+    font-size: 24px; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+    margin: 0 20px; /* Definindo uma margem horizontal igual para ambos os ícones */
+}
+
+.back-arrow:hover, .settings:hover {
+    color: #F4A503; 
+}
+
+.title {
+    font-size: 20px;  
+    color: #fff; 
+}
+
+
+.main-container {
+    margin: 0 5%; 
+    width: 100%;
+    max-width: 1080px; 
+}
+
+.profile-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ccc;
+    background-image: url('foto de perfil.jpg');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    margin: 20px auto 15px;
+}
+
+
+.profile-name {
+    font-size: 22px;
+    font-weight: normal;
+    margin-top: 5px; /* Diminuiu a margem superior */
+    margin-bottom: 3px;
+}
+
+.profile-role {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 12px; 
+}
+
+.separator-um {
+    display: flex;
+    border: none;
+    border-top: 1px solid #444;
+    width: 100%;
+    max-width: 1080px; 
+    margin: 5px 0; 
+}
+
+.info-text {
+    display: flex; 
+    font-size: 16px;
+    flex-direction: column; 
+    gap: 5px; /* EDistancia email e container */
+    align-self: stretch;
+    margin-bottom: 10px;
+}
+
+.info-text label {
+    margin-bottom: 2px; /* Diminui a margem inferior do label */
+}
+
+.email-input {
+    height: 20px;
+    border: 1.5px solid #fff; 
+    background-color: #000; 
+    color: #ccc; 
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 10px;
+    width: 100%; 
+}
+
+.email-input::placeholder {
+    color: #F4A503; /* Cor do texto do placeholder */
+}
+
+.separator-dois {
+    display: flex;
+    border: none;
+    border-top: 1px solid #444;
+    width: 100%;
+    max-width: 1080px; 
+    margin: 10px 0; /* Diminuiu a margem superior e inferior */
+}
+
+.info-text-tel {
+    display: flex; 
+    font-size: 16px;
+    flex-direction: column; 
+    gap: 5px; /* EDistancia email e container */
+    align-self: stretch;
+    margin-bottom: 10px;
+}
+
+.info-text-tel label {
+    margin-bottom: 2px; /* Diminui a margem inferior do label */
+}
+
+.telephone-input {
+    height: 20px;
+    border: 1.5px solid #fff; 
+    background-color: #000; 
+    color: #ccc; 
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 10px;
+    width: 100%; 
+}
+
+.telephone-input::placeholder {
+    color: #F4A503; /* Cor do texto do placeholder */
+}
+
+.profile-info {
+    font-size: 16px;
+    text-align: left;
+    padding-top: 5px; /* Diminuiu o padding superior */
+    width: 100%;
+    max-width: 1080px;
+    margin: 10px auto; /* Diminuiu a margem superior */
+}
+
+
+.info-text {
+    margin-bottom: 10px;
+}
+
+.info-text label {
+    margin-bottom: 10px; 
+}
+
+.info-text div {
+    margin-top: 10px; 
+}
+
+
+@media (max-width: 768px) {
+    .main-container {
+        margin: 0 3%;
+    }
+
+    .back-arrow, .check {
+        font-size: 20px; 
+    }
+
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        margin: 0 2%;
+    }
+
+    .back-arrow, .check {
+        font-size: 18px; 
+    }
+}
