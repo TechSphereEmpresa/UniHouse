@@ -1,16 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-body, html {
-    height: 100%;
-    font-family: Arial, sans-serif;
+header {
     display: flex;
-    justify-content: center;
+    width: 100%;
     align-items: center;
-    background-color: #f0f0f0;
+    justify-content: space-between;
+    position: relative;
+    padding: 49px 100px 15px 100px;
 }
 
 .arrow {
@@ -23,8 +23,12 @@ body, html {
 
 /* Estilo para o conteúdo principal */
 .content {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     position: relative; /* Permite que a seta sobreponha o conteúdo, sem interferir no layout */
+    justify-content: center;
+    align-items: center;
 }
 
 /* Ícone de verificação */

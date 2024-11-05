@@ -4,13 +4,10 @@
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-    font-family: Arial, sans-serif;
+body{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .arrow {
@@ -21,14 +18,34 @@ body, html {
     color: #333;
 }
 
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .content {
+    display: flex;
+    flex-direction: column;
+    width: 226px;;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.Texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
 .check-icon {
     width: 100px; /* Ajuste o tamanho do ícone */
-    height: 100px;
-    margin-bottom: 20px;
 }
 
 h1 {
@@ -46,7 +63,6 @@ p {
     text-align: center;
     font-family: Urbanist;
     font-size: 15px;
-    font-style: normal;
     font-weight: 500;
     line-height: 150%; 
     width: 226px;

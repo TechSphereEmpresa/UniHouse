@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificação do Código</title>
+    <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/login/verificaCod.css">
     <link rel="icon" href="/assets/images/logo.png" type="image/png">
 </head>
@@ -15,12 +16,13 @@
         </a>
     </header>
 
-    <!-- Conteúdo centralizado -->
     <main>
-        <div class="container">
+        <div>
             <h1>OTP de Verificação</h1>
+        </div>
+        <div class="container">
             <p class="description">Digite o código de verificação que enviamos para o email cadastrado.</p>
-            
+        
             <div class="input-container">
                 <input type="text" class="input-codigo" maxlength="1" oninput="moveFocus(this)" />
                 <input type="text" class="input-codigo" maxlength="1" oninput="moveFocus(this)" />
@@ -32,7 +34,6 @@
         </div>
     </main>
 
-    <!-- Script para mover o foco automaticamente entre os campos -->
     <script>
         function moveFocus(input) {
             if (input.value.length >= input.maxLength) {
