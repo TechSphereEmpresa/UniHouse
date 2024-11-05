@@ -25,7 +25,7 @@ body {
 }
 
 .container {
-  width: 90%;
+
   max-width: 800px;
 }
 
@@ -39,11 +39,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 15px; /* Garantir que o botão tenha espaço suficiente em torno da seta */
-  width: auto;
-  height: auto;
-  min-width: 40px; /* Define uma largura mínima para garantir que o ícone não fique muito apertado */
-  min-height: 40px; /* Define uma altura mínima para o botão */
+  padding: 10px; /* Ajusta o padding para garantir que o botão tenha o espaço adequado */
+  width: 40px; /* Largura mínima para o botão */
+  height: 40px; /* Altura mínima para o botão */
+  overflow: hidden; /* Garante que nada saia do limite do botão */
+  border-radius: 50%; /* Garante que o botão seja arredondado */
 }
 
 .content {
@@ -154,18 +154,18 @@ body {
     align-self: flex-start;
     margin-bottom: 0.5em;
     display: flex;
-    justify-content: start;
-    align-items: start;
-    padding: 10px 15px; /* Ajusta o padding para que o botão tenha espaço suficiente */
-    width: auto; /* Permite que o botão se ajuste conforme o conteúdo */
-    height: auto; /* Permite que o botão tenha a altura automática */
-    min-width: 40px; /* Largura mínima para garantir que a seta não fique apertada */
-    min-height: 40px; /* Altura mínima para o botão */
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Ajusta o padding para que o botão tenha espaço suficiente */
+    width: 40px; /* Largura mínima do botão */
+    height: 40px; /* Altura mínima do botão */
+    overflow: hidden; /* Garante que a seta não saia do botão */
+    border-radius: 50%; /* Botão arredondado */
   }
 
   .back-button img {
-    width: 24px; /* Ajusta o tamanho da seta para o mobile */
-    height: auto; /* Garante que o ícone da seta tenha proporção correta */
+    width: 24px; /* Tamanho do ícone */
+    height: auto; /* Manter proporção da seta */
   }
 
   .title-transferencia h1 {
