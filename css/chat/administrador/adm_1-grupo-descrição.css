@@ -260,11 +260,39 @@ main {
     margin: auto 0;
 }
 
+/*.member-name {
+    align-self: stretch;
+    min-width: 240px;
+    flex: 1;
+    margin: auto 0;
+} */
+
 .member-name {
     align-self: stretch;
     min-width: 240px;
     flex: 1;
     margin: auto 0;
+    font-size: 18px; 
+    color: #fff; 
+    text-decoration: none; 
+}
+
+.member-name:hover {
+    color: #F4A503;
+}
+
+.member-name-adm {
+    align-self: stretch;
+    min-width: 240px;
+    flex: 1;
+    margin: auto 0;
+    font-size: 18px; 
+    color: #fff; 
+    text-decoration: none; 
+}
+
+.member-name-adm:hover {
+    color: #F4A503; 
 }
 
 .member-role {
