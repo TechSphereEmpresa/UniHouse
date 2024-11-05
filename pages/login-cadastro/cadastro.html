@@ -12,7 +12,7 @@
 <body>
     <header>
         <a href="/pages/login-cadastro/login-inicial.html">
-            <img src="/assets/icons/common/seta-voltar.svg" alt="">
+            <img src="/assets/icons/common/seta-voltar.svg" alt="Voltar">
         </a>
     </header>
 
@@ -29,12 +29,12 @@
                 <!-- Opções de perfil com Radio Buttons -->
                 <label class="radio-option" id="moradorOption">
                     <input type="radio" name="role" value="morador">
-                    <img src="/assets/icons/login-cadastro/bolinha-cadastro.svg      " alt=""
+                    <img src="/assets/icons/login-cadastro/bolinha-cadastro.svg" alt="Opção Morador">
                     <span>Morador (entra em uma república)</span>
                 </label>
                 <label class="radio-option" id="adminOption">
-                    <img src="/assets/icons/login-cadastro/bolinha-cadastro.svg      " alt=""
                     <input type="radio" name="role" value="administrador">
+                    <img src="/assets/icons/login-cadastro/bolinha-cadastro.svg" alt="Opção Administrador">
                     <span>Administrador (criar uma república)</span>
                 </label>
                 
@@ -45,17 +45,22 @@
     </main>
 
     <script>
-        // Função para lidar com o envio do formulário
         document.getElementById('formCadastro').addEventListener('submit', function(event) {
-            event.preventDefault(); // Previne o comportamento padrão do formulário
+            event.preventDefault(); // Impede o comportamento padrão do formulário
 
-            // Obtém o valor do tipo de perfil selecionado
+            // Obtém o perfil selecionado
             const perfilSelecionado = document.querySelector('input[name="role"]:checked') ? 
-                                       document.querySelector('input[name="role"]:checked').value : null;
+                                      document.querySelector('input[name="role"]:checked').value : null;
+
+            // Log para verificar se o perfil foi capturado corretamente
+            console.log('Perfil selecionado:', perfilSelecionado);
 
             // Salva o perfil no Local Storage se um perfil estiver selecionado
             if (perfilSelecionado) {
                 localStorage.setItem('perfilUsuario', perfilSelecionado);
+                console.log('Perfil salvo no Local Storage:', perfilSelecionado);
+            } else {
+                console.warn('Nenhum perfil foi selecionado.');
             }
 
             // Redireciona para a página inicial

@@ -74,7 +74,7 @@
         <div class="opcoes">
             <div class="opcao">
                 <img src="/assets/icons/home/configurações/sair.svg" alt="">
-                <a href="">
+                <a href="#" onclick="logout()">
                     <p>Sair</p>
                 </a>
             </div>
@@ -86,7 +86,12 @@
                 </a>
             </div>
         </div>
-
     </main>
+    <script>
+        function logout() {
+          localStorage.removeItem('perfilUsuario');
+          window.location.href = '/pages/login-cadastro/login-inicial.html';
+        }
+      </script>
 </body>
 </html>

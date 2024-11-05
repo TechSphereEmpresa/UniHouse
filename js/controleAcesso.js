@@ -4,7 +4,7 @@ function ajustarNavegacaoPorPerfil() {
   
     // Se o perfil não estiver definido, redireciona para login
     if (!perfil) {
-      window.location.href = 'login.html';
+      window.location.href = '/pages/login-cadastro/cadastro.html';
       return;
     }
   

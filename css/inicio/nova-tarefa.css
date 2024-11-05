@@ -39,7 +39,6 @@ form {
 }
 
 .caixa-nome, .caixa-opcoes, .caixa-descricao, .caixa-data, .caixa-hora {
-    /*flex: 2;*/
     width: 45%;
     display: flex;
     flex-direction: column;
