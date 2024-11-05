@@ -9,9 +9,13 @@ document.getElementById('formCadastro').addEventListener('submit', function (eve
     if (perfilSelecionado) {
         localStorage.setItem('perfilUsuario', perfilSelecionado);
         console.log('Perfil salvo no Local Storage:', perfilSelecionado);
+
+        if (perfilSelecionado === 'morador') {
+            window.location.href = '/pages/login-cadastro/codigo-republica.html';
+        } else if (perfilSelecionado === 'administrador') {
+            window.location.href = '/pages/login-cadastro/planos.html';
+        }
     } else {
         console.warn('Nenhum perfil foi selecionado.');
     }
-
-    window.location.href = '/pages/inicio/inicio.html';
 });

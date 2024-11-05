@@ -2,7 +2,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 140px;
 }
 
 header {
@@ -15,9 +14,9 @@ header {
 }
 
 main {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    width: 100%;
     align-items: center;
     justify-content: center;
     gap: 30px;
@@ -73,10 +72,15 @@ form {
 
 .radio-option {
     position: relative;
-    color: #fff;
+    justify-content: start;
     gap: 6px;
     background-color: transparent;
-    transition: background-color 0.3s;
+    color: #fff;
+    transition: background-color 0.5s;
+}
+
+.radio-option:hover { 
+    background: #232323;
 }
 
 .input-field, .nome{
@@ -86,6 +90,11 @@ form {
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
+    transition: background-color 0.5s;
+}
+
+.input-field:hover, .nome:hover {
+    background-color: #EAEAEA;
 }
 
 .btn-registrar {
@@ -137,6 +146,16 @@ form {
     }
 
     button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px) { 
+    .div-dados {
+        flex-direction: column;
+    }
+
+    .input-field, .radio-option {
         width: 100%;
     }
 }
