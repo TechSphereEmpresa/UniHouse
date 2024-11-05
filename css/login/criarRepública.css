@@ -5,11 +5,11 @@ body {
     gap: 150px;
 }
 
-main {
+main{
     align-items: center;
 }
 
-header {
+header{
     display: flex;
     height: 102px;
     padding: 0px 20px 15px 20px;
@@ -19,11 +19,11 @@ header {
     gap: 80px;
     align-self: stretch;
 }
-
 .container {
     text-align: center;
-    width: 90%;
+    width: 100%;
     align-items: center;
+    height: 792px;
 }
 
 .back-button {
@@ -38,11 +38,11 @@ header {
 h1 {
     font-size: 24px;
     color: #fff;
-    margin-top: 50px;
+    margin-top: 50px; /* Ajuste para compensar o espaço da seta */
     margin-bottom: 40px;
     font-size: 30px;
     font-weight: 700;
-    line-height: 110%;
+    line-height: 130%;
 }
 
 .description {
@@ -62,25 +62,27 @@ h1 {
     height: 54px;
     padding: 0px 14px;
     cursor: pointer;
+    
     font-family: Urbanist;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
     color: #000;
+    
     background-color: #fff;
+    border: none;
     border-radius: 16px;
 }
 
 .btn-enviar {
-    width: 60%;
+    width: 100%;
     background-color: #F4A503;
     color: #000;
     font-family: Urbanist;
     height: 54px;
-    padding: 14px 23px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding: 10px 20px;
+    margin-top: 20px;
     border: none;
     border-radius: 20px;
     font-size: 19px;
@@ -91,26 +93,4 @@ h1 {
 
 .btn-enviar:hover {
     background-color: #d29502;
-}
-
-.btn-secundario {
-    width: 60%;
-    background-color: #fff;
-    color: #F4A503;
-    font-family: Urbanist;
-    height: 54px;
-    padding: 10px 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 2px solid #F4A503;
-    border-radius: 20px;
-    font-size: 19px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.5s;
-}
-
-.btn-secundario:hover {
-    background-color: #F4A503;
-    color: #fff;
 }
