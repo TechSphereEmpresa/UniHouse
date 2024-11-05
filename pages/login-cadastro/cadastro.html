@@ -26,7 +26,6 @@
                 <input type="password" class="input-field" placeholder="Senha">
                 <input type="password" class="input-field" placeholder="Confirmar senha">
 
-                <!-- Opções de perfil com Radio Buttons -->
                 <label class="radio-option" id="moradorOption">
                     <input type="radio" name="role" value="morador">
                     <img src="/assets/icons/login-cadastro/bolinha-cadastro.svg" alt="Opção Morador">
@@ -38,36 +37,14 @@
                     <span>Administrador (criar uma república)</span>
                 </label>
                 
-                <!-- Botão de Registrar -->
                 <button type="submit" class="btn-registrar">Registrar</button>
             </div>
         </form>
     </main>
+    
+    <script src="/js/guardar-perfil.js" defer></script>
 
     <script>
-        document.getElementById('formCadastro').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede o comportamento padrão do formulário
-
-            // Obtém o perfil selecionado
-            const perfilSelecionado = document.querySelector('input[name="role"]:checked') ? 
-                                      document.querySelector('input[name="role"]:checked').value : null;
-
-            // Log para verificar se o perfil foi capturado corretamente
-            console.log('Perfil selecionado:', perfilSelecionado);
-
-            // Salva o perfil no Local Storage se um perfil estiver selecionado
-            if (perfilSelecionado) {
-                localStorage.setItem('perfilUsuario', perfilSelecionado);
-                console.log('Perfil salvo no Local Storage:', perfilSelecionado);
-            } else {
-                console.warn('Nenhum perfil foi selecionado.');
-            }
-
-            // Redireciona para a página inicial
-            window.location.href = '/pages/inicio/inicio.html';
-        });
-
-        // Opções de seleção para adicionar estilos visuais (opcional)
         const moradorOption = document.getElementById('moradorOption');
         const adminOption = document.getElementById('adminOption');
 
