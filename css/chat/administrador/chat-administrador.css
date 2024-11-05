@@ -900,7 +900,7 @@ body { /*¨Chats"*/
     box-shadow: 0 2px 12px -2px var(--orange-custom);
 }
 .conversation-item-dropdown-toggle:active {
-    background-color: var(--indigo-950);
+    background-color: var(--red-600);
 }
 .conversation-item-dropdown-list {
     position: absolute;
