@@ -35,9 +35,7 @@
         .marker-image {
             position: absolute;
             left: 0;
-            /* Posiciona na ponta esquerda */
             top: 50%;
-            /* Centraliza verticalmente */
             transform: translateY(-50%);
             width: 12px;
             height: 12px;
@@ -104,49 +102,24 @@
                 <li>S</li>
             </ul>
             <ul class="days"></ul>
+            <ul class="days" id="semana"></ul>
         </div>
     </header>
 
     <main>
         <section id="horarios">
-            <div class="div-hora">
-                <p>01:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>02:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>03:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>04:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>05:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>06:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>07:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>08:00</p>
-                <hr class="divisoria">
-            </div>
+            <div class="div-hora"><p>01:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>02:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>03:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>04:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>05:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>06:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>07:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>08:00</p><hr class="divisoria"></div>
 
             <div class="tarefa-marcada">
-                <div class="div-hora">
-                    <p>09:00</p>
-                    <hr class="divisoria">
-                </div>
+                <div class="div-hora"><p>09:00</p><hr class="divisoria"></div>
+            
                 <a class="box-tarefa" href="tarefa.html">
                     <img src="../../assets/icons/home/tarefa.svg" alt="">
                     <div class="box-tarefa-info">
@@ -162,138 +135,30 @@
                 </a>
             </div>
 
-            <!-- Continue adicionando os horários como estava no seu código -->
-            <div class="div-hora">
-                <p>10:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>11:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>12:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>13:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>14:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>15:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>16:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>17:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>18:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>19:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>20:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>21:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>22:00</p>
-                <hr class="divisoria">
-            </div>
-            <div class="div-hora">
-                <p>23:00</p>
-                <hr class="divisoria">
-            </div>
+            <div class="div-hora"><p>10:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>11:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>12:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>13:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>14:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>15:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>16:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>17:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>18:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>19:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>20:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>21:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>22:00</p><hr class="divisoria"></div>
+            <div class="div-hora"><p>23:00</p><hr class="divisoria"></div>
 
-            <!-- Marcador de hora atual -->
             <div id="currentTimeMarker" class="current-time-marker">
                 <img src="/assets/icons/home/calendario/ellipse.svg" alt="Marcador" class="marker-image">
             </div>
 
         </section>
-        <section class="secao-vazia"></section>
     </main>
-
-    <script>
-        function updateMarkerPosition() {
-            const horarios = document.getElementById('horarios');
-            const marker = document.getElementById('currentTimeMarker');
-
-            // Obtenha a hora atual
-            const now = new Date();
-            const currentHour = now.getHours();
-            const currentMinute = now.getMinutes();
-
-            // Calcule o total de minutos no dia
-            const totalMinutesInDay = 24 * 60;
-            const currentMinutes = currentHour * 60 + currentMinute;
-
-            // Calcule a posição do marcador
-            const containerHeight = horarios.offsetHeight;
-            const positionY = (currentMinutes / totalMinutesInDay) * containerHeight;
-
-            // Aplique a posição ao marcador
-            marker.style.top = `${positionY}px`;
-        }
-
-        // Atualize a posição do marcador a cada minuto
-        setInterval(updateMarkerPosition, 60000);
-
-        // Chame a função para definir a posição inicial
-        updateMarkerPosition();
-
-    </script>
+    
     <script src="/js/calendario.js" defer></script>
-    <script>
-        if ('WebSocket' in window) {
-            (function () {
-                function refreshCSS() {
-                    var sheets = [].slice.call(document.getElementsByTagName("link"));
-                    var head = document.getElementsByTagName("head")[0];
-                    for (var i = 0; i < sheets.length; ++i) {
-                        var elem = sheets[i];
-                        var parent = elem.parentElement || head;
-                        parent.removeChild(elem);
-                        var rel = elem.rel;
-                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-                        }
-                        parent.appendChild(elem);
-                    }
-                }
-                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-                var address = protocol + window.location.host + window.location.pathname + '/ws';
-                var socket = new WebSocket(address);
-                socket.onmessage = function (msg) {
-                    if (msg.data == 'reload') window.location.reload();
-                    else if (msg.data == 'refreshcss') refreshCSS();
-                };
-                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-                    console.log('Live reload enabled.');
-                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-                }
-            })();
-        }
-        else {
-            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-        }
-    </script>
+    <script src="/js/marcador-calendario.js" defer></script>
 </body>
 
 </html>
