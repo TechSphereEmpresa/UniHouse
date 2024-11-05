@@ -1,21 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body{
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.arrow {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 2rem;
-    color: #333;
+header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    padding: 49px 100px 15px 100px;
 }
 
 main{

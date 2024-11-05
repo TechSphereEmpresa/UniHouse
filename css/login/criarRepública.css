@@ -1,251 +1,254 @@
-:root {
-    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
-  }
-  
-  .main-container {
-    overflow: hidden;
-  }
-  
-  .main-container,
-  .main-container * {
-    box-sizing: border-box;
-  }
-  
-  input,
-  select,
-  textarea,
-  button {
-    outline: 0;
-  }
-  
-  .main-container {
-    position: relative;
-    width: 1280px;
-    height: 832px;
-    margin: 0 auto;
-    background: #000000;
-  }
-  .arrow-right-next {
-    position: relative;
-    width: 26px;
-    height: 26px;
-    margin: 66px 0 0 22px;
-    background: url(./assets/images/f465d80d-630d-41e7-8388-f266020dedb7.png)
-      no-repeat center;
-    background-size: cover;
-    overflow: hidden;
-  }
-  .frame {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 72px;
-    position: relative;
-    width: 1236px;
-    margin: 33px 0 0 22px;
-    z-index: 1;
-  }
-  .hello-register {
-    flex-shrink: 0;
-    flex-basis: auto;
-    position: relative;
-    color: #ffffff;
-    font-family: Urbanist, var(--default-font-family);
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 10px;
-    text-align: left;
-    white-space: nowrap;
-    letter-spacing: -0.3px;
-    z-index: 2;
-  }
-  .frame-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-    gap: 31px;
-    position: relative;
-    width: 980px;
-    z-index: 3;
-  }
-  .frame-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-    gap: 13px;
-    position: relative;
-    min-width: 0;
-    z-index: 4;
-  }
-  .frame-3 {
-    flex-shrink: 0;
-    position: relative;
-    width: 100px;
-    height: 100px;
-    background: url(./assets/images/b0df1ff3-176b-4d39-af6c-4e333723fac0.png)
-      no-repeat center;
-    background-size: cover;
-  }
-  .add-photo {
-    flex-shrink: 0;
-    flex-basis: auto;
-    position: relative;
-    height: 24px;
-    color: #8390a1;
-    font-family: Urbanist, var(--default-font-family);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 6;
-  }
-  .email-box {
-    flex-shrink: 0;
-    position: relative;
-    width: 327px;
-    height: 54px;
-    font-size: 0px;
-    z-index: 7;
-    overflow: hidden;
-    border-radius: 18px;
-  }
-  .name {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-    width: 41px;
-    height: 26px;
-    margin: 14px 0 0 23px;
-    color: #000000;
-    font-family: IBM Plex Sans, var(--default-font-family);
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 26px;
-    text-align: center;
-    white-space: nowrap;
-    z-index: 9;
-  }
-  .rectangle {
-    position: absolute;
-    width: 327px;
-    height: 54px;
-    top: 0;
-    left: 0;
-    background: #f7f8f9;
-    border: 1px solid #e8ecf4;
-    z-index: 8;
-    border-radius: 18px;
-  }
-  .caixa-email-input {
-    position: absolute;
-    width: 327px;
-    height: 54px;
-    top: 0;
-    left: 0;
-    background: transparent;
-    border: none;
-    z-index: 10;
-    outline: none;
-  }
-  .caixa-email {
-    flex-shrink: 0;
-    position: relative;
-    width: 327px;
-    height: 54px;
-    font-size: 0px;
-    z-index: 11;
-    overflow: hidden;
-    border-radius: 18px;
-  }
-  .descricao {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-    width: 67px;
-    height: 26px;
-    margin: 14px 0 0 23px;
-    color: #000000;
-    font-family: IBM Plex Sans, var(--default-font-family);
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 26px;
-    text-align: center;
-    white-space: nowrap;
-    z-index: 13;
-  }
-  .rectangle-4 {
-    position: absolute;
-    width: 327px;
-    height: 54px;
-    top: 0;
-    left: 0;
-    background: #f7f8f9;
-    border: 1px solid #e8ecf4;
-    z-index: 12;
-    border-radius: 18px;
-  }
-  .email-input {
-    position: absolute;
-    width: 327px;
-    height: 54px;
-    top: 0;
-    left: 0;
-    background: transparent;
-    border: none;
-    z-index: 14;
-    outline: none;
-  }
-  .button {
-    flex-shrink: 0;
-    position: relative;
-    width: 327px;
-    height: 54px;
-    cursor: pointer;
-    font-size: 0px;
-    background: transparent;
-    border: none;
-    z-index: 15;
-    border-radius: 18px;
-  }
-  .create {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-    width: 44px;
-    height: 26px;
-    margin: 14px 0 0 142px;
-    color: #000000;
-    font-family: Urbanist, var(--default-font-family);
-    font-size: 19px;
-    font-weight: 700;
-    line-height: 26px;
-    text-align: center;
-    white-space: nowrap;
-    z-index: 17;
-  }
-  .rectangle-5 {
-    position: absolute;
-    width: 327px;
-    height: 54px;
-    top: 0;
-    left: 0;
-    background: #f4a503;
-    z-index: 16;
-    border-radius: 18px;
-  }
-  
+main {
+  overflow: hidden;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  width: 1280px;
+  height: 832px;
+  margin: 0 auto;
+  background: #000000;
+}
+
+.arrow-right-next {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  margin: 66px 0 0 22px;
+  background: url(./assets/images/f465d80d-630d-41e7-8388-f266020dedb7.png) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 72px;
+  position: relative;
+  width: 1236px;
+  margin: 33px 0 0 22px;
+  z-index: 1;
+}
+
+.hello-register {
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  color: #ffffff;
+  font-family: Urbanist, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 10px;
+  text-align: left;
+  white-space: nowrap;
+  letter-spacing: -0.3px;
+  z-index: 2;
+}
+
+.frame-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 31px;
+  position: relative;
+  width: 980px;
+  z-index: 3;
+}
+
+.frame-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 13px;
+  position: relative;
+  min-width: 0;
+  z-index: 4;
+}
+
+.frame-3 {
+  flex-shrink: 0;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: url(./assets/images/b0df1ff3-176b-4d39-af6c-4e333723fac0.png) no-repeat center;
+  background-size: cover;
+}
+
+.add-photo {
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  height: 24px;
+  color: #8390a1;
+  font-family: Urbanist, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 6;
+}
+
+.email-box {
+  flex-shrink: 0;
+  position: relative;
+  width: 327px;
+  height: 54px;
+  font-size: 0px;
+  z-index: 7;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.name {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 41px;
+  height: 26px;
+  margin: 14px 0 0 23px;
+  color: #000000;
+  font-family: IBM Plex Sans, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 9;
+}
+
+.rectangle {
+  position: absolute;
+  width: 327px;
+  height: 54px;
+  top: 0;
+  left: 0;
+  background: #f7f8f9;
+  border: 1px solid #e8ecf4;
+  z-index: 8;
+  border-radius: 18px;
+}
+
+.caixa-email-input {
+  position: absolute;
+  width: 327px;
+  height: 54px;
+  top: 0;
+  left: 0;
+  background: transparent;
+  border: none;
+  z-index: 10;
+  outline: none;
+}
+
+.caixa-email {
+  flex-shrink: 0;
+  position: relative;
+  width: 327px;
+  height: 54px;
+  font-size: 0px;
+  z-index: 11;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.descricao {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 67px;
+  height: 26px;
+  margin: 14px 0 0 23px;
+  color: #000000;
+  font-family: IBM Plex Sans, var(--default-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 13;
+}
+
+.rectangle-4 {
+  position: absolute;
+  width: 327px;
+  height: 54px;
+  top: 0;
+  left: 0;
+  background: #f7f8f9;
+  border: 1px solid #e8ecf4;
+  z-index: 12;
+  border-radius: 18px;
+}
+
+.email-input {
+  position: absolute;
+  width: 327px;
+  height: 54px;
+  top: 0;
+  left: 0;
+  background: transparent;
+  border: none;
+  z-index: 14;
+  outline: none;
+}
+
+.button {
+  flex-shrink: 0;
+  position: relative;
+  width: 327px;
+  height: 54px;
+  cursor: pointer;
+  font-size: 0px;
+  background: transparent;
+  border: none;
+  z-index: 15;
+  border-radius: 18px;
+}
+
+.create {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 44px;
+  height: 26px;
+  margin: 14px 0 0 142px;
+  color: #000000;
+  font-family: Urbanist, var(--default-font-family);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 17;
+}
+
+.rectangle-5 {
+  position: absolute;
+  width: 327px;
+  height: 54px;
+  top: 0;
+  left: 0;
+  background: #f4a503;
+  z-index: 16;
+  border-radius: 18px;
+}

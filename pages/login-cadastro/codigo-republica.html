@@ -23,20 +23,27 @@
 
             <input type="text" class="input-codigo" placeholder="Código">
 
-            <button class="verificar-btn">Verificar</button>
+            <button id="verificar-btn">Verificar</button>
             
         </div>
 
-        <div class="republica-acesso">
+        <div id="republica-acesso">
             <img class="cancelar" src="/assets/icons/login-cadastro/x.svg" alt="">
 
             <div class="icon-nome">
-                <img src="/assets/icons/login-cadastro/icon-rep.svg" alt="Foto de perfil da república">
+                <img src="/assets/icons/common/icon-rep.svg" alt="Foto de perfil da república">
                 <h1>[Nome da república]</h1>
             </div>
-
-            <button class="solicitar-acesso">Solicitar acesso</button>
+            <a class="btn" href="entradaSolicitada.html">
+                <button class="solicitar-btn">Solicitar acesso</button>
+            </a>
         </div>
     </main>
+
+    <script>
+        document.getElementById("verificar-btn").addEventListener("click", function() {
+            document.getElementById("republica-acesso").style.display = "flex";
+        });
+    </script>
 </body>
 </html>
