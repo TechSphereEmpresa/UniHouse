@@ -1,11 +1,14 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap);
-body, html {
+
+body,
+html {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center;  
-    
+    align-items: center;
+    justify-content: center;
+
 }
+
 header {
     display: flex;
     width: 100%;
@@ -14,45 +17,64 @@ header {
     position: relative;
     padding: 49px 100px 15px 100px;
 }
+
 header a img {
-    position: absolute;  /* Posiciona a seta de forma absoluta */
-    top: 20px;  /* Distância do topo */
-    left: 20px;  /* Distância da esquerda */
-    width: 30px;  /* Tamanho da seta */
+    position: absolute;
+    /* Posiciona a seta de forma absoluta */
+    top: 20px;
+    /* Distância do topo */
+    left: 20px;
+    /* Distância da esquerda */
+    width: 30px;
+    /* Tamanho da seta */
     height: auto;
 }
 
 /* Main container para centralizar o conteúdo */
 main {
     display: flex;
-    flex-direction: column;  /* Organiza os itens em coluna */
-    align-items: center;  /* Centraliza verticalmente */
-    justify-content: center;  /* Centraliza horizontalmente */
-    padding: 20px;  /* Padding para garantir que o conteúdo não fique colado nas bordas */
+    flex-direction: column;
+    /* Organiza os itens em coluna */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    padding: 20px;
+    /* Padding para garantir que o conteúdo não fique colado nas bordas */
     width: 100%;
-    height: 100%;  /* Garantir que o main ocupe a altura total da tela */
-    max-width: 500px;  /* Limita a largura do conteúdo para não ficar muito largo */
+    height: 100%;
+    /* Garantir que o main ocupe a altura total da tela */
+    max-width: 500px;
+    /* Limita a largura do conteúdo para não ficar muito largo */
     position: relative;
 }
 
 /* Container interno do conteúdo */
 .container {
     display: flex;
-    font-family: Urbanist;  /* Aplica a fonte Urbanist */
-    flex-direction: column;  /* Organiza os itens em coluna */
-    align-items: center;  /* Centraliza os itens dentro do container */
-    justify-content: center;  /* Centraliza o conteúdo do container */
+    font-family: Urbanist;
+    /* Aplica a fonte Urbanist */
+    flex-direction: column;
+    /* Organiza os itens em coluna */
+    align-items: center;
+    /* Centraliza os itens dentro do container */
+    justify-content: center;
+    /* Centraliza o conteúdo do container */
     width: 100%;
-    max-width: 500px;  /* Limita a largura do conteúdo */
-    margin-top: auto;   /* Empurra o conteúdo para o meio da tela verticalmente */
-    margin-bottom: auto; /* Garante que a .container esteja centralizada no main */
+    max-width: 500px;
+    /* Limita a largura do conteúdo */
+    margin-top: auto;
+    /* Empurra o conteúdo para o meio da tela verticalmente */
+    margin-bottom: auto;
+    /* Garante que a .container esteja centralizada no main */
 }
 
 /* Estilo para o título */
 h1 {
     color: #fff;
-    font-family: Urbanist, sans-serif;  
-    margin-top: 50px;  /* Ajuste para compensar o espaço da seta */
+    font-family: Urbanist, sans-serif;
+    margin-top: 50px;
+    /* Ajuste para compensar o espaço da seta */
     margin-bottom: 40px;
     font-size: 30px;
     font-weight: 700;
@@ -61,7 +83,8 @@ h1 {
 
 /* Estilo para a descrição */
 .description {
-    font-family: Urbanist;  /* Aplica a fonte Urbanist */
+    font-family: Urbanist;
+    /* Aplica a fonte Urbanist */
     font-weight: 500;
     line-height: 150%;
     font-size: 16px;
@@ -77,7 +100,8 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 30px;  /* Adiciona margem inferior para separar do botão */
+    margin-bottom: 30px;
+    /* Adiciona margem inferior para separar do botão */
 }
 
 /* Estilo para os inputs de código */
@@ -90,7 +114,7 @@ h1 {
     border: 2px solid orange;
     border-radius: 8px;
     color: white;
-    font-family: Urbanist; 
+    font-family: Urbanist;
     background: #000;
     outline: none;
     font-style: normal;
@@ -100,41 +124,39 @@ h1 {
 }
 
 /* Estilo para o botão */
-.btn-verificar {
-    margin-top: 20px; /* Espaço entre a frase e o botão */
-    padding: 10px 20px; /* Tamanho do botão */
-    background-color: #F4A503; /* Cor de fundo laranja */
-    color: #000; /* Cor do texto preta */
-    font-family: Urbanist;
-    font-size: 16px;
-    font-weight: 700;
-    border: none; /* Remove a borda padrão */
-    border-radius: 18px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de mãozinha ao passar por cima */
-    transition: color 0.3s ease; /* Transição suave para a cor do texto */
-    display: flex;
-    width: 335px;
-    height: 54px;
-    padding: 14px 0px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
+a.btn {
+    width: 100%;
 }
 
-/* Efeito hover no botão */
+.btn-verificar {
+    width: 100%;
+    height: 54px;
+    padding: 10px 20px;
+    background-color: #F4A503;
+    color: #000;
+    border: none;
+    border-radius: 18px;
+    font-family: Urbanist;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
 .btn-verificar:hover {
-    background-color: #f39c12;
+    color: #fff;
 }
 
 /* Responsividade */
 @media (max-width: 600px) {
     .container {
-        width: 90%;  /* Reduz a largura no mobile */
+        width: 90%;
+        /* Reduz a largura no mobile */
     }
 
     .input-codigo {
-        width: 50px;  /* Reduz a largura dos inputs no mobile */
+        width: 50px;
+        /* Reduz a largura dos inputs no mobile */
         height: 50px;
         font-size: 20px;
     }
