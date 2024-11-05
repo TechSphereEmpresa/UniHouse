@@ -5,9 +5,6 @@ const funcoes = [document.getElementById('funcaoOrganizacao'), document.getEleme
 const descricoes = [document.getElementById('funcaoOrganizacaoDescricao'), document.getElementById('funcaoFinanceiroDescricao'), document.getElementById('funcaoRelatorioDescricao')];
 
 let currentIndex = 0;
-document.addEventListener("DOMContentLoaded", function() {
-  document.body.classList.add("visible");
-});
 
 botao.onclick = function () {
     if (currentIndex < 2) {
