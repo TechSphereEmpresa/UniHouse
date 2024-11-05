@@ -94,10 +94,9 @@
     position: relative;
     width: 100px;
     height: 100px;
-    background: url(./assets/images/fc3ecba8-cfac-4f65-9d8d-ee124ba226be.png)
+    background: url(./assets/images/b0df1ff3-176b-4d39-af6c-4e333723fac0.png)
       no-repeat center;
     background-size: cover;
-    z-index: 5;
   }
   .add-photo {
     flex-shrink: 0;
