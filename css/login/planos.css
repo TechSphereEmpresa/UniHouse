@@ -7,6 +7,44 @@ header {
     padding: 49px 100px 15px 100px;
 }
 
+.header-logo {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    flex-direction: column; /* Alinha tudo em coluna */
+    gap: 5px; /* Espaço entre as linhas */
+    font-size: 14px;
+    color: #fff;
+    align-items: flex-start; /* Alinha à esquerda */
+}
+
+.header-logo .logo-symbol {
+    width: 20px; /* Tamanho pequeno para o símbolo */
+    height: 20px;
+}
+
+.feature-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna */
+    gap: 5px;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center; /* Alinha os ícones e o texto */
+    font-size: 12px; /* Tamanho pequeno para as palavras */
+}
+
+.check-icon {
+    width: 12px; /* Tamanho pequeno do ícone de check */
+    height: 12px;
+    margin-right: 5px; /* Espaço entre o check e o texto */
+}
+
 main {
     display: flex;
     height: 100%;
@@ -15,11 +53,13 @@ main {
 
 .planos {
     display: flex;
-    width: 375px;
-    height: 100%;
+    width: 587px;
+    height: 630px;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding: 28px 24px;
+    gap: 10px;
+    flex-shrink: 0;
 
     border-radius: 20px 20px 0px 0px;
     background: rgba(55, 96, 160, 0.60);
@@ -43,10 +83,16 @@ main {
     color: #fff;
     background-color: #1C3152;
     transition: background-color 0.3s;
+    width: 534px;
+    height: 86px;
+    flex-shrink: 0;
 }
 
 .radio-option.selected {
     background-color: #264370; 
+    width: 534px;
+    height: 86px;
+    flex-shrink: 0;
     img {
         content: url('/assets/icons/login-cadastro/check-cadastro.svg');
     }
@@ -75,6 +121,9 @@ main {
     padding: 3px 8px 3px 12px;
     border-radius: 8px;
     background: #F4A503;
+    width: 55px;
+    height: 28px;
+    flex-shrink: 0;
 
     color: #000;
     font-size: 15px;
@@ -109,11 +158,14 @@ button:hover {
 
 a {
     text-decoration: none;
-    margin-top: 20px;
-    color: #BCBCBC;
+    color: #FFF;
     text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Urbanist;
     font-size: 13px;
+    font-style: normal;
     font-weight: 500;
+    line-height: 22px;
 }
 
 a:hover {

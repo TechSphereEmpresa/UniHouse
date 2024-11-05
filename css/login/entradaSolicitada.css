@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.content {
+    text-align: center;
+}
+
+.check-icon {
+    width: 100px; /* Ajuste o tamanho do ícone */
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+p {
+    color: var(--Gray, #8391A1);
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; 
+    width: 226px;
+}
