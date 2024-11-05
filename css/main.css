@@ -24,7 +24,7 @@ body::-webkit-scrollbar {
 }
 
 header {
-    padding: 30px 100px 20px 100px;
+    padding: 30px 100px 0px;
 }
 
 main {
@@ -33,7 +33,7 @@ main {
 
 @media (max-width: 1000px) {
     header {
-        padding: 30px 50px 50px;
+        padding: 30px 50px 0px;
     }
 
     main {
@@ -43,7 +43,7 @@ main {
 
 @media (max-width: 664px) {
     header {
-        padding: 30px 20px 20px;
+        padding: 30px 20px 0px;
     }
 
     main {

@@ -1,42 +1,63 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 header {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: end;
     position: relative;
-    padding: 49px 100px 15px 100px;
+    padding: 49px 100px 0px 100px;
 }
 
-.header-logo {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
+main {
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Alinha tudo em coluna */
-    gap: 5px; /* Espaço entre as linhas */
-    font-size: 14px;
-    color: #fff;
-    align-items: flex-start; /* Alinha à esquerda */
+    flex-wrap: wrap;
+    align-items: start;
+    gap: 50px;
 }
 
-.header-logo .logo-symbol {
-    width: 20px; /* Tamanho pequeno para o símbolo */
-    height: 20px;
-}
-
-.feature-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.logo-vantagens {
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Coloca os itens em coluna */
+    flex-direction: column;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.logo img {
+    width: 32px;
+    height: 32px;
+    border-radius: 40px;
+}
+
+.vantagens {
+    display: flex;
+    flex-direction: column; 
     gap: 5px;
+    list-style-type: none;
 }
 
-.feature-list li {
+.vantagens li {
     display: flex;
-    align-items: center; /* Alinha os ícones e o texto */
-    font-size: 12px; /* Tamanho pequeno para as palavras */
+    align-items: center; 
+    font-size: 22px;
+    font-weight: 500;
+    white-space: nowrap;
 }
 
 .check-icon {
@@ -45,21 +66,14 @@ header {
     margin-right: 5px; /* Espaço entre o check e o texto */
 }
 
-main {
+.planos {
+    flex: 1;
     display: flex;
     height: 100%;
-    align-items: end;
-}
-
-.planos {
-    display: flex;
-    width: 587px;
-    height: 630px;
     flex-direction: column;
     align-items: flex-start;
     padding: 28px 24px;
     gap: 10px;
-    flex-shrink: 0;
 
     border-radius: 20px 20px 0px 0px;
     background: rgba(55, 96, 160, 0.60);
@@ -70,7 +84,7 @@ main {
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    width: 327px;
+    width: 100%;
     height: 82px;
     padding: 12px;
     gap: 6px;
@@ -83,15 +97,12 @@ main {
     color: #fff;
     background-color: #1C3152;
     transition: background-color 0.3s;
-    width: 534px;
-    height: 86px;
-    flex-shrink: 0;
 }
 
 .radio-option.selected {
     background-color: #264370; 
-    width: 534px;
-    height: 86px;
+    width: 100%;
+    height: 82px;
     flex-shrink: 0;
     img {
         content: url('/assets/icons/login-cadastro/check-cadastro.svg');
@@ -133,7 +144,16 @@ main {
 .opcoes {
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 12px;
+}
+
+.botao-continuar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
 }
 
 button {
@@ -142,12 +162,12 @@ button {
     color: #000;
     height: 54px;
     padding: 10px 20px;
-    margin-top: 20px;
     border: none;
     border-radius: 18px;
     font-family: Urbanist;
     font-size: 19px;
     font-weight: 700;
+    white-space: nowrap;
     cursor: pointer;
     transition: color 0.3s;
 }
@@ -156,9 +176,9 @@ button:hover {
     color: #fff;
 }
 
-a {
+.continuar {
     text-decoration: none;
-    color: #FFF;
+    color: #909DB0;
     text-align: center;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: Urbanist;
@@ -168,10 +188,10 @@ a {
     line-height: 22px;
 }
 
-a:hover {
+.continuar:hover {
     text-decoration: underline;
 }
 
-a:visited {
+.continuar:visited {
     text-decoration: none;
 }

@@ -4,46 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planos</title>
-    <link rel="stylesheet" href="/css/login/planos.css">
     <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
+    <link rel="stylesheet" href="/css/login/planos.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
-<header>
-    <a href="/pages/login-cadastro/login-inicial.html">
-        <img src="/assets/icons/login-cadastro/x.svg" alt="Fechar">
-    </a>
 
-    <!-- Novo código para o símbolo e o texto "UniHouse" -->
-    <div class="header-logo">
-        <img src="/assets/images/logo.png" alt="Símbolo" class="logo-symbol">
-        <span>UniHouse</span>
-    </div>
-</header>
-<header>
-    <a href="/pages/login-cadastro/login-inicial.html">
-        <img src="/assets/icons/login-cadastro/x.svg" alt="Fechar">
-    </a>
-
-    <!-- Novo código para o símbolo e o texto "UniHouse" -->
-    <div class="header-logo">
-        <img src="/assets/icons/your-symbol.svg" alt="Símbolo" class="logo-symbol">
-        <span>UniHouse</span>
-        
-        <!-- Lista com as três palavras -->
-        <ul class="feature-list">
-            <li><img src="/assets/icons/check.svg" alt="Check" class="check-icon"> Sem Anúncios</li>
-            <li><img src="/assets/icons/check.svg" alt="Check" class="check-icon"> Relatório mais detalhado</li>
-            <li><img src="/assets/icons/check.svg" alt="Check" class="check-icon"> Adicionar tarefas</li>
-        </ul>
-    </div>
-</header>
 <body>
     <header>
         <a href="/pages/login-cadastro/login-inicial.html">
             <img src="/assets/icons/login-cadastro/x.svg" alt="Fechar">
         </a>
     </header>
+
     <main>
+        <div class="logo-vantagens">
+            <div class="logo">
+                <img src="/assets/images/logo.png" alt="Símbolo" class="logo-symbol">
+                <p>UniHouse</p>
+            </div>
+    
+            <ul class="vantagens">
+                <li><img src="/assets/icons/login-cadastro/check-planos.svg" alt="Check" class="check-icon"> Sem Anúncios</li>
+                <li><img src="/assets/icons/login-cadastro/check-planos.svg" alt="Check" class="check-icon"> Relatório mais detalhado</li>
+                <li><img src="/assets/icons/login-cadastro/check-planos.svg" alt="Check" class="check-icon"> Adicionar transferências</li>
+            </ul>
+        </div>
+
         <div class="planos">
             <div class="opcoes">
                     <label class="radio-option selected" id="anualOption">
@@ -70,8 +56,10 @@
                     </label>
                 </div>
                 
-                <button href="/pages/inicio/inicio.html">Comece 7 dias grátis</button>
-                <a href="">Continuar no plano gratuito</a>
+                <div class="botao-continuar">
+                    <button href="/pages/inicio/inicio.html">Comece 7 dias grátis</button>
+                    <a class="continuar" href="">Continuar no plano gratuito</a>
+                </div>
         </div>
     </main>
 
