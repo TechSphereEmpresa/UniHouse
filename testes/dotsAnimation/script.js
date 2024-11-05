@@ -1,65 +1,52 @@
-const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
-let currentDate = new Date();
+function updateCurrentDate() {
+    const currentDateElement = document.getElementById('monthYear');
+    const date = new Date();
+    
+    const monthNames = [
+      'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+      'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+    ];
+  
+    const currentMonth = monthNames[date.getMonth()];
+    const currentYear = date.getFullYear();
+  
+    currentDateElement.textContent = `${currentMonth} ${currentYear}`;
+  }
+  
+  // Chama a função ao carregar a página
+  updateCurrentDate();
+  
 
-document.addEventListener('DOMContentLoaded', function () {
-    const currentMonthYear = document.getElementById('current-month-year');
-    const daysContainer = document.getElementById('days-container');
-    const prevMonthButton = document.getElementById('prev-month');
-    const nextMonthButton = document.getElementById('next-month');
-
-    function renderCalendar(date) {
-        daysContainer.innerHTML = ""; // Limpa os dias do calendário
-        const year = date.getFullYear();
-        const month = date.getMonth();
-        
-        // Atualiza o mês e ano exibidos
-        currentMonthYear.textContent = `${monthNames[month]} ${year}`;
-        
-        // Primeiro dia do mês
-        const firstDayOfMonth = new Date(year, month, 1).getDay();
-        // Número total de dias no mês atual
-        const daysInMonth = new Date(year, month + 1, 0).getDate();
-        
-        // Preenche os dias em branco antes do primeiro dia do mês
-        for (let i = 0; i < firstDayOfMonth; i++) {
-            const emptyDay = document.createElement('div');
-            emptyDay.classList.add('empty-day');
-            daysContainer.appendChild(emptyDay);
-        }
-
-        // Cria os dias do mês
-        for (let day = 1; day <= daysInMonth; day++) {
-            const dayElement = document.createElement('div');
-            dayElement.classList.add('day');
-            dayElement.textContent = day;
-            dayElement.addEventListener('click', () => {
-                document.querySelectorAll('.day').forEach(d => d.classList.remove('selected'));
-                dayElement.classList.add('selected');
-            });
-            daysContainer.appendChild(dayElement);
-
-            // Marca o dia atual
-            if (
-                day === currentDate.getDate() &&
-                month === currentDate.getMonth() &&
-                year === currentDate.getFullYear()
-            ) {
-                dayElement.classList.add('today');
-            }
-        }
+function showCurrentWeek() {
+    const daysContainer = document.querySelector('.days');
+    const currentDate = new Date(); // Data atual
+    const currentDay = currentDate.getDate();
+    const currentMonth = currentDate.getMonth();
+    const currentYear = currentDate.getFullYear();
+    
+    // Obter o dia da semana do primeiro dia da semana vigente
+    const firstDayOfWeek = new Date(currentYear, currentMonth, currentDay - currentDate.getDay());
+    
+    // Limpa os dias anteriores
+    daysContainer.innerHTML = '';
+  
+    // Exibe apenas os 7 dias da semana atual
+    for (let i = 0; i < 7; i++) {
+      const day = new Date(firstDayOfWeek);
+      day.setDate(firstDayOfWeek.getDate() + i);
+      
+      const dayElement = document.createElement('li');
+      dayElement.textContent = day.getDate();
+  
+      // Adiciona a classe 'active' para o dia atual
+      if (day.getDate() === currentDay) {
+        dayElement.classList.add('active');
+      }
+  
+      daysContainer.appendChild(dayElement);
     }
-
-    // Navegação entre os meses
-    prevMonthButton.addEventListener('click', () => {
-        currentDate.setMonth(currentDate.getMonth() - 1);
-        renderCalendar(currentDate);
-    });
-
-    nextMonthButton.addEventListener('click', () => {
-        currentDate.setMonth(currentDate.getMonth() + 1);
-        renderCalendar(currentDate);
-    });
-
-    // Renderiza o calendário inicialmente
-    renderCalendar(currentDate);
-});
+  }
+  
+  // Chamar a função para exibir a semana atual ao carregar a página
+  showCurrentWeek();
+  
