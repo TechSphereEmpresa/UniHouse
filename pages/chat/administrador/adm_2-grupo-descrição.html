@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="/css/chat/administrador/adm_2-grupo-descrição.css">
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" href="/assets/images/logo.png" type="image/png">
-
 </head>
 <body>
-  
+
 <div class="main-container">
-     <header class="navbar">
+    <header class="navbar">
         <a href="adm_1-grupo-descrição.html" class="back-arrow" aria-label="Voltar">
            <img src="/assets/icons/common/seta-voltar.svg" alt="Voltar à página Início">
         </a>
@@ -31,21 +30,15 @@
                         <p class="member-count">6 moradores</p>
                     </div>
                 </header>
-                <div class="divider">                
-                </div>
+                <div class="divider"></div>
                 <section class="group-announcements">
                     <h2 class="announcements-title">Descrição</h2>
-                    <div class="announcements-content2">
-                        <textarea class="announcements-content2-input" rows="4" placeholder="Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto"></textarea>
-                    <div class="divider"> 
-                </div>
+                    <textarea class="announcements-content2-input" rows="4" placeholder="Texto Texto Texto"></textarea>
+                </section>
+                <div class="divider"></div>
                 <section class="group-announcements">
-                  
                     <h2 class="announcements-title2">Avisos</h2>
-                    <div class="announcements-content2">
-                        <textarea class="announcements-content2-input" rows="4" placeholder="Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto"></textarea>
-
-                    <div class="divider"> 
+                    <textarea class="announcements-content2-input" rows="4" placeholder="Texto Texto Texto"></textarea>
                 </section>
             </div>  
     
@@ -53,7 +46,7 @@
                 <div class="member-item">
                     <div class="member-profile">
                         <img src="/assets/icons/common/profile.svg" alt="Avatar do Membro" class="member-avatar">
-                        <span class="member-name">[Nome]</span>
+                        <span class="member-name" onclick="openPopup('[Nome]')">[Nome]</span>
                     </div>
                     <span class="member-role admin-role">Administrador</span>
                 </div>
@@ -61,7 +54,7 @@
                 <div class="member-item">
                     <div class="member-profile">
                         <img src="/assets/icons/common/profile.svg" alt="Avatar do Membro" class="member-avatar">
-                        <span class="member-name">[Nome]</span>
+                        <span class="member-name" onclick="openPopup('[Nome]')">[Nome]</span>
                     </div>
                     <span class="member-role">Morador</span>
                 </div>
@@ -69,36 +62,82 @@
                 <div class="member-item">
                     <div class="member-profile">
                         <img src="/assets/icons/common/profile.svg" alt="Avatar do Membro" class="member-avatar">
-                        <span class="member-name">[Nome]</span>
+                        <span class="member-name" onclick="openPopup('[Nome]')">[Nome]</span>
                     </div>
                     <span class="member-role">Morador</span>
                 </div>
-               
+                
                 <div class="member-item">
                     <div class="member-profile">
                         <img src="/assets/icons/common/profile.svg" alt="Avatar do Membro" class="member-avatar">
-                        <span class="member-name">[Nome]</span>
-                    </div>
-                    
-                    <span class="member-role">Morador</span>
-                </div>
-                <div class="member-item">
-                    <div class="member-profile">
-                        <img src="/assets/icons/common/profile.svg" alt="Avatar do Membro" class="member-avatar">
-                        <span class="member-name">[Nome]</span>
+                        <span class="member-name" onclick="openPopup('[Nome]')">[Nome]</span>
                     </div>
                     <span class="member-role">Morador</span>
                 </div>
+
                 <div class="member-item">
                     <div class="member-profile">
                         <img src="/assets/icons/common/profile.svg" alt="Avatar do Membro" class="member-avatar">
-                        <span class="member-name">[Nome]</span>
+                        <span class="member-name" onclick="openPopup('[Nome]')">[Nome]</span>
+                    </div>
+                    <span class="member-role">Morador</span>
+                </div>
+
+                <div class="member-item">
+                    <div class="member-profile">
+                        <img src="/assets/icons/common/profile.svg" alt="Avatar do Membro" class="member-avatar">
+                        <span class="member-name" onclick="openPopup('[Nome]')">[Nome]</span>
                     </div>
                     <span class="member-role">Morador</span>
                 </div>   
             </aside>
-      
         </div>
     </section>
+</div>
+
+<!-- Estrutura do Pop-up -->
+<div id="actionPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-button" onclick="closePopup()">&times;</span>
+        <h2>Ações para <span id="popupMemberName"></span></h2>
+        <button class="popup-button" onclick="promoteAdmin()">Promover a administrador</button>
+        <button class="popup-button" onclick="removeRepublic()">Remover da república</button>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+    // Função para abrir o pop-up e definir o nome do membro
+    function openPopup(memberName) {
+        document.getElementById('popupMemberName').innerText = memberName;
+        document.getElementById('actionPopup').style.display = 'block';
+    }
+
+    // Função para fechar o pop-up
+    function closePopup() {
+        document.getElementById('actionPopup').style.display = 'none';
+    }
+
+    // Funções para as ações (exemplos)
+    function promoteAdmin() {
+        const memberName = document.getElementById('popupMemberName').innerText;
+        alert(`Membro ${memberName} promovido a administrador!`);
+        closePopup();
+    }
+
+    function removeRepublic() {
+        const memberName = document.getElementById('popupMemberName').innerText;
+        alert(`Membro ${memberName} removido da república!`);
+        closePopup();
+    }
+
+    // Fecha o pop-up ao clicar fora dele
+    window.onclick = function(event) {
+        const popup = document.getElementById('actionPopup');
+        if (event.target == popup) {
+            popup.style.display = "none";
+        }
+    }
+</script>
 </body>
 </html>
