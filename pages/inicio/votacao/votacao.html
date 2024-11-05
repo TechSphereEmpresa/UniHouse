@@ -20,55 +20,66 @@
 
     <main>
         <div class="container">
-            <a class="votacao" id="multa" href="votacao-multa.html">
-                <div class="votacao-titulo-infos">
-                    <p>Multa para [Nome]</p>
-                    <div class="votacao-infos">
-                        <p>Motivo: Não fez a tarefa [tarefa] no dia [data]</p>
-                        <p>Valor da multa: R$ 15,00</p>
+            <div class="funcao-admin" style="display: none;">
+                <a href="nova-votacao.html">
+                    <div id="botao-nova-votacao">
+                        <img src="/assets/icons/home/mais.svg" alt="">
+                        <p>Nova votação</p>
                     </div>
-                </div>
-                <div class="votacao-botoes">
-                    <button class="botao-discordo">Discordo</button>
-                    <button class="botao-concordo">Concordo</button>
-                </div>
-            </a>
-
-            <a class="votacao" id="generica" href="votacao-descricao.html">
-                <div class="votacao-titulo-infos">
-                    <p>Regra nova</p>
-                    <div class="votacao-infos">
-                        <p>[Descrição]</p>
-                    </div>
-                </div>
-                <div class="votacao-botoes">
-                    <button class="botao-discordo">Discordo</button>
-                    <button class="botao-concordo">Concordo</button>
-                </div>
-            </a>
-
-            <a class="votacao" id="tarefa-concluida" href="votacao-tarefa.html">
-                <div class="votacao-titulo-infos">
-                    <p>Tarefa concluída</p>
-                    <div class="votacao-infos">
-                        <p>[Tarefa]</p>
-                        <p>[Nome]</p>
-                        <div class="box-tarefa-info-data">
-                            <img src="/assets/icons/home/data.svg" alt="">
-                            <time class="tarefa-data" datetime="2024-01-18">18/01/2024</time>
-                            <p class="tarefa-data">-</p>
-                            <img src="/assets/icons/home/relogio.svg" alt="">
-                            <p class="tarefa-data">09:00</p>
+                </a>
+            </div>
+            <section class="votacoes">
+                <a class="votacao" id="multa" href="votacao-multa.html">
+                    <div class="votacao-titulo-infos">
+                        <p>Multa para [Nome]</p>
+                        <div class="votacao-infos">
+                            <p>Motivo: Não fez a tarefa [tarefa] no dia [data]</p>
+                            <p>Valor da multa: R$ 15,00</p>
                         </div>
                     </div>
-                </div>
-                <div class="votacao-botoes">
-                    <button class="botao-discordo">Discordo</button>
-                    <button class="botao-concordo">Concordo</button>
-                </div>
-            </a>
+                    <div class="votacao-botoes">
+                        <button class="botao-discordo">Discordo</button>
+                        <button class="botao-concordo">Concordo</button>
+                    </div>
+                </a>
+
+                <a class="votacao" id="generica" href="votacao-descricao.html">
+                    <div class="votacao-titulo-infos">
+                        <p>Regra nova</p>
+                        <div class="votacao-infos">
+                            <p>[Descrição]</p>
+                        </div>
+                    </div>
+                    <div class="votacao-botoes">
+                        <button class="botao-discordo">Discordo</button>
+                        <button class="botao-concordo">Concordo</button>
+                    </div>
+                </a>
+
+                <a class="votacao" id="tarefa-concluida" href="votacao-tarefa.html">
+                    <div class="votacao-titulo-infos">
+                        <p>Tarefa concluída</p>
+                        <div class="votacao-infos">
+                            <p>[Tarefa]</p>
+                            <p>[Nome]</p>
+                            <div class="box-tarefa-info-data">
+                                <img src="/assets/icons/home/data.svg" alt="">
+                                <time class="tarefa-data" datetime="2024-01-18">18/01/2024</time>
+                                <p class="tarefa-data">-</p>
+                                <img src="/assets/icons/home/relogio.svg" alt="">
+                                <p class="tarefa-data">09:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="votacao-botoes">
+                        <button class="botao-discordo">Discordo</button>
+                        <button class="botao-concordo">Concordo</button>
+                    </div>
+                </a>
+            </section>
         </div>
     </main>
+    <script src="/js/controleAcesso.js"></script>
 </body>
 
 </html>

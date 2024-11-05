@@ -4,37 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendário App</title>
-    <link rel="stylesheet" href="teste.css">
+
+    <style>
+        .agenda-container {
+            position: relative;
+            width: 100px;
+            height: 600px; /* Altura total representando o dia */
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            margin: 20px auto;
+        }
+
+        .time-label {
+            position: absolute;
+            width: 100%;
+            font-size: 12px;
+            text-align: center;
+            color: #666;
+        }
+
+        .time-label:nth-child(1) { top: 0; }
+        .time-label:nth-child(2) { top: 25%; }
+        .time-label:nth-child(3) { top: 50%; }
+        .time-label:nth-child(4) { top: 75%; }
+        .time-label:nth-child(5) { bottom: 0; }
+
+        .current-time-marker {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #007bff;
+        }
+    </style>
 </head>
 <body>
-    <div class="calendar-container">
-        <div class="calendar-header">
-            <button id="prev-month" class="back-button">&#8592;</button>
-            <h1>Calendário</h1>
-            <button id="next-month" class="add-button">+</button>
+    <main>
+        <div class="agenda-container">
+            <div class="time-label">00:00</div>
+            <div class="time-label">06:00</div>
+            <div class="time-label">12:00</div>
+            <div class="time-label">18:00</div>
+            <div class="time-label">23:59</div>
+            <div class="current-time-marker" id="currentTimeMarker"></div>
         </div>
-        <div class="calendar-month">
-            <span id="current-month-year" class="month-year">Janeiro 2024</span>
-        </div>
-        <div class="calendar-days">
-            <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
-            <div id="days-container"></div>
-        </div>
-    </div>
+        
+    </main>
 
-    <div class="agenda">
-        <div class="time-slot">06:00</div>
-        <div class="time-slot">07:00</div>
-        <div class="time-slot">08:00</div>
-        <div class="time-slot">
-            <div class="event" style="background-color: #FFA500;">
-                <span class="event-title">Lavar banheiro</span>
-                <span class="event-time">18/01/24 - 09:00</span>
-            </div>
-        </div>
-        <div class="time-slot">10:00</div>
-    </div>
+    <script>
+        function updateMarkerPosition() {
+        const container = document.querySelector('.agenda-container');
+        const marker = document.getElementById('currentTimeMarker');
+        
+        // Obtenha a hora atual
+        const now = new Date();
+        const currentHour = now.getHours();
+        const currentMinute = now.getMinutes();
 
-    <script src="script.js"></script>
+        // Calcule o total de minutos no dia
+        const totalMinutesInDay = 24 * 60;
+        const currentMinutes = currentHour * 60 + currentMinute;
+
+        // Calcule a posição do marcador
+        const containerHeight = container.offsetHeight;
+        const positionY = (currentMinutes / totalMinutesInDay) * containerHeight;
+
+        // Aplique a posição ao marcador
+        marker.style.top = `${positionY}px`;
+    }
+
+    // Atualize a posição do marcador a cada minuto
+    setInterval(updateMarkerPosition, 60000);
+
+    // Chame a função para definir a posição inicial
+    updateMarkerPosition();
+    </script>
 </body>
 </html>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multas</title>
     <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
-    <link rel="stylesheet" href="/css/inicio/multas.css">
+    <link rel="stylesheet" href="/css/inicio/multas/multas.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 
@@ -45,29 +45,47 @@
                 </div>
             </a>
         </div>
-
-        <div id="historico">
-            <div id="historico-titulo-filtro">
-                <p>Histórico de multas</p>
-                <select id="filtro">
-                    <option value="Atrasadas">Minhas</option>
-                    <option value="Hoje">Todas</option>
-                </select>
-            </div>
-            <a class="box-multa" href="">
-                <h1>Não fez a tarefa [tarefa] no dia [data]</h1>
-                <div class="box-multa-infos">
-                    <div id="box-multa-votos">
-                        <img src="/assets/icons/home/balanca.svg" alt="">
-                        <p>5/6 pessoas votaram a favor</p>
+        <section class="botao-historico">
+            <div class="funcao-admin" style="display: none;">
+                <a href="nova-multa.html">
+                    <div id="botao-nova-multa">
+                        <img src="/assets/icons/home/mais.svg" alt="">
+                        <p>Nova multa</p>
                     </div>
-                    <p>Valor da multa: RS 15,00</p>
-                    <p>Status: Paga</p>
+                </a>
+            </div>
+            <div id="historico">
+                <div id="historico-titulo-filtro">
+                    <p>Histórico de multas</p>
+                    <select id="filtro">
+                        <option value="Atrasadas">Minhas</option>
+                        <option value="Hoje">Todas</option>
+                    </select>
                 </div>
-            </a>
+                <a class="box-multa" href="">
+                    <h1>Não fez a tarefa [tarefa] no dia [data]</h1>
+                    <div class="box-multa-infos">
+                        <div id="box-multa-votos">
+                            <img src="/assets/icons/home/balanca.svg" alt="">
+                            <p>5/6 pessoas votaram a favor</p>
+                        </div>
+                        <p>Valor da multa: RS 15,00</p>
+                        <p>Status: Paga</p>
+                    </div>
+                </a>
 
-        </div>
+            </div>
+        </section>
+
     </main>
+    <script src="/js/controleAcesso.js"></script> 
+  <script>
+    // Função de logout para limpar o perfil salvo
+    function logout() {
+      localStorage.removeItem('perfilUsuario');
+      window.location.href = 'login.html';  // Redireciona para a página de login
+    }
+  </script>
 </body>
 
 </html>

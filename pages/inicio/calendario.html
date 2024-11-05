@@ -8,70 +8,105 @@
     <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
     <link rel="stylesheet" href="/css/inicio/calendario.css">
     <link rel="stylesheet" href="/css/main.css">
+
+    <style>
+        #horarios {
+            position: relative;
+        }
+
+        .div-hora {
+            position: relative;
+        }
+
+        .div-hora p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .current-time-marker {
+            position: absolute;
+            right: 0;
+            height: 3px;
+            width: 95%;
+            background-color: #264370;
+            z-index: 10;
+        }
+
+        .marker-image {
+            position: absolute;
+            left: 0;
+            /* Posiciona na ponta esquerda */
+            top: 50%;
+            /* Centraliza verticalmente */
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+        }
+    </style>
 </head>
 
 <body>
-        <header>
-            <div class="cabecalho">
-                <a href="inicio.html">
-                    <img src="/assets/icons/common/seta-voltar.svg" alt="">
-                </a>
-                <p>Calendário</p>
-            </div>
-            <div id="wrapper">
-                <div class="cabecalho-calendario">
-                    <div class="dropdown">
-                        <button id="dropdownBtn"">
+    <header>
+        <div class="cabecalho">
+            <a href="inicio.html">
+                <img src="/assets/icons/common/seta-voltar.svg" alt="">
+            </a>
+            <p>Calendário</p>
+        </div>
+        <div id="wrapper">
+            <div class="cabecalho-calendario">
+                <div class="dropdown">
+                    <button id="dropdownBtn"">
                             <div class=" current-date" id="monthYear">
-                    </div>
-                    <img src="/assets/icons/home/calendario/triangulo-mes.svg" alt="">
-                    </button>
-                    <div id="dropdownMenu" class="dropdown-content">
-                        <div class="dropdown-items">
-                            <div class="months">
-                                <ul>
-                                    <li onclick="setMonth(0)">Janeiro</li>
-                                    <li onclick="setMonth(1)">Fevereiro</li>
-                                    <li onclick="setMonth(2)">Março</li>
-                                    <li onclick="setMonth(3)">Abril</li>
-                                    <li onclick="setMonth(4)">Maio</li>
-                                    <li onclick="setMonth(5)">Junho</li>
-                                    <li onclick="setMonth(6)">Julho</li>
-                                    <li onclick="setMonth(7)">Agosto</li>
-                                    <li onclick="setMonth(8)">Setembro</li>
-                                    <li onclick="setMonth(9)">Outubro</li>
-                                    <li onclick="setMonth(10)">Novembro</li>
-                                    <li onclick="setMonth(11)">Dezembro</li>
-                                </ul>
-                            </div>
-                            <div class="years">
-                                <ul>
-                                    <li onclick="setYear(2023)">2023</li>
-                                    <li onclick="setYear(2024)">2024</li>
-                                    <li onclick="setYear(2025)">2025</li>
-                                    <li onclick="setYear(2026)">2026</li>
-                                    <li onclick="setYear(2027)">2027</li>
-                                </ul>
-                            </div>
+                </div>
+                <img src="/assets/icons/home/calendario/triangulo-mes.svg" alt="">
+                </button>
+                <div id="dropdownMenu" class="dropdown-content">
+                    <div class="dropdown-items">
+                        <div class="months">
+                            <ul>
+                                <li onclick="setMonth(0)">Janeiro</li>
+                                <li onclick="setMonth(1)">Fevereiro</li>
+                                <li onclick="setMonth(2)">Março</li>
+                                <li onclick="setMonth(3)">Abril</li>
+                                <li onclick="setMonth(4)">Maio</li>
+                                <li onclick="setMonth(5)">Junho</li>
+                                <li onclick="setMonth(6)">Julho</li>
+                                <li onclick="setMonth(7)">Agosto</li>
+                                <li onclick="setMonth(8)">Setembro</li>
+                                <li onclick="setMonth(9)">Outubro</li>
+                                <li onclick="setMonth(10)">Novembro</li>
+                                <li onclick="setMonth(11)">Dezembro</li>
+                            </ul>
+                        </div>
+                        <div class="years">
+                            <ul>
+                                <li onclick="setYear(2023)">2023</li>
+                                <li onclick="setYear(2024)">2024</li>
+                                <li onclick="setYear(2025)">2025</li>
+                                <li onclick="setYear(2026)">2026</li>
+                                <li onclick="setYear(2027)">2027</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <img src="/assets/icons/home/mais.svg" alt="">
             </div>
-            <div class="calendar">
-                <ul class="weeks">
-                    <li>D</li>
-                    <li>S</li>
-                    <li>T</li>
-                    <li>Q</li>
-                    <li>Q</li>
-                    <li>S</li>
-                    <li>S</li>
-                </ul>
-                <ul class="days"></ul>
-            </div>
-            </div>
-        </header>
+            <img src="/assets/icons/home/mais.svg" alt="">
+        </div>
+        <div class="calendar">
+            <ul class="weeks">
+                <li>D</li>
+                <li>S</li>
+                <li>T</li>
+                <li>Q</li>
+                <li>Q</li>
+                <li>S</li>
+                <li>S</li>
+            </ul>
+            <ul class="days"></ul>
+        </div>
+        </div>
+    </header>
 
     <main>
         <section id="horarios">
@@ -115,10 +150,8 @@
                 </div>
                 <a class="box-tarefa" href="tarefa.html">
                     <img src="../../assets/icons/home/tarefa.svg" alt="">
-
                     <div class="box-tarefa-info">
                         <p class="tarefa-nome">Lavar banheiro</p>
-
                         <div class="box-tarefa-info-data">
                             <img src="../../assets/icons/home/data.svg" alt="">
                             <time class="tarefa-data" datetime="2024-01-18">18/01/2024</time>
@@ -130,6 +163,7 @@
                 </a>
             </div>
 
+            <!-- Continue adicionando os horários como estava no seu código -->
             <div class="div-hora">
                 <p>10:00</p>
                 <hr class="divisoria">
@@ -186,11 +220,84 @@
                 <p>23:00</p>
                 <hr class="divisoria">
             </div>
+
+            <!-- Marcador de hora atual -->
+            <div id="currentTimeMarker" class="current-time-marker">
+                <img src="/assets/icons/home/calendario/ellipse.svg" alt="Marcador" class="marker-image">
+            </div>
+
         </section>
         <section class="secao-vazia"></section>
     </main>
 
+    <script>
+        function updateMarkerPosition() {
+            const horarios = document.getElementById('horarios');
+            const marker = document.getElementById('currentTimeMarker');
+
+            // Obtenha a hora atual
+            const now = new Date();
+            const currentHour = now.getHours();
+            const currentMinute = now.getMinutes();
+
+            // Calcule o total de minutos no dia
+            const totalMinutesInDay = 24 * 60;
+            const currentMinutes = currentHour * 60 + currentMinute;
+
+            // Calcule a posição do marcador
+            const containerHeight = horarios.offsetHeight;
+            const positionY = (currentMinutes / totalMinutesInDay) * containerHeight;
+
+            // Aplique a posição ao marcador
+            marker.style.top = `${positionY}px`;
+        }
+
+        // Atualize a posição do marcador a cada minuto
+        setInterval(updateMarkerPosition, 60000);
+
+        // Chame a função para definir a posição inicial
+        updateMarkerPosition();
+
+    </script>
     <script src="/js/calendario.js" defer></script>
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
 </body>
 
 </html>

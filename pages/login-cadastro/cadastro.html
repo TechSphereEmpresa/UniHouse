@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="/css/login/cadastro.css">
-    <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
+    <link rel="icon" href="/assets/images/logo.png" type="image/png">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 
@@ -18,32 +17,52 @@
     </header>
 
     <main>
-            <h1>Faça o cadastro da sua conta para começar</h1>
-            <form>
-                <div class="div-dados">
-                    <input class="nome" type="text" class="input-field" placeholder="Nome">
-                    <input type="email" class="input-field" placeholder="Email universitário">
-                    <input type="tel" class="input-field" placeholder="Telefone">
-    
-                    <input type="password" class="input-field" placeholder="Senha">
-                    <input type="password" class="input-field" placeholder="Confirmar senha">
-    
-                    <label class="radio-option" id="moradorOption">
-                        <img src="/assets/icons/login-cadastro/bolinha-cadastro.svg" alt="">
-                        <input type="radio" name="role" value="morador">
-                        Morador (entra em uma república)
-                    </label>
-                    <label class="radio-option" id="adminOption">
-                        <img src="/assets/icons/login-cadastro/bolinha-cadastro.svg" alt="">
-                        <input type="radio" name="role" value="administrador">
-                        Administrador (criar uma república)
-                    </label>
-                    <button class="btn-registrar" href="/pages/inicio/inicio.html">Registrar</button>
-                </div>
-            </form>
+        <h1>Faça o cadastro da sua conta para começar</h1>
+        <form id="formCadastro">
+            <div class="div-dados">
+                <input class="nome input-field" type="text" placeholder="Nome">
+                <input type="email" class="input-field" placeholder="Email universitário">
+                <input type="tel" class="input-field" placeholder="Telefone">
+                <input type="password" class="input-field" placeholder="Senha">
+                <input type="password" class="input-field" placeholder="Confirmar senha">
+
+                <!-- Opções de perfil com Radio Buttons -->
+                <label class="radio-option" id="moradorOption">
+                    <input type="radio" name="role" value="morador">
+                    <img src="/assets/icons/login-cadastro/bolinha-cadastro.svg      " alt=""
+                    <span>Morador (entra em uma república)</span>
+                </label>
+                <label class="radio-option" id="adminOption">
+                    <img src="/assets/icons/login-cadastro/bolinha-cadastro.svg      " alt=""
+                    <input type="radio" name="role" value="administrador">
+                    <span>Administrador (criar uma república)</span>
+                </label>
+                
+                <!-- Botão de Registrar -->
+                <button type="submit" class="btn-registrar">Registrar</button>
+            </div>
+        </form>
     </main>
 
     <script>
+        // Função para lidar com o envio do formulário
+        document.getElementById('formCadastro').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o comportamento padrão do formulário
+
+            // Obtém o valor do tipo de perfil selecionado
+            const perfilSelecionado = document.querySelector('input[name="role"]:checked') ? 
+                                       document.querySelector('input[name="role"]:checked').value : null;
+
+            // Salva o perfil no Local Storage se um perfil estiver selecionado
+            if (perfilSelecionado) {
+                localStorage.setItem('perfilUsuario', perfilSelecionado);
+            }
+
+            // Redireciona para a página inicial
+            window.location.href = '/pages/inicio/inicio.html';
+        });
+
+        // Opções de seleção para adicionar estilos visuais (opcional)
         const moradorOption = document.getElementById('moradorOption');
         const adminOption = document.getElementById('adminOption');
 
@@ -58,5 +77,4 @@
         });
     </script>
 </body>
-
 </html>

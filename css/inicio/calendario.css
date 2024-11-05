@@ -215,6 +215,9 @@ main {
 
 hr {
   flex: 1;
+  height: 2px;
+  border: none;
+  background-color: white;
 }
 
 .box-tarefa {
