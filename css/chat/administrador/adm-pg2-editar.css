@@ -19,8 +19,8 @@ body {
     justify-content: space-between; 
     align-items: center; 
     background-color: #000; 
-    padding: 10px 50px; /* Ajustado para um padding consistente */
-    margin: 20px 0; /* Margens do container */
+    padding: 10px 50px; 
+    margin: 20px 0; 
 }
 
 .back-arrow, .settings {

@@ -21,17 +21,17 @@ body {
     background-color: #000; 
     padding: 10px 50px; /* Ajustado para um padding consistente */
     margin: 20px 0px; /* Margens do container */
-} 
+}
 
 .back-arrow {
     color: #fff;
     font-size: 24px;
-    text-decoration: none; 
+    text-decoration: none;
     transition: color 0.3s ease;
     margin: 0 350px; /* Reduzido para manter o alinhamento */
 }
 
-.check{
+.settings {
     color: #fff;
     font-size: 24px;
     text-decoration: none;
@@ -39,7 +39,7 @@ body {
     margin: 0 350px; 
 }
 
-.back-arrow:hover, .check:hover {
+.back-arrow:hover, .settings:hover {
     color: #F4A503;
 }
 
@@ -47,13 +47,12 @@ body {
     font-size: 20px;
     color: #fff;
 }
- 
 
-
+/* Estilos do contêiner principal */
 .group-info-container {
     background-color: #000;
     display: flex;
-    padding: 20px;
+    padding-bottom: 20px;
     flex-direction: column;
     overflow: hidden;
     min-height: 100vh;
@@ -251,15 +250,6 @@ body {
     padding: 0 5px;
 }
 
-.announcements-content2-input { 
-    border: 1.5px solid #fff; 
-    background-color: #000; 
-    color: #ccc; 
-    padding: 10px; /* Espaçamento interno */
-    border-radius: 10px;
-    width: 100%; 
-}
-
 .members-list {
     display: flex;
     min-width: 240px;
@@ -334,7 +324,7 @@ body {
         margin: 0 3%;
     }
 
-    .back-arrow, .check /*.settings*/ {
+    .back-arrow, .settings {
         font-size: 20px; 
     }
 
@@ -345,7 +335,7 @@ body {
         margin: 0 2%;
     }
 
-    .back-arrow, .check /*settings */ {
+    .back-arrow, .settings {
         font-size: 18px; 
     }
 }
