@@ -54,12 +54,11 @@
     flex-shrink: 0;
     flex-basis: auto;
     position: relative;
-    height: 39px;
     color: #ffffff;
     font-family: Urbanist, var(--default-font-family);
     font-size: 30px;
     font-weight: 700;
-    line-height: 39px;
+    line-height: 10px;
     text-align: left;
     white-space: nowrap;
     letter-spacing: -0.3px;
