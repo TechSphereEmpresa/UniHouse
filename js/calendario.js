@@ -1,4 +1,4 @@
-const mediaQuery = window.matchMedia("(max-width: 1100px)");
+const mediaQuery = window.matchMedia("(max-width: 1000px)");
 
 function handleMediaChange(event) {
     if (event.matches) {

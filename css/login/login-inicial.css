@@ -7,6 +7,19 @@ body {
     color: #fff;
     text-align: center;
 }
+main, .logo-nome, btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    gap: 50px;
+}
+
+.logo-nome {
+    gap: 18px;
+}
 
 .logo {
     width: 150px;
@@ -14,48 +27,58 @@ body {
     margin-bottom: 20px;
 }
 
-.company-name {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 30px;
+h1 {
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
 }
 
 .btn-container {
     display: flex;
-    flex-direction: column; /* Alinha os botões verticalmente */
-    gap: 16px; /* Espaço de 16px entre os botões */
+    flex-direction: column; 
+    gap: 16px; 
 }
 
 .btn {
+    width: 335px;
     padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+    border-radius: 18px;
     text-decoration: none;
-    width: 335px; /* Definido como uma largura fixa */
+    cursor: pointer;
+
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+
+    border: 2px solid #F4A503; 
+    background-color: #000;
+    color: #fff;
+
+    transition: 0.5s;
 }
 
 .btn-login {
     background-color: #F4A503; 
     color: #000;
+    border: 2px solid #F4A503; 
     border-radius: 18px;
-    opacity: 100%;
 }
 
-.btn-login:hover {
+.btn:hover {
     background-color: #F4A503;
+    color: #000;
+
 }
 
 .btn-cadastro {
     background-color: transparent;
     border: 2px solid #F4A503; 
-    color: #F4A503;
     border-radius: 18px;
+    color: #fff;
     opacity: 100%;
 }
 
 .btn-cadastro:hover {
-    background-color: rgba(255, 255, 255, 0.1);
 }

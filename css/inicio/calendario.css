@@ -299,3 +299,27 @@ main a:visited {
     margin-right: 0px;
   }
 }
+
+@media (max-width: 1000px) {
+  .cabecalho {
+    padding: 30px 50px 0px;
+  }
+
+  #wrapper {
+    padding: 20px 50px;
+  }
+
+  main {
+    padding-top: 320px;
+  }
+}
+
+@media (max-width: 664px) {
+  .cabecalho {
+      padding: 30px 20px 0px;
+  }
+
+  #wrapper {
+    padding: 20px 20px;
+  }
+}
