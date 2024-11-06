@@ -83,7 +83,7 @@ function updateCurrentDate() {
 updateCurrentDate();
 
 // Media query para verificar a largura da tela
-const mediaQuery = window.matchMedia("(max-width: 1000px)");
+const mediaQuery = window.matchMedia("(max-width: 600px)");
 
 function handleMediaChange(event) {
     if (event.matches) {
@@ -115,31 +115,18 @@ function setYear(year) {
 // Função para abrir/fechar o dropdown
 document.getElementById("dropdownBtn").addEventListener("click", function() {
     const dropdownMenu = document.getElementById("dropdownMenu");
-    const isMenuVisible = dropdownMenu.style.display === "block";
-    
-    dropdownMenu.style.display = isMenuVisible ? "none" : "block";  // Alterna entre aberto/fechado
+    dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
 });
 
 // Fechar o menu ao clicar fora
 window.onclick = function(event) {
-    const dropdownMenu = document.getElementById("dropdownMenu");
-    if (!event.target.matches('#dropdownBtn') && dropdownMenu.style.display === "block") {
-        dropdownMenu.style.display = "none"; // Fecha o menu se o clique não for no botão
+    if (!event.target.matches('#dropdownBtn')) {
+        closeDropdownMenu();
     }
 };
 
 // Função para fechar o menu dropdown
 function closeDropdownMenu() {
     const dropdownMenu = document.getElementById("dropdownMenu");
-    dropdownMenu.style.display = "none"; // Fecha o menu
+    dropdownMenu.style.display = "none";
 }
-
-// Função para alternar entre o calendário semanal e mensal ao clicar na div 'calendar'
-document.querySelector('.calendar').addEventListener('click', function() {
-    const daysContainer = document.querySelector('.days');
-    if (daysContainer && daysContainer.children.length <= 7) {
-        renderCalendar(); // Exibe o calendário mensal
-    } else {
-        showCurrentWeek(); // Exibe a semana atual
-    }
-});
