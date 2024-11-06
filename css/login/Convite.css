@@ -154,7 +154,15 @@ main {
   border: none;
   z-index: 12;
   outline: none;
+  color:#fff;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 173.333% */
+  font-family: Urbanist;
+  padding-left: 15px;
 }
+
+
 
 .codigo {
   display: flex;
