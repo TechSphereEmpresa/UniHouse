@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar tarefa</title>
+    <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
+    <link rel="stylesheet" href="/css/inicio/editar-tarefa.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <header>
+        <a href="/pages/inicio/inicio.html">
+            <img src="/assets/icons/common/seta-voltar.svg" alt="">
+        </a>
+        <a href="/pages/inicio/tarefa/tarefa-descricao.html">
+            <img src="/assets/icons/home/confirmar.svg" alt="">
+        </a>
+    </header>
+
+    <main>
+        <form action="">
+
+            <div class="caixa-nome">
+                <label for="tarefa">Título da tarefa</label>
+                <input type="text" id="tarefa" name="tarefa">
+            </div>
+
+            <div class="caixa-descricao">
+                <label for="tarefa">Descrição</label>
+                <input type="text" id="tarefa" name="tarefa">
+            </div>
+
+            <div class="caixa-data">
+                <label for="data">Data</label>
+                <input type="date" id="data" name="data" placeholder="Selecione a data">
+            </div>
+
+            <div class="div-caixa-hora">
+                <div class="caixa-hora">
+                    <label for="hora">Início</label>
+                    <input type="time" class="hora" name="hora">
+                </div>
+    
+                <div class="caixa-hora">
+                    <label for="hora">Fim</label>
+                    <input type="time" class="hora" name="hora" step="3600">
+                </div>
+            </div>
+
+            <div class="caixa-opcoes" id="prioridade">
+                <label for="">Prioridade</label>
+                <div class="opcoes">
+                    <div class="prioridade" onclick="selectPrioridade(this)">Baixa</div>
+                    <div class="prioridade" onclick="selectPrioridade(this)">Média</div>
+                    <div class="prioridade" onclick="selectPrioridade(this)">Alta</div>
+                </div>
+            </div>
+
+            <div class="caixa-opcoes">
+                <label for="">Frequência</label>
+                <div class="opcoes">
+                    <div class="frequencia" onclick="selectFrequencia(this)">Não se repete</div>
+                    <div class="frequencia" onclick="selectFrequencia(this)">Todo dia</div>
+                    <div class="frequencia" onclick="selectFrequencia(this)">Toda semana</div>
+                    <div class="frequencia" onclick="selectFrequencia(this)">Todo mês</div>
+                </div>
+            </div>
+
+            <div class="caixa-opcoes" id="responsavel">
+                <label for="">Responsável</label>
+                <div class="moradores">
+                    <div class="morador" onclick="selectMorador(this)">
+                        <img src="/assets/icons/common/profile.svg" alt="Perfil">
+                        <p>[Nome]</p>
+                    </div>
+                    <div class="morador" onclick="selectMorador(this)">
+                        <img src="/assets/icons/common/profile.svg" alt="Perfil">
+                        <p>[Nome]</p>
+                    </div>
+                    <div class="morador" onclick="selectMorador(this)">
+                        <img src="/assets/icons/common/profile.svg" alt="Perfil">
+                        <p>[Nome]</p>
+                    </div>
+                    <div class="morador" onclick="selectMorador(this)">
+                        <img src="/assets/icons/common/profile.svg" alt="Perfil">
+                        <p>[Nome]</p>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </main>
+
+    <script src="/js/nova-tarefa.js" type="text/javascript" defer></script>
+</body>
+
+</html>
