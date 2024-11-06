@@ -1,6 +1,7 @@
 body{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 30px;
 }
 
@@ -13,17 +14,11 @@ header {
     padding: 49px 100px 15px 100px;
 }
 
-.arrow {
-    position: absolute; /* Posiciona a seta de forma absoluta */
-    top: 20px; /* Distância do topo */
-    left: 20px; /* Distância da esquerda */
-    font-size: 2rem; /* Tamanho da seta */
-    color: #333; /* Cor da seta */
-}
-
 /* Estilo para o conteúdo principal */
 .content {
     display: flex;
+    width: 226px;
+    height: 100%;
     flex-direction: column;
     text-align: center;
     position: relative; /* Permite que a seta sobreponha o conteúdo, sem interferir no layout */
@@ -63,7 +58,8 @@ p {
     margin-top: 20px; /* Espaço entre a frase e o botão */
     padding: 10px 20px; /* Tamanho do botão */
     background-color: #F4A503; /* Cor de fundo laranja */
-    color: #000; /* Cor do texto preta */
+    color: #000; 
+    text-decoration: none;
     font-family: Urbanist;
     font-size: 16px;
     font-weight: 700;
@@ -84,4 +80,12 @@ p {
 /* Efeito ao passar o mouse no botão */
 .btn-voltar:hover {
     color: #FFF; /* Cor do texto muda para branco */
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
 }

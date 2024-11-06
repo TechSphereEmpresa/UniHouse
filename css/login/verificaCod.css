@@ -1,72 +1,33 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap);
-
-body,
-html {
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-
 }
 
 header {
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
-    padding: 49px 100px 15px 100px;
 }
 
-header a img {
-    position: absolute;
-    /* Posiciona a seta de forma absoluta */
-    top: 20px;
-    /* Distância do topo */
-    left: 20px;
-    /* Distância da esquerda */
-    width: 30px;
-    /* Tamanho da seta */
-    height: auto;
-}
-
-/* Main container para centralizar o conteúdo */
 main {
-    display: flex;
-    flex-direction: column;
-    /* Organiza os itens em coluna */
-    align-items: center;
-    /* Centraliza verticalmente */
-    justify-content: center;
-    /* Centraliza horizontalmente */
-    padding: 20px;
-    /* Padding para garantir que o conteúdo não fique colado nas bordas */
-    width: 100%;
+    width: 331px;
     height: 100%;
-    /* Garantir que o main ocupe a altura total da tela */
-    max-width: 500px;
-    /* Limita a largura do conteúdo para não ficar muito largo */
-    position: relative;
 }
 
 /* Container interno do conteúdo */
 .container {
     display: flex;
-    font-family: Urbanist;
-    /* Aplica a fonte Urbanist */
     flex-direction: column;
-    /* Organiza os itens em coluna */
     align-items: center;
-    /* Centraliza os itens dentro do container */
     justify-content: center;
-    /* Centraliza o conteúdo do container */
     width: 100%;
     max-width: 500px;
-    /* Limita a largura do conteúdo */
     margin-top: auto;
-    /* Empurra o conteúdo para o meio da tela verticalmente */
     margin-bottom: auto;
-    /* Garante que a .container esteja centralizada no main */
+    gap: 40px;
 }
 
 /* Estilo para o título */
@@ -95,13 +56,10 @@ h1 {
     gap: 10px;
 }
 
-/* Contêiner dos campos de input */
 .input-container {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 30px;
-    /* Adiciona margem inferior para separar do botão */
+    width: 100%;
+    justify-content: space-between;
 }
 
 /* Estilo para os inputs de código */
