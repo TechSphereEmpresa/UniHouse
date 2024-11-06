@@ -228,9 +228,16 @@ hr {
   align-items: center;
   gap: 13px;
   margin-top: 9.5px;
-
+  cursor: pointer;
   border-radius: 10px;
   background: #F4A503;
+}
+
+.box-tarefa a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none; 
 }
 
 .box-tarefa-info {

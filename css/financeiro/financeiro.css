@@ -200,6 +200,7 @@ header h1 {
   font-style: normal;
   font-weight: 600;
   line-height: 26px;
+  transition: background-color 0.5s;
 }
 
 .btn:hover {

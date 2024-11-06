@@ -16,7 +16,6 @@ html, body {
     color: #FFF;
     font-family: Urbanist;
     font-weight: 600;
-    overflow: auto; /* remover barra de rolagem*/
 }
 
 body::-webkit-scrollbar {
