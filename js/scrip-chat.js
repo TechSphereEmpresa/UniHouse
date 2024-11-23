@@ -1,19 +1,26 @@
-// start: Sidebar
+// Ínicio: Sidebar (navegação entre as páginas) 
 document.querySelector('.chat-sidebar-profile-toggle').addEventListener('click', function(e) {
+
     e.preventDefault()
-    this.parentElement.classList.toggle('active')
+// Impede o comportamento padrão do evento (o redirecionamento é impedido e usuário poderá controlar o comportamento de navegação manualmente) 
+   
+   this.parentElement.classList.toggle('active')
+   // Alterna a visibilidade da sidebar 
 })
 
 document.addEventListener('click', function(e) {
-    if(!e.target.matches('.chat-sidebar-profile, .chat-sidebar-profile *')) {
+// Quando houver um clique em qualquer parte da página verifica se o clique NÃO foi dentro do menu de perfil
+   
+   if(!e.target.matches('.chat-sidebar-profile, .chat-sidebar-profile *')) {
+// Se o clique for fora o menu fecha
         document.querySelector('.chat-sidebar-profile').classList.remove('active')
     }
 })
-// end: Sidebar
+// Fim: Sidebar (navegação entre as páginas) 
 
 
+// ínicio: Conversation (Conversas) 
 
-// start: Conversation
 document.querySelectorAll('.conversation-item-dropdown-toggle').forEach(function(item) {
     item.addEventListener('click', function(e) {
         e.preventDefault()
@@ -58,6 +65,7 @@ document.querySelectorAll('.conversation-form-input').forEach(function(item) {
     });
 })
 
+// Ao selecionar uma conversa ir a ela
 document.querySelectorAll('[data-conversation]').forEach(function(item) {
     item.addEventListener('click', function(e) {
         e.preventDefault()
@@ -75,4 +83,7 @@ document.querySelectorAll('.conversation-back').forEach(function(item) {
         document.querySelector('.conversation-default').classList.add('active')
     })
 })
-// end: Conversation
+
+
+
+//Fim: Conversation (Conversas) 

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="tailwindcss-colors.css">
     <link rel="stylesheet" href="/css/chat/administrador/chat-administrador.css">
+    <link rel="stylesheet" href="/css/common/tailwindcss-colors.css">
     <title>Chat</title>
     <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
 
@@ -15,28 +15,22 @@
 
 </head>
 <body>
-
-  <!-- start: Chat -->
+  <!--  Ínicio: Globais - Geral-->
   <section class="chat-section">
     <div class="chat-container">
 
-        <!-- start: Sidebar -->
+        <!-- Ínicio: Sidebar (navegação entre as páginas) -->
         <aside class="chat-sidebar">
             <a href="#" class="chat-sidebar-logo">
                 <i class="ri-chat-1-fill"></i>
             </a>
             <ul class="chat-sidebar-menu">
-                
-                <li class="active"> <a href="/pages/inicio/inicio.html" data-title="Início"><i class="ri-home-line"></i></a></li>
-                    
-                <li> <a href="chat-administrador.html" data-title="Chat"><i class="ri-chat-3-line"></i></a></li>
-                
+                <li > <a href="/pages/inicio/inicio.html" data-title="Início"><i class="ri-home-line"></i></a></li>
+                <li class="active">  <a href="chat-administrador.html" data-title="Chat"><i class="ri-chat-3-line"></i></a></li>
                 <li><a href="/" data-title="Financeiro"><i class="ri-wallet-line"></i></a></li>
-                
-                <li><a href="#" data-title="Relatório"><i class="ri-pie-chart-line"></i></a></li>
+                <li><a href="/pages/relatorio/relatorio.html" data-title="Relatório"><i class="ri-pie-chart-line"></i></a></li>
                 <li class="chat-sidebar-profile">
-                    
-
+                    <!--Parte Inferior: Sidebar-->
                     <button type="button" class="chat-sidebar-profile-toggle">
                         <img src="/assets/icons/common/profile.svg">    
                     </button>
@@ -47,13 +41,12 @@
                 </li>
             </ul>
         </aside>
-        <!-- end: Sidebar -->
+        <!-- Fim: Sidebar (navegação entre as páginas) -->
 
-            
-            <!-- start: Content -->
+            <!-- Ínicio: Sidebar da conversa (Content Sidebar)  -->
             <div class="chat-content">
                
-                <!-- start: Content side -->
+                <!-- Ínicio: Content side -->
                 <div class="content-sidebar">
                     <div class="content-sidebar-title">Chat</div>
                     <form action="" class="content-sidebar-form">
@@ -62,26 +55,27 @@
                     </form>
                     <div class="content-messages">
                         <ul class="content-messages-list">
-
                          <!-- Principal, grupo geral -->
-                         <!--trocar por icone do aplicativo-->
+
                             <li class="content-message-title-principal"><span> Principal</span></li>
                             <li>
+                                 <!-- Conversa 1 -->
                                 <a href="index.html" data-conversation="#conversation-1">
                                     <img class="content-message-image" src="/assets/icons/common/icon-rep.svg" alt="icone-casa">
                                     <span class="content-message-info">
                                         <span class="content-message-name">[Nome da república]
                                     </span>
-                                        <span class="content-message-text"> [Nome]: Preciso que devolvam um livro para mim .</span>
+                                        <span class="content-message-text"> [Nome]: Preciso que devolvam um livro para mim.</span>
                                     </span>
                                     <span class="content-message-more">
                                         <span class="content-message-unread">1</span>
                                         <span class="content-message-time">21:54</span>
                                     </span>
-                    
                                 </a>
                             <li class="content-message-title"><span>Conversas Recentes</span></li>
                             <li>
+
+                             <!-- Conversa 2 -->
                                 <a href="#" data-conversation="#conversation-2">
                                     <img class="content-message-image" src="/assets/icons/common/profile.svg" alt="">
                                     <span class="content-message-info">
@@ -94,19 +88,19 @@
                                 </a>
                             </li>
                             <li>
-
-                                <a href="#">
+                                 <!-- Conversa 3 -->
+                                 <a href="#">
                                     <img class="content-message-image" src="/assets/icons/common/profile.svg" alt="">
                                     <span class="content-message-info">
                                         <span class="content-message-name">[Nome]</span>
-                                        <span class="content-message-text"> Quando estiver vindo para a reppública avise </span>
+                                        <span class="content-message-text"> Quando estiver vindo para a república avise </span>
                                     </span>
                                     <span class="content-message-more">
                                         <span class="content-message-unread">5</span>
                                         <span class="content-message-time">19:50</span>
                                     </span>
                                 </a>
-
+                                 <!-- Conversa 4 -->
                             </li>
                             <li>
                                 <a href="#">
@@ -119,7 +113,7 @@
                                         <span class="content-message-time">19:33</span>
                                     </span>
                                 </a>
-
+                           <!-- Conversa 5 -->
                             </li>
                             <li>
                                 <a href="#">
@@ -135,6 +129,7 @@
                                 </a>
                             </li>
                             <li>
+                             <!-- Conversa 6 -->
                                 <a href="#">
                                     <img class="content-message-image" src="/assets/icons/common/profile.svg" alt="">
                                     <span class="content-message-info">
@@ -148,10 +143,13 @@
                             </li>
                         </ul>
                         <ul class="content-messages-list">
-                            <li class="content-message-title"><span>Todos os membros</span></li>
+                       <!--Lista dos membros-->
+                            <li 
+                            class="content-message-title"><span>Todos os membros</span></li>
                             <li>
-                                <a href="#">
-                                    <img class="content-message-image" src="/assets/icons/common/profile.svg" alt="">
+                        <!--Conversa 2-->
+                        <a href="#" data-conversation="#conversation-2"> 
+                             <img class="content-message-image" src="/assets/icons/common/profile.svg" alt="">
                                     <span class="content-message-info">
                                         <span class="content-message-name">[Nome]</span>
                                         <span class="content-message-text"> Não esquece</span>
@@ -162,6 +160,7 @@
                                 </a>
                             </li>
                             <li>
+                                <!--Conversa 3-->
                                 <a href="#">
                                     <img class="content-message-image" src="/assets/icons/common/profile.svg" alt="">
                                     <span class="content-message-info">
@@ -175,6 +174,7 @@
                                 </a>
                             </li>
                             <li>
+                                <!--Conversa 4-->
                                 <a href="#">
                                     <img class="content-message-image" src="/assets/icons/common/profile.svg" alt="">
                                     <span class="content-message-info">
@@ -187,22 +187,21 @@
                                 </a>
                             </li>
                             <li>
+                                <!--Conversa 5-->
                                 <a href="#">
                                     <img class="content-message-image" src="/assets/icons/common/profile.svg" alt="">
                                     <span class="content-message-info">
                                         <span class="content-message-name">[Nome]</span>
                                         <span class="content-message-text">É assim mesmo</span>
-
-
                                     </span>
                                     <span class="content-message-more">
                                         <span class="content-message-unread">2</span>
-
                                         <span class="content-message-time">15:10</span>
                                     </span>
                                 </a>
                             </li>
                             <li>
+                                <!--Conversa 6-->
                                 <a href="#">
                                     <img class="content-message-image" src="/assets/icons/common/profile.svg" alt="">
                                     <span class="content-message-info">
@@ -215,8 +214,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
-                                    <img class="content-message-image" src="/assets/icons/common/profile.svg" alt="">
+                                <!--Conversa 7: Simula um membro que nunca foi mandado mensagem-->
+                                <a href="#" data-conversation="#conversation-7">                      <img class="content-message-image" src="/assets/icons/common/profile.svg" alt="">
                                     <span class="content-message-info">
                                         <span class="content-message-name">[Nome]</span>
                                         <span class="content-message-text">   </span>
@@ -229,9 +228,9 @@
                         </ul>
                     </div>
                 </div>
-                <!-- end: Content side -->
+            <!-- Fim: Sidebar da conversa (Content Sidebar)  -->
 
-                <!-- start: Conversation -->
+                <!-- ínicio: Conversation (Conversas) -->
                 <div class="conversation conversation-default active">
                     <i class="ri-chat-3-line"></i>
                     <p>Selecione Chat e Vizualize a Conversa.</p>
@@ -246,14 +245,11 @@
                                 <div class="conversation-user-status online">3 membros online</div>
                             </div>
                         </div>
-
                         <div class="conversation-buttons">
                             <a href="adm_1-grupo-descrição.html">
                             <img src="/assets/icons/common/info-icon.svg" alt="">
                         </div>
-                      
                     </div>
-
                     <div class="conversation-main">
                         <ul class="conversation-wrapper">
                             <div class="coversation-divider"><span>Hoje</span></div>
@@ -351,16 +347,10 @@
                                     </div>
                                 </div>
                             </li>
-
-
-
-
                             <li class="conversation-item me">
                                 <div class="conversation-item-side">
                                     <img class="conversation-item-image" src="/assets/icons/common/profile.svg" alt="">
                                     <div class="conversation-title">[Nome]</div> <!-- Nome do usuario no chat de grupo-->
-
-
                                 </div>
                                 <div class="conversation-item-content">
                                     <div class="conversation-item-wrapper">
@@ -425,6 +415,8 @@
                         <button type="button" class="conversation-form-button conversation-form-submit"><i class="ri-send-plane-2-line"></i></button>
                     </div>
                 </div>
+
+                <!-- Chat - Conversa 2-->
                 <div class="conversation" id="conversation-2">
                     <div class="conversation-top">
                         <button type="button" class="conversation-back"><i class="ri-arrow-left-line"></i></button>
@@ -440,7 +432,6 @@
                             <a href="/pages/chat/morador/morador-vizualizar.html">
                                 <img src="/assets/icons/common/info-icon.svg" alt="">
                         </div>
-
                     </div>
                     <div class="conversation-main">
                         <ul class="conversation-wrapper">
@@ -603,6 +594,89 @@
                         <button type="button" class="conversation-form-button conversation-form-submit"><i class="ri-send-plane-2-line"></i></button>
                     </div>
                 </div>
+
+               <!--Conversa 7: Conversa nunca aberta antes-->
+               <div class="conversation" id="conversation-7">
+                <!-- Topo da Conversa -->
+                <div class="conversation-top">
+                    <button type="button" class="conversation-back"><i class="ri-arrow-left-line"></i></button>
+                    <div class="conversation-user">
+                        <img class="conversation-user-image" src="/assets/icons/common/profile.svg" alt="">
+                        <div>
+                            <div class="conversation-user-name">[Nome]</div>
+                            <div class="conversation-user-status online">online</div>
+                        </div>
+                    </div>
+                    <div class="conversation-buttons">
+                        <a href="/pages/chat/morador/morador-vizualizar.html">
+                            <img src="/assets/icons/common/info-icon.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            
+                <!-- Mensagens -->
+                <div class="conversation-main">
+                    <ul class="conversation-wrapper" id="message-list">
+                        <div class="coversation-divider"><span>Hoje</span></div>
+                    </ul>
+                </div>
+            
+                <!-- Formulário de envio -->
+                <div class="conversation-form">
+                    <div class="conversation-form-group">
+                        <textarea id="message-input" class="conversation-form-input" rows="1" placeholder="Digite..."></textarea>
+                        <button id="send-button" type="button" class="conversation-form-button conversation-form-submit">
+                            <i class="ri-send-plane-2-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const messageInput = document.getElementById("message-input");
+                    const sendButton = document.getElementById("send-button");
+                    const messageList = document.getElementById("message-list");
+            
+                    // Função para adicionar uma mensagem
+                    function addMessage() {
+                        const messageText = messageInput.value.trim(); // Remove espaços desnecessários
+                        if (messageText !== "") {
+                            // Criar o elemento da mensagem
+                            const messageItem = document.createElement("li");
+                            messageItem.classList.add("conversation-item");
+                            messageItem.innerHTML = `
+                                <div class="conversation-item-side">
+                                    <img class="conversation-item-image" src="/assets/icons/common/profile.svg" alt="">
+                                </div>
+                                <div class="conversation-item-content">
+                                    <div class="conversation-item-wrapper">
+                                        <div class="conversation-item-box">
+                                            <div class="conversation-item-text">
+                                                <p>${messageText}</p>
+                                                <div class="conversation-item-time">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+            
+                            // Adicionar a mensagem à lista
+                            messageList.appendChild(messageItem);
+            
+                            // Rolagem automática para a última mensagem
+                            messageList.scrollTop = messageList.scrollHeight;
+            
+                            // Limpar o campo de entrada
+                            messageInput.value = "";
+                        }
+                    }
+            
+                       // Evento de clique no botão "Enviar"
+        sendButton.addEventListener("click", addMessage);
+});
+</script>
+
                 <!-- end: Conversation -->
             </div>
             <!-- end: Content -->
