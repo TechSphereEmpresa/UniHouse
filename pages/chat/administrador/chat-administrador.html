@@ -52,11 +52,11 @@
                     <form action="" class="content-sidebar-form">
                         <input type="search" class="content-sidebar-input" placeholder="Pesquisando...">
                         <button type="submit" class="content-sidebar-submit"><i class="ri-search-line"></i></button>
+                    <!-- Se der tentar colocar Pesquisando para funcionar JS -->
                     </form>
                     <div class="content-messages">
                         <ul class="content-messages-list">
                          <!-- Principal, grupo geral -->
-
                             <li class="content-message-title-principal"><span> Principal</span></li>
                             <li>
                                  <!-- Conversa 1 -->
@@ -67,14 +67,13 @@
                                     </span>
                                         <span class="content-message-text"> [Nome]: Preciso que devolvam um livro para mim.</span>
                                     </span>
-                                    <span class="content-message-more">
+                                <span class="content-message-more">
                                         <span class="content-message-unread">1</span>
                                         <span class="content-message-time">21:54</span>
                                     </span>
                                 </a>
                             <li class="content-message-title"><span>Conversas Recentes</span></li>
                             <li>
-
                              <!-- Conversa 2 -->
                                 <a href="#" data-conversation="#conversation-2">
                                     <img class="content-message-image" src="/assets/icons/common/profile.svg" alt="">
@@ -100,8 +99,9 @@
                                         <span class="content-message-time">19:50</span>
                                     </span>
                                 </a>
-                                 <!-- Conversa 4 -->
                             </li>
+                                                                                       <!-- Conversa 4 -->
+
                             <li>
                                 <a href="#">
                                     <img class="content-message-image" src="/assets/icons/common/profile.svg" alt="">
@@ -235,7 +235,9 @@
                     <i class="ri-chat-3-line"></i>
                     <p>Selecione Chat e Vizualize a Conversa.</p>
                 </div>
+                <!-- Chat - Conversa 1-->
                 <div class="conversation" id="conversation-1">
+                <!-- Topo da Conversa -->
                     <div class="conversation-top">
                         <button type="button" class="conversation-back"><i class="ri-arrow-left-line"></i></button>
                         <div class="conversation-user">
@@ -248,6 +250,7 @@
                         <div class="conversation-buttons">
                             <a href="adm_1-grupo-descrição.html">
                             <img src="/assets/icons/common/info-icon.svg" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="conversation-main">
@@ -261,6 +264,7 @@
                                 <div class="conversation-item-content">
                                     <div class="conversation-item-wrapper">
                                         <div class="conversation-item-box">
+                                            
                                             <div class="conversation-item-text">
                                                 <p>Aviso importante: Relembrando que o pagamento das contas da casa está programado para amanhã </p>
                                                 <div class="conversation-item-time">9:30</div>
@@ -412,12 +416,13 @@
                             <textarea class="conversation-form-input" rows="1" placeholder="Digite..."></textarea>
                             <button type="button" class="conversation-form-record"><i class="ri-mic-line"></i></button>
                         </div>
-                        <button type="button" class="conversation-form-button conversation-form-submit"><i class="ri-send-plane-2-line"></i></button>
+                        <button type="send-button" class="conversation-form-button conversation-form-submit"><i class="ri-send-plane-2-line"></i></button>
                     </div>
                 </div>
 
                 <!-- Chat - Conversa 2-->
                 <div class="conversation" id="conversation-2">
+                <!-- Topo da Conversa -->
                     <div class="conversation-top">
                         <button type="button" class="conversation-back"><i class="ri-arrow-left-line"></i></button>
                         <div class="conversation-user">
@@ -427,24 +432,26 @@
                                 <div class="conversation-user-status online">online</div>
                             </div>
                         </div>
-                        
+
                         <div class="conversation-buttons">
                             <a href="/pages/chat/morador/morador-vizualizar.html">
                                 <img src="/assets/icons/common/info-icon.svg" alt="">
+                            </a>     
                         </div>
                     </div>
+                <!-- Exemplo de Mensagens -->
                     <div class="conversation-main">
                         <ul class="conversation-wrapper">
                             <div class="coversation-divider"><span>Hoje</span></div>
                             <li class="conversation-item me">
-                                <div class="conversation-item-side">
+                                <div  <div class="conversation-item-side">
                                     <img class="conversation-item-image" src="/assets/icons/common/profile.svg" alt="">
                                 </div>
                                 <div class="conversation-item-content">
                                     <div class="conversation-item-wrapper">
                                         <div class="conversation-item-box">
                                             <div class="conversation-item-text">
-                                                <p>Boa Tarde!</p>
+                                                <p>Boa Tarde</p>
                                                 <div class="conversation-item-time">12:30</div>
                                             </div>
                                             <div class="conversation-item-dropdown">
@@ -576,6 +583,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </li>
                         </ul>
                     </div>
@@ -584,9 +592,6 @@
                     </button>
                     <button type="button" class="conversation-form-button"><i class="fas fa-paperclip"></i></button>
                 </button>
-
-
-
                         <div class="conversation-form-group">
                             <textarea class="conversation-form-input" rows="1" placeholder="Digite..."></textarea>
                             <button type="button" class="conversation-form-record"><i class="ri-mic-line"></i></button>
@@ -613,7 +618,7 @@
                         </a>
                     </div>
                 </div>
-            
+
                 <!-- Mensagens -->
                 <div class="conversation-main">
                     <ul class="conversation-wrapper" id="message-list">
@@ -624,14 +629,40 @@
                 <!-- Formulário de envio -->
                 <div class="conversation-form">
                     <div class="conversation-form-group">
+
                         <textarea id="message-input" class="conversation-form-input" rows="1" placeholder="Digite..."></textarea>
-                        <button id="send-button" type="button" class="conversation-form-button conversation-form-submit">
-                            <i class="ri-send-plane-2-line"></i>
+
+
+                    <!--MUDAR -->
+
+                          <button id="send-button" type="button" class="conversation-form-button conversation-form-submit conversation-form-record">
+                            <i class="ri-send-plane-2-line"></i> 
+
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> 
             
+        
+<!--    <div class="conversation-form">
+                    <div class="conversation-form-buttons">
+                        <button type="button" class="conversation-form-button">
+                            <i class="ri-emotion-line"></i>
+                        </button>
+                        <button type="button" class="conversation-form-button">
+                            <i class="fas fa-paperclip"></i>
+                        </button>
+                    </div>
+                    <div class="conversation-form-group">
+                        <textarea id="message-input" class="conversation-form-input" rows="1" placeholder="Digite..."></textarea>
+                        <button id="send-button" type="button" class="conversation-form-button conversation-form-submit conversation-form-record">
+                            <i class="ri-mic-line"></i>
+                            <i class="ri-send-plane-2-line"></i>
+                        </button>
+                    </div>
+                </div>-->
+
+
             <script>
                 document.addEventListener("DOMContentLoaded", () => {
                     const messageInput = document.getElementById("message-input");

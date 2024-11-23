@@ -265,7 +265,7 @@ body {
     position: relative;
     z-index: 1;
     padding: 0 4px 0 0;
-    background-color: var(--black-custom); /*Sublinhado de texto */
+    background-color: var(--black-custom); /*Sublinhado de texto (Principal/Todos os membros) */
 }
 .content-message-title-principal::before {
     content: '';
@@ -292,7 +292,7 @@ body {
     position: relative;
     z-index: 1;
     padding: 0 4px 0 0;
-    background-color: var(--black-custom); /*Sublinhado de texto */
+    background-color: var(--black-custom); 
 }
 .content-message-title::before {
     content: '';
@@ -328,7 +328,6 @@ body {
 .content-message-text {
     font-size: 13px;
     color: var(--slate-400);
-     /* NÃO MUDAR ESSA COR */
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -342,11 +341,12 @@ body {
     color: var(--black-custom);
     background-color: var(--orange-custom);
     padding: 2px 4px;
-    border-radius: 4px;
+    border-radius:4px;
+
 }
 .content-message-time {
     font-size: 12px;
-    color: var(--silver-custom); /* Branco */
+    color: var(--silver-custom); 
     font-weight: 500;
 }
 /* end: Content side - Lateral do Chat */
