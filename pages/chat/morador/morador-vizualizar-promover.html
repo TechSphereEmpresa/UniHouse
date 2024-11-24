@@ -1,0 +1,84 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promover ou Remover</title>
+    <link rel="stylesheet" href="/css/chat/morador/morador-vizualizar-promover.css">
+    <link rel="stylesheet" href="/css/common/tailwindcss-colors.css">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/images/logo.png" type="image/png">
+
+</head>
+<body>
+    <div class="main-container">
+        <header class="navbar">
+            <a href="/pages/chat/administrador/grupo-descrição.html" class="back-arrow" aria-label="Voltar">
+                <img src="/assets/icons/common/seta-voltar.svg" alt="Voltar à página Início">
+            </a>
+            <div class="title"></div>
+            <!-- Botão para abrir o pop-up -->
+            <a href="#" class="check" aria-label="Editar perfil" onclick="openEditPopup(event)">
+                <img src="/assets/icons/common/editar-membro-icon.svg" alt="Editar perfil">
+            </a>
+        </header>
+
+        <main class="profile-container">
+            <img class="profile-image" src="/assets/icons/common/profile.svg" alt="">        
+            <div class="profile-name" id="profileName">[Nome]</div>
+            <div class="profile-role"> Morador</div>
+            <div class="separator-um"></div> 
+            <div class="profile-info">
+                <div class="info-text">
+                    <label>Email:</label>
+                    <div>nome@email.com</div> 
+                </div>
+                <div class="separator-dois"></div>
+                <div class="info-text">
+                    <label>Telefone: </label>       
+                    <div>(00) 00000-0000</div> 
+                </div>
+            </div>
+        </main>
+
+        <!-- Pop-up -->
+        <div id="actionPopup" class="popup">
+            <div class="popup-content">
+                <span class="close-button" onclick="closePopup()">&times;</span>
+                <h2>Ações para <span id="popupMemberName">[Nome]</span></h2>
+                <button class="popup-button" onclick="promoteAdmin()">Promover a administrador</button>
+                <button class="popup-button" onclick="removeRepublic()">Remover da república</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Abrir pop-up
+        function openEditPopup(event) {
+            event.preventDefault();
+            const profileName = document.getElementById("profileName").innerText;
+            document.getElementById("popupMemberName").innerText = profileName;
+            document.getElementById("actionPopup").style.display = "block";
+        }
+
+        // Fechar pop-up
+        function closePopup() {
+            document.getElementById("actionPopup").style.display = "none";
+        }
+
+        // Ação: Promover a administrador
+        function promoteAdmin() {
+            alert("Usuário promovido a administrador!");
+            closePopup();
+        }
+
+        // Ação: Remover da república
+        function removeRepublic() {
+            const confirmation = confirm("Tem certeza que deseja remover este usuário da república?");
+            if (confirmation) {
+                alert("Usuário removido da república.");
+                closePopup();
+            }
+        }
+    </script>
+</body>
+</html>
