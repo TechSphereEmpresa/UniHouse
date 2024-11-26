@@ -93,8 +93,7 @@ h1 {
   width: 50px;
   height: auto;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  right: 20px;
 }
 
 .info-cartao {
@@ -143,7 +142,7 @@ h1 {
 .detalhes-cartao {
   position: absolute;
   bottom: 15px;
-  left: 20px;
+  left: 5px;
   display: flex;
   justify-content: space-between;
   width: 100%;
