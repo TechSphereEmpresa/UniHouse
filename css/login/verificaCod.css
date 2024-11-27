@@ -1,6 +1,4 @@
 body {
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
@@ -25,18 +23,11 @@ main {
     justify-content: center;
     width: 100%;
     max-width: 500px;
-    margin-top: auto;
-    margin-bottom: auto;
     gap: 40px;
 }
 
 /* Estilo para o título */
 h1 {
-    color: #fff;
-    font-family: Urbanist, sans-serif;
-    margin-top: 50px;
-    /* Ajuste para compensar o espaço da seta */
-    margin-bottom: 40px;
     font-size: 30px;
     font-weight: 700;
     line-height: 130%;
@@ -44,13 +35,10 @@ h1 {
 
 /* Estilo para a descrição */
 .description {
-    font-family: Urbanist;
-    /* Aplica a fonte Urbanist */
     font-weight: 500;
     line-height: 150%;
     font-size: 16px;
     color: #656F77;
-    margin-bottom: 30px;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;

@@ -22,6 +22,12 @@ body::-webkit-scrollbar {
     display: none; 
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 header {
     padding: 30px 100px 0px;
 }

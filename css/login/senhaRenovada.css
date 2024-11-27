@@ -22,7 +22,6 @@ header {
     flex-direction: column;
     text-align: center;
     position: relative; /* Permite que a seta sobreponha o conteúdo, sem interferir no layout */
-    justify-content: center;
     align-items: center;
 }
 
