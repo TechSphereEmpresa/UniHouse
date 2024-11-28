@@ -3,6 +3,8 @@ const chatInput = document.getElementById("chat-input");
 const sendButton = document.getElementById("send-button");
 
 const responses = {
+  "Oi": "Oi, em que posso ajudar?",
+  "Qual são as suas funções": "Eu posso dar dicar de organização financeira ou doméstica.",
   "organização financeira": "Recomendo que você crie uma planilha com suas receitas e despesas.",
   "organização doméstica": "Uma dica é criar um cronograma semanal para tarefas domésticas.",
   "economizar dinheiro": "Evite gastos desnecessários e procure promoções antes de comprar.",
@@ -38,7 +40,7 @@ function getBotResponse(message) {
       return responses[keyword];
     }
   }
-  return "Desculpe, não entendi sua pergunta. Tente novamente!";
+  return "Desculpe, não entendi sua resposta. Tente novamente!";
 }
 
 sendButton.addEventListener("click", sendMessage);
@@ -48,3 +50,4 @@ chatInput.addEventListener("keypress", (e) => {
     sendMessage();
   }
 });
+
