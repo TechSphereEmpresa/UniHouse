@@ -2,25 +2,229 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat</title>
+  <meta-nome="viewport" conteudo="width=device-width, initial-scale=1.0">
+  -titulo>Chat<-titulo>
   <link rel="stylesheet" href="/css/chat/universal/chat-universal.css">
   <link rel="stylesheet" href="/css/common/tailwindcss-colors.css">
-  <link rel="stylesheet" href="../../css/main.css">
-  <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="icon" href="/assets/imagems/logo.png" type="iamge/png">
 
 </head>
  <body>
 
-   <!--Lista de Conversa-->
-   <!--Conversas-->
-   <!--Grupo-->
-   <!--Pessoa 1-->
-   <!--Pessoa 2-->
-   <!--Pessoa 3-->
-   <!--Pessoa 4-->
-   <!--Pessoa 5-->
-   <!--Pessoa 6 (conversa em branco)-->
+   <section class="chat-section">
+    <div class="chat-container">
+
+        
+            <!-- Ínicio: Sidebar da conversa (conteudo Sidebar)  -->
+            <main div class="chat-conteudo">
+               
+                <!-- Ínicio: conteudo side -->
+                <div class="conteudo-sidebar">
+                    <div class="conteudo-sidebar-titulo">Chat</div>
+                    <form action="" class="conteudo-sidebar-form">
+                        <input type="search" class="conteudo-sidebar-input" placeholder="Pesquisando...">
+                        <button type="submit" class="conteudo-sidebar-submit"><i class="ri-search-line"></i></button>
+                    </form>
+                    <div class="conteudo-mensagem">
+                        <ul class="conteudo-mensagem-list">
+
+                         <!-- Principal, grupo geral -->
+                            <li class="conteudo-mensagem-titulo-principal"><span> Principal</span></li>
+                            <li>
+                                 <!-- Conversa 1 (Grupo) -->
+                                <a href="index.html" data-conversa="#conversa-1">
+                                    <img class="conteudo-mensagem-imagem" src="/assets/icons/common/icon-rep.svg" alt="icone-casa">
+                                    <span class="conteudo-mensagem-info">
+                                        <span class="conteudo-mensagem-nome">[Nome da república]
+                                    </span>
+                                        <span class="conteudo-mensagem-texto"> [Nome]: Preciso que devolvam um livro para mim.</span>
+                                    </span>
+                                <span class="conteudo-mensagem-more">
+                                        <span class="conteudo-mensagem-unread">1</span>
+                                        <span class="conteudo-mensagem-horario">21:54</span>
+                                    </span>
+                                </a>
+                            <li class="conteudo-mensagem-titulo"><span>Conversas Recentes</span></li>
+                            <li>
+                             <!-- Conversa 2 (Pessoa 1)-->
+                                <a href="#" data-conversa="#conversa-2">
+                                    <img class="conteudo-mensagem-imagem" src="/assets/icons/common/perfil.svg" alt="">
+                                    <span class="conteudo-mensagem-info">
+                                        <span class="conteudo-mensagem-nome">[Nome]</span>
+                                        <span class="conteudo-mensagem-texto"> Não esquece </span>
+                                    </span>
+                                    <span class="conteudo-mensagem-more">
+                                        <span class="conteudo-mensagem-horario">20:23</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                 <!-- Conversa 3 (Pessoa 2)-->
+                                 <a href="#" data-conversa="#conversa-3">
+                                    <img class="conteudo-mensagem-imagem" src="/assets/icons/common/perfil.svg" alt="">
+                                    <span class="conteudo-mensagem-info">
+                                        <span class="conteudo-mensagem-nome">[Nome]</span>
+                                        <span class="conteudo-mensagem-texto"> Quando estiver vindo para a república avise </span>
+                                    </span>
+                                    <span class="conteudo-mensagem-more">
+                                        <span class="conteudo-mensagem-unread">5</span>
+                                        <span class="conteudo-mensagem-horario">19:50</span>
+                                    </span>
+                                </a>
+                            </li>
+
+                         <!-- Conversa 4 (Pessoa 3)-->
+                            <li>
+                                <a href="#" data-conversa="#conversa-4">
+                                    <img class="conteudo-mensagem-imagem" src="/assets/icons/common/perfil.svg" alt="">
+                                    <span class="conteudo-mensagem-info">
+                                        <span class="conteudo-mensagem-nome">[Nome]</span>
+                                        <span class="conteudo-mensagem-texto"> Tenho uma prova de manhã</span>
+                                    </span>
+                                    <span class="conteudo-mensagem-more">
+                                        <span class="conteudo-mensagem-horario">19:33</span>
+                                    </span>
+                                </a>
+
+                           <!-- Conversa 5 (Pessoa 4) -->
+                            </li>
+                            <li>
+                                <a href="#" data-conversa="#conversa-5">
+                                    <img class="conteudo-mensagem-imagem" src="/assets/icons/common/perfil.svg" alt="">
+                                    <span class="conteudo-mensagem-info">
+                                        <span class="conteudo-mensagem-nome">[Nome]</span>
+                                        <span class="conteudo-mensagem-texto"> É assim mesmo </span>
+                                    </span>
+                                    <span class="conteudo-mensagem-more">
+                                        <span class="conteudo-mensagem-unread">2</span>
+                                        <span class="conteudo-mensagem-horario">15:10</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+
+                             <!-- Conversa 6 (Pessoa 5) -->
+                             <a href="#" data-conversa="#conversa-6">
+                                <img class="conteudo-mensagem-imagem" src="/assets/icons/common/perfil.svg" alt="">
+                                    <span class="conteudo-mensagem-info">
+                                        <span class="conteudo-mensagem-nome">[Nome]</span>
+                                        <span class="conteudo-mensagem-texto">Não lembro</span>
+                                    </span>
+                                    <span class="conteudo-mensagem-more">
+                                        <span class="conteudo-mensagem-horario">10:20</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="conteudo-mensagem-list">
+
+                       <!--Lista de todos os membros-->
+                            <li 
+                            class="conteudo-mensagem-titulo"><span>Todos os membros</span></li>
+                            <li>
+
+                        <!--Conversa 2 (Pessoa 1)-->
+                        <a href="#" data-conversa="#conversa-2"> 
+                             <img class="conteudo-mensagem-imagem" src="/assets/icons/common/perfil.svg" alt="">
+                                    <span class="conteudo-mensagem-info">
+                                        <span class="conteudo-mensagem-nome">[Nome]</span>
+                                        <span class="conteudo-mensagem-texto"> Não esquece</span>
+                                    </span>
+                                    <span class="conteudo-mensagem-more">
+                                        <span class="conteudo-mensagem-horario">20:23</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <!--Conversa 3 (Pessoa 2)-->
+                                <a href="#" data-conversa="#conversa-3"> 
+                                    <img class="conteudo-mensagem-imagem" src="/assets/icons/common/perfil.svg" alt="">
+                                    <span class="conteudo-mensagem-info">
+                                        <span class="conteudo-mensagem-nome">[Nome]</span>
+                                        <span class="conteudo-mensagem-texto">Quando estiver vindo para a reppública avise </span>
+                                    </span>
+                                    <span class="conteudo-mensagem-more">
+                                        <span class="conteudo-mensagem-unread">5</span>
+                                        <span class="conteudo-mensagem-horario">19:50</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <!--Conversa 4 (Pessoa 3)-->
+                                <a href="#" data-conversa="#conversa-4"> 
+                                    <img class="conteudo-mensagem-imagem" src="/assets/icons/common/perfil.svg" alt="">
+                                    <span class="conteudo-mensagem-info">
+                                        <span class="conteudo-mensagem-nome">[Nome]</span>
+                                        <span class="conteudo-mensagem-texto"> Tenho uma prova de manhã  </span>
+                                    </span>
+                                    <span class="conteudo-mensagem-more">
+                                        <span class="conteudo-mensagem-horario">19:33</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+
+                                <!--Conversa 5 (Pessoa 4)-->
+                                <a href="#" data-conversa="#conversa-5">
+                                    <img class="conteudo-mensagem-imagem" src="/assets/icons/common/perfil.svg" alt="">
+                                    <span class="conteudo-mensagem-info">
+                                        <span class="conteudo-mensagem-nome">[Nome]</span>
+                                        <span class="conteudo-mensagem-texto">É assim mesmo</span>
+                                    </span>
+                                    <span class="conteudo-mensagem-more">
+                                        <span class="conteudo-mensagem-unread">2</span>
+                                        <span class="conteudo-mensagem-horario">15:10</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <!--Conversa 6 (Pessoa 5)-->
+                                <a href="#" data-conversa="#conversa-6">
+                                    <img class="conteudo-mensagem-imagem" src="/assets/icons/common/perfil.svg" alt="">
+                                    <span class="conteudo-mensagem-info">
+                                        <span class="conteudo-mensagem-nome">[Nome]</span>
+                                        <span class="conteudo-mensagem-texto"> Não lembro</span>
+                                     </span>
+                                    <span class="conteudo-mensagem-more">
+                                        <span class="conteudo-mensagem-horario"> 10:20 </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <!--Conversa 7 (Pessoa 6): Simula um membro que nunca foi mandado mensagemm-->
+                                <a href="#" data-conversa="#conversa-7">                      <img class="conteudo-mensagem-imagem" src="/assets/icons/common/perfil.svg" alt="">
+                                    <span class="conteudo-mensagem-info">
+                                        <span class="conteudo-mensagem-nome">[Nome]</span>
+                                        <span class="conteudo-mensagem-texto">   </span>
+                                    </span>
+                                    <span class="conteudo-mensagem-more">
+                                       <!-- Sem horário -->  
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            <!-- Fim: Sidebar da conversa -->
+
+              <!-- ínicio: conversa -->
+                <div class="conversa conversa-default active">
+                    <i class="ri-chat-3-line"></i>
+                    <p>Selecione Chat e Vizualize a Conversa.</p>
+                </div>
+
+              <!-- Fim: conversa -->
+
+
+              <!--  No ínicio de cada conversa tem que colocar esse id á vc muda o número da conversa -->
+              <div class="conversation" id="conversation-1">
+ 
+
+              <!--  Tem que deixar tambem no inicio de cada conversa essas 2 linhas pq é a seta quando esta no modo celular para ver voltar a lista de pessoas -->
+
+                <div class="conversation-top">
+                    <button type="button" class="conversation-back"><i class="ri-arrow-left-line"></i></button>
 
 
 
@@ -34,8 +238,16 @@
 
 
 
+
+
+
+
+
+
+
+</div>
+</section>
   <!--Menu-->
-
   <nav class="menu">
     <a href="/pages/inicio/inicio.html" class="menu-item ">
         <img src="/assets/icons/common/nav/inicio.svg" alt="Início" class="menu-icon">
