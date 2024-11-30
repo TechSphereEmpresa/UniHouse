@@ -1,49 +1,3 @@
-body {
-    align-items: center;
-}
-
-header {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-}
-
-main {
-    width: 331px;
-    height: 100%;
-}
-
-/* Container interno do conteúdo */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 500px;
-    gap: 40px;
-}
-
-/* Estilo para o título */
-h1 {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 130%;
-}
-
-/* Estilo para a descrição */
-.description {
-    font-weight: 500;
-    line-height: 150%;
-    font-size: 16px;
-    color: #656F77;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-}
-
 .input-container {
     display: flex;
     width: 100%;
@@ -52,12 +6,11 @@ h1 {
 
 /* Estilo para os inputs de código */
 .input-codigo {
-    width: 60px;
-    height: 60px;
+    width: 54px;
+    height: 54px;
     text-align: center;
     font-size: 30px;
-    background-color: transparent;
-    border: 2px solid orange;
+    border: 2px solid #F4A503;
     border-radius: 8px;
     color: white;
     font-family: Urbanist;
@@ -74,29 +27,10 @@ a.btn {
     width: 100%;
 }
 
-.btn-verificar {
-    width: 100%;
-    height: 54px;
-    padding: 10px 20px;
-    background-color: #F4A503;
-    color: #000;
-    border: none;
-    border-radius: 18px;
-    font-family: Urbanist;
-    font-size: 19px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.btn-verificar:hover {
-    color: #fff;
-}
-
 /* Responsividade */
 @media (max-width: 600px) {
     .container {
-        width: 90%;
+        width: 100%;
         /* Reduz a largura no mobile */
     }
 
@@ -105,10 +39,5 @@ a.btn {
         /* Reduz a largura dos inputs no mobile */
         height: 50px;
         font-size: 20px;
-    }
-
-    .btn-verificar {
-        padding: 12px 25px;
-        font-size: 17px;
     }
 }

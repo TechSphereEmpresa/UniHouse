@@ -1,8 +1,4 @@
-body {
-    align-items: center;
-}
-
-main, .texto-caixa, .texto {
+main, .conteudo, .texto-caixa, .texto {
     display: flex;
     flex-direction: column;
 }
@@ -16,9 +12,14 @@ header {
     padding: 49px 100px 15px 100px;
 }
 
-main{
-    width: 327px;
-    height: 100%;
+main {
+    width: 100%;
+    align-items: center;
+}
+
+.conteudo {
+    width: 100%;
+    max-width: 500px;
     gap: 40px;
 }
 
@@ -27,7 +28,6 @@ main{
 }
 
 h1 {
-    font-size: 24px;
     font-size: 30px;
     font-weight: 700;
     line-height: 130%;
@@ -36,8 +36,6 @@ h1 {
 .description {
     font-size: 16px;
     color: #656F77;
-    margin-bottom: 30px;
-    flex-direction: column;
     align-items: flex-start;
     gap: 10px;
 }
