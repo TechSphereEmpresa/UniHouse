@@ -7,6 +7,7 @@
     <title>Login</title>
     <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
     <link rel="stylesheet" href="/css/login/login.css">
+    <link rel="stylesheet" href="/css/login/common.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 
@@ -16,24 +17,26 @@
             <img src="/assets/icons/common/seta-voltar.svg" alt="">
         </a>
     </header>
-    
-    <main>
-        <h1>Seja bem-vindo de volta!</h1>
-        <div class="div-botao">
-            <div class="div-email-senha">
-                <input type="text" class="input-field" placeholder="Email ou número" />
 
-                <div class="caixa-senha">
-                    <div class="input-field-container">
-                        <input type="password" class="input-field" id="senhaInput" placeholder="Senha">
-                        <img class="eye-icon" src="/assets/icons/login-cadastro/olho-aberto.svg" alt="Mostrar Senha"
-                            onclick="togglePassword()">
+    <main>
+        <div class="conteudo">
+            <div class="texto-caixa">
+                <h1>Seja bem-vindo de volta!</h1>
+                <div class="div-email-senha">
+                    <input type="text" class="input-field" placeholder="Email ou número" />
+
+                    <div class="caixa-senha">
+                        <div class="input-field-container">
+                            <input type="password" class="input-field" id="senhaInput" placeholder="Senha">
+                            <img class="eye-icon" src="/assets/icons/login-cadastro/olho-aberto.svg" alt="Mostrar Senha"
+                                onclick="togglePassword()">
+                        </div>
+                        <a href="/pages/login-cadastro/esqueceuSenha.html" class="forgot-password">Esqueceu sua
+                            senha?</a>
                     </div>
-                    <a href="/pages/login-cadastro/esqueceuSenha.html" class="forgot-password">Esqueceu sua senha?</a>
                 </div>
             </div>
             <button class="btn-entrar" onclick="window.location.href='/pages/inicio/inicio.html'">Entrar</button>
-   
         </div>
     </main>
 
