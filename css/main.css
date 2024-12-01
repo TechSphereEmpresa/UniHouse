@@ -33,7 +33,7 @@ header {
 }
 
 main {
-    margin: 0px 100px;
+    padding: 0px 100px;
 }
 
 @media (max-width: 1000px) {
@@ -42,7 +42,7 @@ main {
     }
 
     main {
-        margin: 0 50px;
+        padding: 0 50px;
     }
 }
 
@@ -52,6 +52,6 @@ main {
     }
 
     main {
-        margin: 0 20px;
+        padding: 0 20px;
     }
 }
