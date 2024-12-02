@@ -9,7 +9,7 @@
 }
 
 main { 
-    height: calc(100vh - (57px + 30px + 68px)); /* Calcular espaço entre header e nav */
+    height: calc(100vh - (57px + 30px + 68px)); /* Calcular espaço entre header e nav */ 
 }
 /* Fim: Globais - Geral */
 
@@ -55,11 +55,12 @@ header {
     position: absolute;
     top: 0;
     border-right: 2px solid #bcbcbc;
+    padding-right: 16px;
 }
 
 .content-sidebar-form {
     position: relative;
-    padding: 0 16px;
+    /* padding: 0 16px; */
 }
 /* Barra de pesquisa */
 .content-sidebar-input {
@@ -97,7 +98,13 @@ header {
     overflow-y: auto;
     height: 100%;
     margin-top: 16px;
+    scrollbar-width: none; /* Firefox */
 }
+
+.content-messages::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Edge */
+}
+
 
 .content-messages-list {
     list-style-type: none;
@@ -107,19 +114,19 @@ header {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--white);
-    padding: 10px 16px;
+    color: #fff;
+    padding: 10px 0px;
 }
 .content-messages-list > * > a:hover {
-    background-color: #264370;
+    background-color: #1e1e1e;
 }
 .content-messages-list > .active > a {
     background-color: var(--slate-100);
 }
 
 .content-message-title-principal {
-    margin-left: 16px;
-    margin-right: 16px;
+    /* margin-left: 16px; */
+    /* margin-right: 16px; */
     color: #F4A503;
     font-size: 13px;
     font-weight: 500;
@@ -145,8 +152,8 @@ header {
 }
 
 .content-message-title {
-    margin-left: 16px;
-    margin-right: 16px;
+    /* margin-left: 16px; */
+    /* margin-right: 16px; */
     color: var(--slate-200);
     font-size: 13px;
     font-weight: 500;
@@ -343,8 +350,13 @@ header {
 .conversation-main {
     overflow-y: auto;
     overflow-x: hidden;
-    height: 100%;
+    height: 100%; scrollbar-width: none; /* Firefox */
 }
+
+.conversation-main::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Edge */
+}
+
 .conversation-wrapper {
     list-style-type: none;
 }
@@ -385,7 +397,7 @@ header {
     margin-left: unset;
 }
 .conversation-item-text {
-    max-width: 40%;
+    max-width: 70%;
     padding: 12px 16px 8px;
     background-color: #000;
     border: 2px solid #F4A503;
@@ -395,7 +407,7 @@ header {
     word-break: break-word;
     border-radius: 20px 20px 0px 20px;
     line-height: 1.5;
-    margin-left: 60%;
+    margin-left: 30%;
 }
 .conversation-item.me .conversation-item-text {
     margin-left: unset;
@@ -667,6 +679,7 @@ header {
         left: unset;
         width: 100%;
         border-right: none;
+        padding-right: 0px;
     }
 
     .chat-content {
@@ -683,6 +696,8 @@ header {
         display: none;
         padding: 16px;
     }
+
+
 }
 
 /* end: Breakpoints */
