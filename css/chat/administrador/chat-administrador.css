@@ -565,6 +565,7 @@ body {
     display: block;
     line-height: 1.4;
     max-height: calc(20px + ((14px * 2) * 6)); 
+    margin-bottom: 65px;
 }
 .conversation-form-input:focus {
     border-color: var(--orange-500);
