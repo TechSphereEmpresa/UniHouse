@@ -16,9 +16,11 @@ html, body {
     color: #FFF;
     font-family: Urbanist;
     font-weight: 600;
+    scrollbar-width: none; /* Firefox */
 }
 
 body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Edge */
     display: none; 
 }
 
