@@ -19,29 +19,7 @@
   <section class="chat-section">
     <div class="chat-container">
 
-        <!-- Ínicio: Sidebar (navegação entre as páginas) -->
-        <aside class="chat-sidebar">
-            <a href="#" class="chat-sidebar-logo">
-                <i class="ri-chat-1-fill"></i>
-            </a>
-            <ul class="chat-sidebar-menu">
-                <li > <a href="/pages/inicio/inicio.html" data-title="Início"><i class="ri-home-line"></i></a></li>
-                <li class="active">  <a href="chat-administrador.html" data-title="Chat"><i class="ri-chat-3-line"></i></a></li>
-                <li><a href="/" data-title="Financeiro"><i class="ri-wallet-line"></i></a></li>
-                <li><a href="/pages/relatorio/relatorio.html" data-title="Relatório"><i class="ri-pie-chart-line"></i></a></li>
-                <li class="chat-sidebar-profile">
-                    <!--Parte Inferior: Sidebar-->
-                    <button type="button" class="chat-sidebar-profile-toggle">
-                        <img src="/assets/icons/common/profile.svg">    
-                    </button>
-                    <ul class="chat-sidebar-profile-dropdown">
-                        <li><a href="adm-pg1-editar.html"><i class="ri-user-line"></i> Perfil </a></li>
-                        <li><a href="/pages/inicio/inicio.html"><i class="ri-logout-box-line"></i> Sair </a></li>
-                    </ul>
-                </li>
-            </ul>
-        </aside>
-        <!-- Fim: Sidebar (navegação entre as páginas) -->
+      
 
             <!-- Ínicio: Sidebar da conversa (Content Sidebar)  -->
             <div class="chat-content">
@@ -710,6 +688,32 @@
 
                 <!-- Fim: Conversation -->
             </div>
+
+
+            <nav class="menu">
+                <a href="/pages/inicio/inicio.html" class="menu-item">
+                    <img src="/assets/icons/common/nav/inicio.svg" alt="Início" class="menu-icon">
+                    <img class="img-active" src="/assets/icons/common/nav/inicio-active.svg" alt="Início" class="menu-icon">
+                    Início
+                </a>
+                <a href="/pages/financeiro/financeiro.html" class="menu-item">
+                    <img src="/assets/icons/common/nav/financeiro.svg" alt="Financeiro" class="menu-icon">
+                    <img class="img-active" src="/assets/icons/common/nav/financeiro-active.svg" alt="Financeiro" class="menu-icon">
+                    Financeiro
+                </a>
+                <a href="/pages/relatorio/relatorio.html" class="menu-item active">
+                    <img src="/assets/icons/common/nav/relatorio.svg" alt="Relatório" class="menu-icon">
+                    <img class="img-active" src="/assets/icons/common/nav/reatorio-active.svg" alt="Relatório" class="menu-icon">
+                    Relatório
+                </a>
+                <a href="/pages/chat/administrador/chat-administrador.html" class="menu-item">
+                    <img src="/assets/icons/common/nav/chat.svg" alt="Chat" class="menu-icon">
+                    <img class="img-active" src="/assets/icons/common/nav/chat-active.svg" alt="Chat" class="menu-icon">
+                    Chat
+                </a>
+            </nav>
+
+
             <!-- Fim: Content -->
         </div>
     </section>
