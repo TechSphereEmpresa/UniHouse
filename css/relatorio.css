@@ -18,7 +18,9 @@ main {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: calc(100vh - (57px + 30px + 68px));
+  padding-bottom: 78px;
+  height: 100%;
+  /* height: calc(100vh - (57px + 30px + 68px + 10px)); */
 }
 
 .relatorios {
@@ -113,52 +115,6 @@ select {
   font-weight: 700;
 }
 
-.menu {
-  display: flex;
-  width: 100%;
-  padding: 10px 0;
-  border-radius: 8px;
-  border-top: 2px solid #bcbcbc;
-  background: #000;
-  justify-content: space-around;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.menu-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #bcbcbc;
-  text-decoration: none;
-  font-size: 14px;
-
-  .img-active {
-    display: none;
-  }
-}
-
-.menu-item.active {
-  color: #f4a503;
-
-  .img-active {
-    display: block;
-  }
-
-  img {
-    display: none;
-  }
-}
-
-.menu-icon {
-  width: 24px;
-  height: 24px;
-  margin-bottom: 5px;
-}
-
 @media (max-width: 1000px) {
   .relatorios {
     flex-direction: column;
@@ -172,33 +128,7 @@ select {
 }
 
 @media (max-width: 600px) {
-  header {
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 20px;
-  }
-
-  select {
-    font-size: 12px;
-  }
-
-  .mes-atual {
-    font-size: 16px;
-  }
-
   .secao-relatorio {
     width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .menu-item {
-    font-size: 12px;
-  }
-
-  .menu-icon {
-    width: 20px;
-    height: 20px;
   }
 }

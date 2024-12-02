@@ -21,7 +21,6 @@ html, body {
 
 body::-webkit-scrollbar {
     display: none; /* Chrome, Safari e Edge */
-    display: none; 
 }
 
 body {
