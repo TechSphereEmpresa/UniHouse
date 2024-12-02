@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1564a506de4e91804c75b39d4d9d7b6999224c32
 // ínicio: Conversation (Conversas) 
 
 document.querySelectorAll('.conversation-item-dropdown-toggle').forEach(function(item) {
