@@ -10,18 +10,15 @@
 
 </head>
 <body>
-    <div class="transferencia-container">
-        
-        <header class="header">
-            <div class="icone-seta">
-                <a href="javascript:history.back()"> 
-                    <img src="/assets/icons/common/seta-voltar.svg" alt="Voltar">
-                </a>
-            </div>
-            <h1>Nova transferência</h1>
-        </header>
+    <header>
+        <a href="/pages/inicio/multas/multas.html">
+            <img src="/assets/icons/common/seta-voltar.svg" alt="">
+        </a>
+        <p>Nova transferência</p>
+    </header>
+    </header>
 
-        <div class="conteudo">
+    <main>
             <div class="coluna-cartoes">
                 <!-- Cartão Visa -->
                 <div class="cartao visa">
@@ -68,15 +65,18 @@
 
             <!-- Coluna do formulário de transferência -->
             <div class="form-transferencia">
-                <label for="valor">Valor</label>
-                <input type="text" id="valor" placeholder="R$ 15,00">
+                <div class="legenda-caixa">
+                    <label for="valor">Valor</label>
+                    <input type="text" id="valor" placeholder="R$ 15,00">
+                </div>
                 
-                <label for="motivo">Motivo</label>
-                <input type="text" id="motivo" placeholder="Multa">
+                <div class="legenda-caixa">
+                    <label for="motivo">Motivo</label>
+                    <input type="text" id="motivo" placeholder="Multa">
+                </div>
                 
                 <button class="botao-concluir" onclick="window.location.href='transferencia_realizada.html'">Concluir</button>
             </div>
-        </div>
-    </div>
+    </main>
 </body>
 </html>

@@ -1,69 +1,41 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap);
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 body {
-  background-color: #000;
-  color: #fff;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
-.transferencia-container {
-  max-width: 800px;
+main {
+  display: flex;
   width: 100%;
-  padding: 20px;
+  justify-content: center;
+  gap: 40px;
 }
 
-.header {
+header {
   display: flex;
-  height: 102px;
-  overflow: hidden;
-  padding: 20px;
-  background: #000;
-  justify-content: flex-start;
+  width: 100%;
   align-items: center;
-  gap: 10px;
-}
-
-.icone-seta img {
-  width: 24px;
-  height: auto;
-  margin-right: 10px;
-}
-
-h1 {
-  flex: 1 0 0;
-  color: #fff;
-  text-align: center;
-  font-family: Urbanist;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-}
-
-.conteudo {
-  display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  position: relative;
+  padding: 49px 100px 15px 100px;
+}
+
+header a {
+  margin-right: auto;
+}
+
+header p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
 }
 
 .coluna-cartoes {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 15px;
-}
-
-.form-transferencia {
-  width: 48%;
 }
 
 .cartao {
@@ -157,9 +129,9 @@ h1 {
 
 .form-transferencia {
   display: flex;
+  width: 45%;
   flex-direction: column;
-  gap: 15px;
-  margin-top: 10px;
+  gap: 40px;
 }
 
 .form-transferencia label {
@@ -170,40 +142,51 @@ h1 {
 }
 
 .form-transferencia input {
-  color: #bcbcbc;
-  font-family: Urbanist;
-  font-size: 16px;
-  font-weight: 600;
-  width: 335px;
-  height: 54px;
   padding: 14px 23px;
-  border-radius: 18px;
+  width: 100%;
+  outline: none;
   border: 2px solid #f4a503;
+  border-radius: 18px;
   background-color: #000;
+  font-size: 16px;
+  color: #d3d3d3;
+  transition: border-color 0.3s;
+}
+
+.legenda-caixa {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .botao-concluir {
-  width: 335px;
+  width: 100%;
   height: 54px;
-  padding: 14px 0;
-  border-radius: 18px;
-  background: #f4a503;
+  background-color: #f4a503;
   color: #000;
+  padding: 10px 20px;
+  border: 2px solid #f4a503;
+  border-radius: 18px;
   font-family: Urbanist;
   font-size: 19px;
   font-weight: 700;
-  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  margin-bottom: 30px;
 }
 
 .botao-concluir:hover {
-  background-color: #ffd54f;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #f4a503;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .conteudo {
+  main {
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
   }
 
   .header {
@@ -222,6 +205,11 @@ h1 {
     overflow-x: auto;
     padding: 10px;
     width: 100%;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .coluna-cartoes::-webkit-scrollbar {
+      display: none; /* Chrome, Safari e Edge */
   }
 
   .cartao {
@@ -231,7 +219,7 @@ h1 {
   }
 
   .form-transferencia {
-    width: 90%;
+    width: 100%;
   }
 
   .form-transferencia input,
@@ -241,7 +229,7 @@ h1 {
 }
 
 @media (max-width: 480px) {
-  .conteudo {
+  main {
     flex-direction: column;
     align-items: center;
   }
@@ -287,10 +275,6 @@ h1 {
   .nome-cartao,
   .exp-date {
     font-size: 10px;
-  }
-
-  .form-transferencia {
-    width: 90%;
   }
 
   .form-transferencia input,
