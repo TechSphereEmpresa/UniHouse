@@ -63,10 +63,9 @@ document.querySelectorAll('.conversation-back').forEach(function(item) {
     })
 })
 
-
-
 //Fim: Conversation (Conversas) 
 
+//Inputs: Conversation (Conversas) 
 document.addEventListener("DOMContentLoaded", () => {
     const messageInput = document.getElementById("message-input");
     const sendButton = document.getElementById("send-button");
@@ -112,5 +111,22 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault(); // Previne quebra de linha
             addMessage();
         }
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Seleciona todos os elementos de chat que podem ser clicados
+    const chatLinks = document.querySelectorAll(".content-message-more");
+
+    chatLinks.forEach((chatLink) => {
+        chatLink.addEventListener("click", () => {
+            // Busca o elemento de mensagens não lidas dentro do link clicado
+            const unreadBadge = chatLink.querySelector(".content-message-unread");
+            if (unreadBadge) {
+                // Oculta o badge de mensagens não lidas
+                unreadBadge.style.display = "none";
+            }
+        });
     });
 });
