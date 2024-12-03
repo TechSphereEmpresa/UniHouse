@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editando Perfil Administrador</title>
     <link rel="stylesheet" href="/css/chat/administrador/adm-pg2-editar.css">
+    <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" href="/assets/images/logo.png" type="image/png">
 </head>
+
 <body>
-    <div class="main-container">
+    <header>
+        <a href="adm-pg1-editar.html">
+            <img src="/assets/icons/common/seta-voltar.svg" alt="">
+        </a>
+        <a href="adm-pg1-editar.html">
+            <img src="/assets/icons/home/confirmar.svg" alt="">
+        </a>
+    </header>
 
-        <header class="navbar">
-            <a href="javascript:history.back()" class="back-arrow" aria-label="Voltar">
-                <img src="/assets/icons/common/seta-voltar.svg" alt="Voltar">
-            </a>
-            <div class="title"></div>
-            <a href="adm-pg1-editar.html" class="check" aria-label="Salvar alterações">
-                <img src="/assets/icons/login-cadastro/check-cadastro.svg" alt="Salvar alterações">
-            </a>
-        </header>
+    <main>
+        <img class="profile-image" src="/assets/icons/common/profile.svg" alt="">
+        <div class="profile-name">[Nome]</div>
+        <div class="profile-role"> Administrador</div>
 
-        <main class="profile-container">
-            <img class="profile-image" src="/assets/icons/common/profile.svg" alt="">        
-            <div class="profile-name">[Nome]</div>
-            <div class="profile-role"> Administrador</div>
-            
-            <div class="separator-um"></div> 
-            <div class="profile-info">
-                <div class="info-text">
-                    <label>Email:</label>
-                    <input type="text" value="nome@email.com" class="email-input">
-                </div>
-                <div class="separator-dois"></div>
-                <div class="info-text-tel">
-                    <label>Telefone: </label>       
-                    <input type="text" value="(00) 00000-0000" class="telephone-input">
-                </div>
-                </div>
+        <div class="separator-um"></div>
+        <div class="profile-info">
+            <div class="info-text">
+                <label>Email:</label>
+                <input type="text" value="nome@email.com" class="email-input">
             </div>
-        </main>
-    </div>
+            <div class="separator-dois"></div>
+            <div class="info-text-tel">
+                <label>Telefone: </label>
+                <input type="text" value="(00) 00000-0000" class="telephone-input">
+            </div>
+        </div>
+        </div>
+    </main>
 </body>
+
 </html>
