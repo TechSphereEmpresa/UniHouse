@@ -66,3 +66,51 @@ document.querySelectorAll('.conversation-back').forEach(function(item) {
 
 
 //Fim: Conversation (Conversas) 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const messageInput = document.getElementById("message-input");
+    const sendButton = document.getElementById("send-button");
+    const messageList = document.getElementById("message-list");
+
+    // Função para adicionar uma mensagem do usuário
+    function addMessage() {
+        const messageText = messageInput.value.trim(); // Remove espaços desnecessários
+        if (messageText !== "") {
+            // Criar o elemento da mensagem
+            const messageItem = document.createElement("li");
+            messageItem.classList.add("conversation-item", "conversation-item-me");
+            messageItem.innerHTML = `
+                <div class="conversation-item-content">
+                    <div class="conversation-item-wrapper">
+                        <div class="conversation-item-box">
+                            <div class="conversation-item-text">
+                                <p>${messageText}</p>
+                                <div class="conversation-item-time">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Adicionar a mensagem à lista
+            messageList.appendChild(messageItem);
+
+            // Rolagem automática para a última mensagem
+            messageList.scrollTop = messageList.scrollHeight;
+
+            // Limpar o campo de entrada
+            messageInput.value = "";
+        }
+    }
+
+    // Evento de clique no botão "Enviar"
+    sendButton.addEventListener("click", addMessage);
+
+    // Permitir envio com Enter
+    messageInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault(); // Previne quebra de linha
+            addMessage();
+        }
+    });
+});
