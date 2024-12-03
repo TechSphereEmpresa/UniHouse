@@ -8,8 +8,9 @@
     font: inherit;
 }
 
-main { 
-    height: calc(100vh - (57px + 30px + 68px)); /* Calcular espaço entre header e nav */ 
+main {
+    height: calc(100vh - (57px + 30px + 68px)); /* Calcular espaço entre header e nav */
+    padding-bottom: 0;
 }
 /* Fim: Globais - Geral */
 

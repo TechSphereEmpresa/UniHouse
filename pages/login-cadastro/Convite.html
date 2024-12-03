@@ -7,7 +7,9 @@
   <title>Convite República</title>
   <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
   <link rel="stylesheet" href="/css/login/Convite.css" />
+  <link rel="stylesheet" href="/css/login/common.css" />
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap">
 </head>
 
 <body>
@@ -18,33 +20,40 @@
   </header>
 
   <main>
-      <h1>Código da república</h1>
-            <span class="share-code">Compartilhe esse código apenas com os moradores da casa.</span>
-            <div class="email-box">
-              <div class="rectangle"></div>
-              <input class="caixa-email-input" type="text" placeholder="[Código]" /><span class="codigo"></span>
-              <div class="frame-4">
-                <div class="vector"></div>
-              </div>
-            </div>
-          </div>
-          <div class="frame-5">
-            <span class="text-4">Você também pode enviar convites por email.</span>
-            <div class="section-3">
-              <div class="box-4"></div>
-              <input class="Input-2" /><span class="text-5">Email</span>
-              <div class="mail-send">
-                <div class="vector-6"></div>
-              </div>
-            </div>
-          </div>
+    <div class="conteudo">
+      <div class="texto-caixa">
+        <div class="texto">
+          <h1>Código da república</h1>
+          <p class="description">Compartilhe esse código apenas com os moradores da casa.</p>
         </div>
+
+        <div class="input-container">
+          <input type="text" class="input-field" value="[Código]" id="copiarCod" readonly>
+          <span class="copy-icon" onclick="copyText()">content_copy</span>
+      </div>
+      </div>
         
-        <a class="btn" href="/pages/inicio/inicio.html">
-          <button class="seguir-btn">Seguir</button>
-        </a>
+      <div class="texto-caixa">
+        <p class="description">Você também pode enviar convites por email.</p>
+        <input type="text" class="input-field" placeholder="Email">
+      </div>
+      
+      <a class="btn" href="/pages/inicio/inicio.html">
+        <button class="btn-enviar">Seguir</button>
+      </a>
+    </div>
+  </div>
   </main>
 
+  <script>
+    function copyText() {
+        var copyText = document.getElementById("copiarCod");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // Para dispositivos móveis
+        document.execCommand("copy");
+        alert("Texto copiado");
+    }
+</script>
 </body>
 
 </html>

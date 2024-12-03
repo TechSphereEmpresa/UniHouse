@@ -76,7 +76,7 @@ main {
     gap: 10px;
 
     border-radius: 20px 20px 0px 0px;
-    background: rgba(55, 96, 160, 0.60);
+    background: #264370;
 }
 
 .radio-option {
@@ -100,7 +100,7 @@ main {
 }
 
 .radio-option.selected {
-    background-color: #264370; 
+    background-color: #254d8a; 
     width: 100%;
     height: 82px;
     flex-shrink: 0;
@@ -162,18 +162,20 @@ button {
     color: #000;
     height: 54px;
     padding: 10px 20px;
-    border: none;
+    border: 2px solid #F4A503;
     border-radius: 18px;
     font-family: Urbanist;
     font-size: 19px;
     font-weight: 700;
     white-space: nowrap;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: 0.5s;
 }
 
 button:hover {
+    background-color: #264370;
     color: #fff;
+    border: 2px solid #F4A503;
 }
 
 .continuar {

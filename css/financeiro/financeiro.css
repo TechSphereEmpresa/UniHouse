@@ -1,14 +1,3 @@
-
-
-@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap);
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 :root {
   --primary-color: #f4a503;
   --light: #ffffff;
@@ -17,9 +6,6 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   overflow: auto;
 }
 
@@ -49,44 +35,58 @@ header h1 {
   margin: 0; 
 }
 
-.conteudo {
+main {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  height: calc(100vh - (57px + 30px + 68px));
   align-items: flex-start;
   gap: 25px;
-  padding-bottom: 80px;
-  padding: 20px;
   box-sizing: border-box;
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+main::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Edge */
 }
 
 .transacoes {
+  order: 2;
+  flex: 1;
+  display: flex;
   width: 100%;
-  max-width: 600px;
+  height: 100%;
   flex-direction: column;
   align-items: flex-start;
   gap: 15px;
+  overflow: hidden;
 }
 
 .transacoes h2 {
-  color: #fff;
-  font-family: Urbanist;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
   line-height: 108%;
   letter-spacing: -0.5px;
   text-align: start;
   font-feature-settings: "liga" off, "clig" off;
-  padding-bottom: 20px;
 }
 
-.lista-transacoes {
+.lista-botao {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
   background-color: #fff;
   border-radius: 10px;
   padding: 10px;
-  max-height: 60vh; /* Limita a altura no desktop e mobile */
-  overflow-y: auto;
+}
+
+.lista-transacoes {
+  flex: 1;
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.lista-transacoes::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Edge */
 }
 
 .transacao {
@@ -98,6 +98,10 @@ header h1 {
   gap: 15px;
   align-self: stretch;
   white-space: nowrap;
+}
+
+.transacao span {
+  color: #000;
 }
 
 .transacao:last-child {
@@ -116,29 +120,34 @@ header h1 {
 }
 
 .ver-tudo {
-  display: block;
-  margin: 10px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* margin: 10px auto 0 auto; */
   padding: 10px;
-  background-color: #333;
+  background-color: #000;
   color: #fff;
   width: 100%;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
 }
 
 .saldo {
+  order: 1;
+  flex: 1;
   display: flex;
-  height: 239px;
+  width: 100%;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   gap: 25px;
-  flex: 1 0 0;
-
-  padding: 15px;
-  margin: 10px;
   border-radius: 10px;
 }
 
@@ -218,7 +227,7 @@ header h1 {
   background: #000;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 0;
   right: 0;
@@ -283,13 +292,11 @@ header h1 {
 
   .conteudo {
     flex-direction: column;
-    align-items: center;
-    padding-bottom: 100px;
+    /* align-items: center; */
   }
 
   .transacoes {
     order: 2;
-    width: 90%;
   }
 
   .transacao {
@@ -312,6 +319,6 @@ header h1 {
   }
 
   .lista-transacoes {
-    max-height: 50vh; /* Ajusta a altura da lista para o mobile */
+    /* max-height: 50vh; */ /* Ajusta a altura da lista para o mobile */
   }
 }

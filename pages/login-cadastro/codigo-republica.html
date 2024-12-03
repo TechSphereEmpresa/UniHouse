@@ -6,6 +6,7 @@
     <title>Código da república</title>
     <link rel="icon" href="/assets/images/logo.png" type="image/png">
     <link rel="stylesheet" href="/css/login/codigo-republica.css">
+    <link rel="stylesheet" href="/css/login/common.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
@@ -16,19 +17,24 @@
     </header>
 
     <main>
-        <div class="codigo-info">
-            <h2 class="titulo-codigo">Código da República</h2>
-
-            <p class="texto-explicativo">Solicite a um administrador da sua república o código</p>
-
-            <input type="text" class="input-codigo" placeholder="Código">
+        <div class="conteudo">
+            <div class="texto-caixa">
+                <div class="texto">
+                    <h1>Código da República</h1>
+    
+                    <p class="description">Solicite a um administrador da sua república o código</p>
+                </div>
+    
+    
+                <input type="text" class="input-field" placeholder="Código">
+            </div>
 
             <button id="verificar-btn">Verificar</button>
             
         </div>
 
         <div id="republica-acesso">
-            <img class="cancelar" src="/assets/icons/login-cadastro/x.svg" alt="">
+            <img id="cancelar" src="/assets/icons/login-cadastro/x.svg" alt="">
 
             <div class="icon-nome">
                 <img src="/assets/icons/common/icon-rep.svg" alt="Foto de perfil da república">
@@ -43,6 +49,10 @@
     <script>
         document.getElementById("verificar-btn").addEventListener("click", function() {
             document.getElementById("republica-acesso").style.display = "flex";
+        });
+
+        document.getElementById("cancelar").addEventListener("click", function() {
+            document.getElementById("republica-acesso").style.display = "none";
         });
     </script>
 </body>

@@ -31,7 +31,7 @@ hr {
 .descricao {
     font-size: 20px;
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
 }
 
 #botao-pagar {
@@ -40,15 +40,13 @@ hr {
     padding: 14px 0px;
     align-items: center;
     justify-content: center;
-    margin-top: 32px;
-    
+    /* margin-top: 32px; */
     background-color: #F56602;
     border: 3px solid #F56602;
     border-radius: 18px;
     color: #000;
     font-size: 20px;
     font-weight: 700;
-
     transition: background-color 0.5s;
 }
 

@@ -7,6 +7,7 @@
   <title>Criar República</title>
   <link rel="icon" href="/assets/images/logo.png" type="image/png">
   <link rel="stylesheet" href="/css/login/criarRepública.css">
+  <link rel="stylesheet" href="/css/login/common.css">
   <link rel="stylesheet" href="/css/main.css">
 </head>
 
@@ -18,29 +19,50 @@
   </header>
 
   <main>
-    <h1>Agora crie a sua república:</h1>
-    <div class="criar">
-      <div class="caixas">
-        <img src="/assets/icons/login-cadastro/addfoto.svg" alt="">
-        <p class=" add-photo">Adicionar foto</p>
+    <div class="conteudo">
+      <h1>Agora crie a sua república:</h1>
+      <div class="criar">
+        <div class="caixas">
 
-        <div class="email-box">
-          <span class="name">Nome</span>
-          <div class="rectangle"></div>
-          <input class="caixa-email-input" />
-        </div>
+          <div class="addFoto">
+            <label for="fileUpload">
+              <img id="preview" src="/assets/icons/login-cadastro/addfoto.svg" alt="Foto">
+            </label>
+            <input type="file" id="fileUpload" style="display: none;" accept="image/*">
+            <p class="description">Adicionar foto</p>
+          </div>
 
-        <div class="caixa-email">
-          <span class="descricao">Descrição</span>
-          <div class="rectangle-4"></div>
-          <input class="email-input" />
+          <input type="text" class="input-field" placeholder="Nome">
+
+          <input type="text" class="input-field" placeholder="Descrição">
         </div>
+        <a class="btn" href="Convite.html">
+          <button class="btn-enviar">Criar</button>
+        </a>
       </div>
-      <a class="btn" href="Convite.html">
-        <button class="criar-btn">Criar</button>
-      </a>
     </div>
   </main>
+
+  <script>
+    // Seleciona os elementos
+    const fileInput = document.getElementById('fileUpload');
+    const previewImage = document.getElementById('preview');
+
+    // Adiciona o listener para mudança no input
+    fileInput.addEventListener('change', function (event) {
+      const file = event.target.files[0]; // Obtém o arquivo selecionado
+
+      if (file) {
+        const reader = new FileReader(); // Cria um FileReader para ler o arquivo
+
+        reader.onload = function (e) {
+          previewImage.src = e.target.result; // Define o src da imagem como o resultado da leitura
+        };
+
+        reader.readAsDataURL(file); // Lê o arquivo como uma URL base64
+      }
+    });
+  </script>
 </body>
 
 </html>

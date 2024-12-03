@@ -19,6 +19,7 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    padding-bottom: 30px;
 }
 
 .back-button {
@@ -75,11 +76,11 @@ form {
     gap: 6px;
     background-color: transparent;
     color: #fff;
-    transition: background-color 0.5s;
+    transition: 0.5s;
 }
 
 .radio-option:hover { 
-    background: #232323;
+    border: 2px solid #264370;
 }
 
 .input-field, .nome{
@@ -92,10 +93,6 @@ form {
     transition: background-color 0.5s;
 }
 
-.input-field:hover, .nome:hover {
-    background-color: #EAEAEA;
-}
-
 .btn-registrar {
     width: 100%;
     background-color: #F4A503;
@@ -103,7 +100,6 @@ form {
     font-family: Urbanist;
     height: 54px;
     padding: 10px 20px;
-    margin-top: 20px;
     border: none;
     border-radius: 20px;
     font-size: 19px;

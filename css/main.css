@@ -8,9 +8,9 @@
 
 html, body {
     width: 100%;
-    height: 100%; 
-    margin: 0;   
-    padding: 0;  
+    height: 100%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     background: #000;
     color: #FFF;
@@ -34,7 +34,7 @@ header {
 }
 
 main {
-    padding: 0px 100px;
+    padding: 0px 100px 30px;
 }
 
 @media (max-width: 1000px) {
@@ -43,7 +43,7 @@ main {
     }
 
     main {
-        padding: 0 50px;
+        padding: 0 50px 30px;
     }
 }
 
@@ -53,6 +53,6 @@ main {
     }
 
     main {
-        padding: 0 20px;
+        padding: 0 20px 30px;
     }
 }

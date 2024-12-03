@@ -30,18 +30,18 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     padding-bottom: 30px;
     gap: 15px;
 }
 
 form {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
     align-items: end;
     justify-content: space-between;
     gap: 40px;
-
 }
 
 .caixa-descricao, .caixa-valor, .caixa-opcoes {

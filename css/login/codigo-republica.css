@@ -1,63 +1,6 @@
-header {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: start;
-    position: relative;
-    padding: 49px 100px 15px 100px;
-}
-
 main {
-    display: flex;
     height: 100%;
-    flex-direction: column;
-    align-items: center; /* Centraliza os itens dentro do main */
-    gap: 20px;
-}
-
-.codigo-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 375px; /* Mantém a mesma largura do contêiner azul */
-    margin-bottom: 20px; /* Espaço entre as informações e o contêiner azul */
-}
-
-/* Título "Código da República" */
-.titulo-codigo {
-    font-size: 24px;
-    font-weight: 700;
-    color: #fff;
-    text-align: center;
-}
-
-/* Texto explicativo abaixo do título */
-.texto-explicativo {
-    color: var(--Gray, #8391A1);
-    font-family: Urbanist;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%; 
-}
-
-/* Estilo para o campo de entrada do código */
-.input-codigo {
-    width: 100%;
-    height: 54px;
-    padding: 10px 20px;
-    background-color: #fdfdfd;
-    color: #000;
-    text-align: start;
-    border: none;
-    border-radius: 18px;
-    font-family: Urbanist;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: color 0.3s;
-    line-height: 150%;
+    gap: 30px;
 }
 
 /* Botão Verificar */
@@ -67,33 +10,37 @@ main {
     padding: 10px 20px;
     background-color: #F4A503;
     color: #000;
-    border: none;
+    border: 2px solid #F4A503;
     border-radius: 18px;
     font-family: Urbanist;
     font-size: 19px;
     font-weight: 700;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: 0.5s;
 }
 
 #verificar-btn:hover {
+    background-color: #000;
     color: #fff;
+    border: 2px solid #F4A503;
 }
 
 #republica-acesso {
+    position: absolute;
+    bottom: 0;
     display: none;
-    width: 375px;
-    height: 100%;
+    width: 100%;
+    max-width: 500px;
+    height: calc(100vh - (60px + 30px + 230px - 54px));
     flex-direction: column;
     align-items: end;
-    padding: 28px 24px;
-    gap: 20px;
-
-    border-radius: 20px 20px 0px 0px;
-    background: rgba(55, 96, 160, 0.60); /* Cor de fundo azul */
+    padding: 20px;
+    gap: 15px;
+    border-radius: 17px 17px 0px 0px;
+    background: #264370; /* Cor de fundo azul */
 }
 
-.cancelar {
+#cancelar {
     cursor: pointer;
 }
 
@@ -121,14 +68,16 @@ a.btn {
     padding: 10px 20px;
     background-color: #F4A503;
     color: #000;
-    border: none;
+    border: 2px solid #F4A503;
     border-radius: 18px;
     font-family: Urbanist;
     font-size: 19px;
     font-weight: 700;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: 0.5s;
 }
 .solicitar-btn:hover {
+    background-color: #264370;
     color: #fff;
+    border: 2px solid #F4A503;
 }
