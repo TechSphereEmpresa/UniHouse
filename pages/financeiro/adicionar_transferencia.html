@@ -1,43 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Transferência</title>
     <link rel="stylesheet" href="/css/financeiro/adicionar_transferencia.css">
-    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="/css/financeiro/nova_transferencia.css">
+    <link rel="stylesheet" href="/css/main.css">
     <link rel="icon" href="/assets/images/logo.png" type="image/png">
 </head>
+
 <body>
     <header>
         <a href="financeiro.html" class="back-button">
             <img src="/assets/icons/common/seta-voltar.svg" alt="Voltar à página do financeiro">
         </a>
-        <h1>Adicionar transferência</h1>
+        <p>Adicionar transferência</p>
     </header>
+
     <main>
         <form class="transfer-form">
             <div class="left-section">
-                <div class="input-group">
+                <div class="legenda-caixa">
                     <label for="valor">Valor</label>
-                    <input type="text" id="valor" placeholder="R$15,00">
+                    <input type="text" id="valor" placeholder="R$ 15,00">
                 </div>
-                <div class="input-group">
+    
+                <div class="legenda-caixa">
                     <label for="motivo">Motivo</label>
                     <input type="text" id="motivo" placeholder="Multa">
                 </div>
             </div>
+
             <div class="right-section">
-                <div class="input-group">
+                <div class="legenda-caixa">
                     <label for="anexar">Comprovante</label>
-                    <div class="attach-input">
-                        <input type="text" id="anexar" placeholder="Anexar foto ou PDF">
-                        <button class="attach-button">+</button>
+                    <div id="upload-area">
+                        <span id="upload-text">Clique aqui para enviar uma foto ou PDF</span>
+                        <span id="upload-text">+</span>
+                        <input type="file" id="file-upload" accept="image/*,.pdf">
                     </div>
                 </div>
-                <a href="transferencia_adicionada.html" class="submit-button">Concluir</a>
+                <button class="submit-button" type="button" onclick="window.location.href='transferencia_adicionada.html';">Concluir</button>
             </div>
         </form>
     </main>
+
+    <script>
+        document.getElementById("file-upload").addEventListener("change", (event) => {
+            const file = event.target.files[0];
+            const uploadArea = document.getElementById("upload-area");
+            if (file) {
+                uploadArea.innerHTML = `<button id="add-button">+</button> Arquivo selecionado: ${file.name}`;
+            } else {
+                uploadArea.innerHTML = `<button id="add-button">+</button> Clique ou arraste aqui para enviar uma foto ou PDF`;
+            }
+        });
+    </script>
 </body>
+
 </html>

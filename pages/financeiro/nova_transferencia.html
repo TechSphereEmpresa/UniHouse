@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Transferência</title>
     <link rel="stylesheet" href="/css/financeiro/nova_transferencia.css">
-    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
     <link rel="icon" href="/assets/images/logo.png" type="iamge/png">
 
 </head>
+
 <body>
     <header>
-        <a href="/pages/inicio/multas/multas.html">
+        <a href="javascript:history.back()">
             <img src="/assets/icons/common/seta-voltar.svg" alt="">
         </a>
         <p>Nova transferência</p>
@@ -19,64 +21,67 @@
     </header>
 
     <main>
-            <div class="coluna-cartoes">
-                <!-- Cartão Visa -->
-                <div class="cartao visa">
-                    <div class="info-cartao">
-                        <p class="descricao-saldo">Current Balance</p>
-                        <h2 class="saldo">R$3,360.00</h2>
-                        <p class="numero-cartao">**** **** **** 2230</p>
-                        <div class="detalhes-cartao">
-                            <p class="nome-cartao">Louis Scottson</p>
-                            <p class="exp-date">Exp. Date: <strong>09/26</strong></p>
-                        </div>
+        <div class="coluna-cartoes">
+            <!-- Cartão Visa -->
+            <div class="cartao visa">
+                <div class="info-cartao">
+                    <p class="descricao-saldo">Current Balance</p>
+                    <h2 class="saldo">R$3,360.00</h2>
+                    <p class="numero-cartao">**** **** **** 2230</p>
+                    <div class="detalhes-cartao">
+                        <p class="nome-cartao">Louis Scottson</p>
+                        <p class="exp-date">Exp. Date: <strong>09/26</strong></p>
                     </div>
-                    <img src="/assets/images/financeiro/logoVisa.png" alt="Logo Visa" class="logo-cartao">
                 </div>
-
-                <!-- Cartão Mastercard -->
-                <div class="cartao mastercard">
-                    <div class="info-cartao">
-                        <p class="descricao-saldo">Saldo</p>
-                        <h2 class="saldo">R$200,00</h2>
-                        <p class="numero-cartao">**** **** **** 7281</p>
-                        <div class="detalhes-cartao">
-                            <p class="nome-cartao">[Nome]</p>
-                            <p class="exp-date">Exp. Date: <strong>07/26</strong></p>
-                        </div>
-                    </div>
-                    <img src="/assets/images/financeiro/logoMasterCard.png" alt="Logo Mastercard" class="logo-cartao">
-                </div>
-
-                <!-- Cartão American Express -->
-                <div class="cartao amex">
-                    <div class="info-cartao">
-                        <p class="descricao-saldo">Current Balance</p>
-                        <h2 class="saldo">R$935.33</h2>
-                        <p class="numero-cartao">**** **** **** 4136</p>
-                        <div class="detalhes-cartao">
-                            <p class="nome-cartao">Louis Scottson</p>
-                            <p class="exp-date">Exp. Date: <strong>08/25</strong></p>
-                        </div>
-                    </div>
-                    <img src="/assets/images/financeiro/logoAmericanExpress.png" alt="Logo American Express" class="logo-cartao">
-                </div>
+                <img src="/assets/images/financeiro/logoVisa.png" alt="Logo Visa" class="logo-cartao">
             </div>
 
-            <!-- Coluna do formulário de transferência -->
-            <div class="form-transferencia">
-                <div class="legenda-caixa">
-                    <label for="valor">Valor</label>
-                    <input type="text" id="valor" placeholder="R$ 15,00">
+            <!-- Cartão Mastercard -->
+            <div class="cartao mastercard">
+                <div class="info-cartao">
+                    <p class="descricao-saldo">Saldo</p>
+                    <h2 class="saldo">R$200,00</h2>
+                    <p class="numero-cartao">**** **** **** 7281</p>
+                    <div class="detalhes-cartao">
+                        <p class="nome-cartao">[Nome]</p>
+                        <p class="exp-date">Exp. Date: <strong>07/26</strong></p>
+                    </div>
                 </div>
-                
-                <div class="legenda-caixa">
-                    <label for="motivo">Motivo</label>
-                    <input type="text" id="motivo" placeholder="Multa">
-                </div>
-                
-                <button class="botao-concluir" onclick="window.location.href='transferencia_realizada.html'">Concluir</button>
+                <img src="/assets/images/financeiro/logoMasterCard.png" alt="Logo Mastercard" class="logo-cartao">
             </div>
+
+            <!-- Cartão American Express -->
+            <div class="cartao amex">
+                <div class="info-cartao">
+                    <p class="descricao-saldo">Current Balance</p>
+                    <h2 class="saldo">R$935.33</h2>
+                    <p class="numero-cartao">**** **** **** 4136</p>
+                    <div class="detalhes-cartao">
+                        <p class="nome-cartao">Louis Scottson</p>
+                        <p class="exp-date">Exp. Date: <strong>08/25</strong></p>
+                    </div>
+                </div>
+                <img src="/assets/images/financeiro/logoAmericanExpress.png" alt="Logo American Express"
+                    class="logo-cartao">
+            </div>
+        </div>
+
+        <!-- Coluna do formulário de transferência -->
+        <div class="form-transferencia">
+            <div class="legenda-caixa">
+                <label for="valor">Valor</label>
+                <input type="text" id="valor" placeholder="R$ 15,00">
+            </div>
+
+            <div class="legenda-caixa">
+                <label for="motivo">Motivo</label>
+                <input type="text" id="motivo" placeholder="Multa">
+            </div>
+
+            <button class="botao-concluir"
+                onclick="window.location.href='transferencia_realizada.html'">Concluir</button>
+        </div>
     </main>
 </body>
+
 </html>

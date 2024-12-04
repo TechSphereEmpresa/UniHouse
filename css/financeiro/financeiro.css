@@ -37,10 +37,11 @@ header h1 {
 
 main {
   display: flex;
-  height: calc(100vh - (57px + 30px + 68px));
+  height: calc(100vh - (57px + 30px + 68px + 10px));
   align-items: flex-start;
   gap: 25px;
   box-sizing: border-box;
+  padding-bottom: 0 !important;
   overflow: auto;
   scrollbar-width: none; /* Firefox */
 }
@@ -58,7 +59,7 @@ main::-webkit-scrollbar {
   flex-direction: column;
   align-items: flex-start;
   gap: 15px;
-  overflow: hidden;
+  /* margin-bottom: 78px; */
 }
 
 .transacoes h2 {
@@ -76,7 +77,8 @@ main::-webkit-scrollbar {
   height: 100%;
   background-color: #fff;
   border-radius: 10px;
-  padding: 10px;
+  padding: 0 10px 10px;
+  overflow: hidden;
 }
 
 .lista-transacoes {
@@ -227,7 +229,7 @@ main::-webkit-scrollbar {
   background: #000;
   justify-content: space-around;
   align-items: center;
-  /* position: fixed; */
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
