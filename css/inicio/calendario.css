@@ -194,6 +194,7 @@ main {
   display: flex;
   flex-direction: column;
   margin-right: 420px;
+  margin-top: 214px;
 }
 
 .div-hora {
@@ -306,6 +307,7 @@ main a:visited {
   #horarios {
     margin-right: 0px;
     width: 1;
+    margin-top: 320px;
   }
 
   main {
