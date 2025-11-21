@@ -31,3 +31,6 @@ A metodologia Scrum, conforme descrito pela TOTVS (2022), é uma abordagem de ge
 > As tecnologias podem ser adaptadas de acordo com o projeto real.
 
 - Node.js / HTML5 + CSS3 + JavaScript
+
+##  Acesso ao site 
+<a href="https://uni-house-jj6cb41xs-eduarda-s-projects-91439457.vercel.app" target="_blank" rel="noopener noreferrer">UniHouse</a>
